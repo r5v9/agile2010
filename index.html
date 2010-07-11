@@ -1,12 +1,12 @@
-<html manifest="manifest.php">
-
+<!doctype html>
+<html>
 <head>
      <meta charset="UTF-8" />
      <title>Agile 2010</title>
-     <style type="text/css" media="screen">@import "jqtouch/jqtouch.min.css";</style>
-     <style type="text/css" media="screen">@import "themes/jqt/theme.min.css";</style>
-     <script src="jqtouch/jquery.1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
-     <script src="jqtouch/jqtouch.min.js" type="application/x-javascript" charset="utf-8"></script>
+     <style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
+     <style type="text/css" media="screen">@import "themes/jqt/theme.css";</style>
+     <script src="jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+     <script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
      <script type="text/javascript" charset="utf-8">
          var jQT = new $.jQTouch({
              icon: 'icon.png',
@@ -22,26 +22,26 @@
                  'themes/jqt/img/loading.gif'
                  ]
          });
-     </script>
+	</script>
      <style type="text/css" media="screen">
-         body.fullscreen #home .info {
-             display: none;
-         }
-         #about {
-             padding: 100px 10px 40px;
-             text-shadow: rgba(255, 255, 255, 0.3) 0px -1px 0;
-             font-size: 13px;
-             text-align: center;
-             background: #161618;
-         }
-         #about p {
-             margin-bottom: 8px;
-         }
-         #about a {
-             color: #fff;
-             font-weight: bold;
-             text-decoration: none;
-         }
+	     #jqt.fullscreen #home .info {
+	         display: none;
+	     }
+	     div#jqt #about {
+	         padding: 100px 10px 40px;
+	         text-shadow: rgba(255, 255, 255, 0.3) 0px -1px 0;
+	         font-size: 13px;
+	         text-align: center;
+	         background: #161618;
+	     }
+	     div#jqt #about p {
+	         margin-bottom: 8px;
+	     }
+	     div#jqt #about a {
+	         color: #fff;
+	         font-weight: bold;
+	         text-decoration: none;
+	     }
 
 		.schedule a { font-size: 12pt; white-space: normal; }
 		.topic { padding: 10px; padding-bottom: 0; font-size: 14pt; font-weight: bold; }
@@ -56,8 +56,14 @@
      </style>
  </head>
 
-    <body>
-
+<body>
+	<div id="jqt">
+		
+		<div id="about" class="selectable">
+        	<p>About Agile 2010</p>
+            <p><br/><br/><a href="#" class="grayButton goback">Close</a></p>
+        </div>
+			
 		<div id="home" class="current">
             <div class="toolbar">
                 <h1>Agile 2010</h1>
@@ -77,11 +83,6 @@
 				<li class="arrow"><a href="#manifesto">Manifesto</a></li>
             </ul>
 		</div>
-
-        <div id="about" class="selectable">
-        	<p>About Agile 2010</p>
-            <p><br /><br /><a href="#" class="grayButton goback">Close</a></p>
-        </div>
 
         <div id="my-sessions" class="selectable">
 			<div class="toolbar">
@@ -834,13 +835,13 @@
 		
 		<!-- ********** speakers ********** -->
 
-		<div id="jim-highsmith" class="current">
+		<div id="jim-highsmith">
 			<div class="toolbar">
                 <h1>Jim Highsmith</h1>
                 <a class="button back" href="#">Back</a>
             </div>
 			<div class="speaker-info">
-				<img src="speakers/jim-highsmith.png" width="79" heigth="120" align="left" style="margin-right:15px; margin-bottom: 5px;"/>
+				<img src="speakers/jim-highsmith.gif" width="80" heigth="120" align="left" style="margin-right:15px; margin-bottom: 5px;"/>
 				<div class="speaker-title2">Director, Agile Product &amp; Project Management, Cutter Consortium</div>
 				<p>Jim Highsmith is a co-author of the Agile Manifesto and Director of Cutter Consortium's Agile Product &amp; Project Management practice. He is the recipient of the 2005 Stevens Award in recognition of his work in adaptive software development and Agile processes. Jim has 25-plus years experience as an IT manager, product manager, project manager, consultant, and software developer. He has consulted with IT and product development organizations and software companies in the US, Europe, Canada, South Africa, Australia, Japan, India, and New Zealand to help them adapt to the accelerated pace of development in increasingly complex, uncertain environments. His areas of consulting include Agile software development, project management, and collaboration.</p>
 				<p>Jim is the author of Agile Project Management: Creating Innovative Products, now in its second edition, and Agile Software Development Ecosystems. His first book, Adaptive Software Development: A Collaborative Approach to Managing Complex Systems, won the prestigious Jolt Award. He is co-editor of the Agile Software Development Series. Jim is also co-author of the Agile Manifesto, co-author of the Declaration of Interdependence for project leaders, founding member of the Agile Alliance, and co-founder and first President of the Agile Project Leadership Network. He holds a BS in electrical engineering and an MS in management.</p>
@@ -868,5 +869,7 @@
             </div>
         </div>
 
-    </body>
+	</div>
+
+</body>
 </html>
