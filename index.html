@@ -55,20 +55,45 @@
                  'themes/jqt/img/whiteButton.png',
                  'themes/jqt/img/loading.gif'
                  ]
-         });
+         })
 
 		$(document).ready(function() { 
-			$('.speaker').after('<a href="#" class="attend-button grayButton" style="font-size: 12pt;">I don&#39;t attend</a>');
+			
+			$('.speaker').after('<a href="#" class="attend-button grayButton" style="font-size: 12pt;"></a>')
+			
+			$('.schedule a').click(function() { 
+				id = $(this).attr('href').substring(1)
+				attend = (localStorage.getItem(id)!=null)
+				$('#' + id + " .attend-button").html(attend ? "I attend" : "I don't attend")
+			})
+			
 			$('.attend-button').click(function() {
+				id = $(this).parent().attr('id')
+				title = $(this).parent().children('.topic').attr('innerHTML')
+				when = $(this).parent().children('.toolbar').children('h1').attr('innerHTML')
 				if (this.innerHTML == 'I attend') {
+					localStorage.setItem(id, when + '|' + title)
 					this.innerHTML = "I don't attend"
 				} else {
+					localStorage.removeItem(id)
 					this.innerHTML = 'I attend'
 				}
-				this.selected = false;
 				return false
 			})
-		});
+			
+			$('#my-sessions-link').click(function() {
+				listHtml = ''
+				for (i=0; i<localStorage.length; i++) {
+					id = localStorage.key(i)
+					values = localStorage.getItem(id).split('|')
+					when = values[0]
+					title = values[1]
+					listHtml += '<li class="sep">' + when + '</li>'
+					listHtml += '<li><a href="#' + id + '">' + title + '</a></li>'
+				}
+				$('#my-sessions > .edgetoedge').html(listHtml)
+			})
+		})
 
 	</script>
 
@@ -540,7 +565,7 @@
 
 		<!-- ********** topics ********** -->
 
-		<div id="beyond">
+		<div id="beyond" class="topic-page">
 			<div class="toolbar">
 				<h1>Wed 09:00AM</h1>
 				<a class="button back" href="#">Back</a>
@@ -1217,6 +1242,8 @@
                 <h1>My Sessions</h1>
                 <a class="button back" href="#">Back</a>
             </div>
+			<ul class="edgetoedge schedule">
+			</ul>
         </div>
 			
 		<div id="home" class="current">
@@ -1225,7 +1252,7 @@
                 <a class="button slideup" id="infoButton" href="#about">About</a>
             </div>
             <ul class="rounded">
-                <li class="arrow"><a href="#my-sessions">My Sessions</a></li>
+                <li class="arrow"><a href="#my-sessions" id="my-sessions-link">My Sessions</a></li>
             </ul>
             <ul class="rounded">
                 <li class="arrow"><a href="#wednesday">Wednesday</a></li>
