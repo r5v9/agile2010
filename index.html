@@ -5,24 +5,6 @@
      <title>Agile 2010</title>
      <style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
      <style type="text/css" media="screen">@import "themes/jqt/theme.css";</style>
-     <script src="jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
-     <script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
-     <script type="text/javascript" charset="utf-8">
-         var jQT = new $.jQTouch({
-             icon: 'icon.png',
-             addGlossToIcon: false,
-             startupScreen: 'startup.png',
-             statusBar: 'black',
-             preloadImages: [
-                 'themes/jqt/img/back_button.png',
-                 'themes/jqt/img/back_button_clicked.png',
-                 'themes/jqt/img/button_clicked.png',
-                 'themes/jqt/img/grayButton.png',
-                 'themes/jqt/img/whiteButton.png',
-                 'themes/jqt/img/loading.gif'
-                 ]
-         });
-	</script>
      <style type="text/css" media="screen">
 	     #jqt.fullscreen #home .info {
 	         display: none;
@@ -55,8 +37,42 @@
 		.speaker-info { padding: 15px; }
 		.speaker-info p { margin-bottom: 7px; }
 		.speaker-photo { float: left; margin-right:15px; margin-bottom: 5px; }
+		.attend-button { margin-left: 10px; margin-right: 10px; margin-top: -5px; text-align: center; }
 
      </style>
+     <script src="jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+     <script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+     <script type="text/javascript" charset="utf-8">
+         var jQT = new $.jQTouch({
+             icon: 'icon.png',
+             addGlossToIcon: false,
+             startupScreen: 'startup.png',
+             statusBar: 'black',
+             preloadImages: [
+                 'themes/jqt/img/back_button.png',
+                 'themes/jqt/img/back_button_clicked.png',
+                 'themes/jqt/img/button_clicked.png',
+                 'themes/jqt/img/grayButton.png',
+                 'themes/jqt/img/whiteButton.png',
+                 'themes/jqt/img/loading.gif'
+                 ]
+         });
+
+		$(document).ready(function() { 
+			$('.speaker').after('<a href="#" class="attend-button grayButton" style="font-size: 12pt;">I don&#39;t attend</a>');
+			$('.attend-button').click(function() {
+				if (this.innerHTML == 'I attend') {
+					this.innerHTML = "I don't attend"
+				} else {
+					this.innerHTML = 'I attend'
+				}
+				this.selected = false;
+				return false
+			})
+		});
+
+	</script>
+
  </head>
 
 <body>
