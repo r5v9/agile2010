@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+	 <meta charset="UTF-8" />
+	 <title>Agile 2010</title>
+
+	 <style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
+	 <style type="text/css" media="screen">@import "themes/jqt/theme.css";</style>
+	 <style type="text/css" media="screen">@import "agile2010.css";</style>
+
+	 <script src="jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+	 <script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+	 <script src="agile2010.js" type="application/x-javascript" charset="utf-8"></script>
+
+	 <script type="text/javascript" charset="utf-8">
+		 var jQT = new $.jQTouch({
+			 icon: 'icon.png',
+			 addGlossToIcon: false,
+			 startupScreen: 'startup.png',
+			 statusBar: 'black',
+			 preloadImages: [
+				 'themes/jqt/img/back_button.png',
+				 'themes/jqt/img/back_button_clicked.png',
+				 'themes/jqt/img/button_clicked.png',
+				 'themes/jqt/img/grayButton.png',
+				 'themes/jqt/img/whiteButton.png',
+				 'themes/jqt/img/loading.gif'
+			]
+		 })
+	</script>
+ </head>
+
+<body>
+	<div id="jqt">
+		
+		<!-- speakers -->
+		<% 
+			speakers.each_key do |id| 
+			speaker = speakers[id] 
+		%>
+		<div id="<%=id%>">
+			<div class="toolbar">
+				<h1><%=speaker['name']%></h1>
+				<a class="button back" href="#">Back</a>
+			</div>
+			<div class="speaker-info">
+				<img src="speakers/<%=id%>.gif" width="80" height="120" class="speaker-photo"/>
+				<div class="speaker-title2"><%=speaker['title']%></div>
+				<%=speaker['description']%>
+			</div>
+		</div>
+		<% end %>
+		
+		<!-- topics -->
+		<%
+			topics.each_key do |id|
+			topic = topics[id]
+		%>
+		<div id="<%=id%>" class="topic-page">
+			<div class="toolbar">
+				<h1><%=topic['date']%></h1>
+				<a class="button back" href="#">Back</a>
+			</div>
+			<div class="topic"><%=topic['title']%></div>
+			<ul class="speaker">
+				<%
+					topic_speakers = topic['speakers']==nil ? [] : topic['speakers'].split(',')
+					topic_speakers.each do |speaker_id|
+					speaker_id.strip!
+					speaker = speakers[speaker_id]
+				%>
+				<li class="arrow">
+					<a href="#<%=speaker_id%>">
+						<%=speaker['name']%>
+						<div class="speaker-title"><%=speaker['title']%></div>
+					</a>
+				</li>
+				<% end %>
+			</ul>
+			<div class="description">
+				<%=topic['description']%>
+			</div>
+		</div>
+		<% end %>
+		
+		<!-- schedules -->
+		<%
+			days = [ {:full => "Wednesday", :short => "Wed"}, {:full => "Thursday", :short => "Thu"} ]
+			days.each do |day|
+		%>
+		<div id="<%=day[:full]%>" class="selectable">
+			<div class="toolbar">
+				<h1><%=day[:full]%></h1>
+				<a class="button back" href="#">Back</a>
+			</div>
+			<ul class="edgetoedge schedule">
+				<%
+					previous_date = ''
+					topic_keys[day[:short]].each do |id|
+					topic = topics[id]
+				%>
+				<% 
+					date = topic['date'][4..-1].strip
+					if date!=previous_date
+				%>
+				<li class="sep"><%=date%></li>
+				<%
+					previous_date = date
+					end
+				%>
+				<li>
+					<a href="#<%=id%>"><%=topic['title']%></a>
+					<span class="speaker-title3">
+						<% topic_speakers = topic['speakers']==nil ? [] : topic['speakers'].split(',') %>
+						<%= topic_speakers.map { |speaker_id| speakers[speaker_id.strip]['name'] }.join(' and ')%>
+					</span>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
+		
+		<!-- about -->
+		<div id="about" class="selectable">
+			<p>About Agile 2010</p>
+			<p><br/><br/><a href="#" class="grayButton goback">Close</a></p>
+		</div>
+
+		<!-- my sessions -->
+		<div id="my-sessions" class="selectable">
+			<div class="toolbar">
+				<h1>My Sessions</h1>
+				<a class="button back" href="#">Back</a>
+			</div>
+			<ul class="edgetoedge schedule">
+			</ul>
+		</div>
+		
+		<!-- home -->
+		<div id="home" class="current">
+			<div class="toolbar">
+				<h1>Agile 2010</h1>
+				<a class="button slideup" id="infoButton" href="#about">About</a>
+			</div>
+			<ul class="rounded">
+				<li class="arrow"><a href="#my-sessions" id="my-sessions-link">My Sessions</a></li>
+			</ul>
+			<ul class="rounded">
+				<% days.each do |day| %>
+				<li class="arrow"><a href="#<%=day[:full]%>"><%=day[:full]%></a></li>
+				<% end %>
+			</ul>
+		</div>	
+		
+	</div>
+</body>

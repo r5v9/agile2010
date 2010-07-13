@@ -1,0 +1,295 @@
+
+beyond-scope-schedule-cost:
+    date: Wed 09:00AM
+    title: >
+        Beyond Scope, Schedule, and Cost: Rethinking Agile performance measures
+    speakers: jim-highsmith
+    description: |
+        <p>A March 2009 Business Week article proclaims, "There is no more Normal." In the throws of such pervasive change the traditional emphasis on "following the plan with minimal changes," needs to be supplanted by an agile stress on "adapting successfully to inevitable changes." Furthermore, if agility is about delivering customer value by being flexible, then how can adherence to a traditional scope, schedule, and cost plan be the best way to measure performance? It can't. We need to move beyond the classic Iron Triangle measures to an Agile Triangle that focuses on Value, Quality, and Constraints.</p>
+        <p>Agile teams are asked to be agile, flexible, and adaptive, but then are told to conform to planned scope, schedule, and cost goals. They are asked to adapt, but inside a very small box. If we are to scale agility to large projects and bring agile values to organizations, then we must change performance measures. To mirror the Agile Manifesto, it's not that scope, schedule, and cost are unimportant, but that value and quality are more important. This keynote explores the necessity for and the rationale behind moving to this new set of agile performance measures.</p>
+
+essence-agile:
+    date: Wed 10:00AM
+    title: The Essence of Agile Software Development
+    speakers: martin-fowler
+    description: |
+        <p>Almost ten years ago I had the good fortune to be at a workshop that led to the coining of the term "Agile" and the writing of the "Manifesto for Agile Software Development". Since then I've watched as ThoughtWorks, my employer, has embraced software agility and applied it on projects all over the world. During these years the concept of Agile has become more and more mainstream, but as with any radical idea, popularity tends to introduce diffusion. So I find it's important to revisit the core essence of these ideas, so they don't get lost in the noise of widespread adoption.</p>
+
+dogs-tricks:
+    date: Wed 11:30AM
+    title: Old tricks for new dogs and new tricks for old dogs
+    speakers: shane-hastie
+    description: |
+        <p>Agile Organisation, Process and Practice brolly Context is everything - there is no 'one-size-fits-all' approach to project delivery. The Agile umbrella encompasses a wide range of techniques and approaches. This talk briefly examines a variety of the techniques and identifies the "project ecosystem" elements that will enable them to be effective, where they work best, where they are to be avoided and practical advice on how to get the maximum benefit from each of the practices.</p>
+        <p>Shane presents a framework for selecting from a variety of techniques to identify the combination that will work most effectively in a specific project environment. This talk doesn't attempt to teach the techniques; rather Shane provides some concrete advice for selecting from techniques such as: brainstorming, mind maps, DeBono's thinking hats, vision box, structured interviews, questionnaires, scriptwriting, snowcards, use cases, user stories, process models, decision tables, data models, planning poker, behaviour driven development, low-fi prototypes, and CRC cards.</p>
+        
+technology-transformation:
+    date: Wed 11:30AM
+    title: Delivering technology transformation in parallel with a transition to Agile
+    speakers: daniel-oertli
+    description: |
+        <p>Culture, Leadership, People brolly If you need to push through a substantial technology transformation - and are wondering whether a simultaneous transition to Agile will help or hinder your organisation to digest a major technology change - then this talk is for you.</p>
+        <p>In this talk, Daniel Oertli reflects on the experience of rebuilding a major website - realestate.com.au - in under a year on a new platform, running on new infrastructure, delivered with newly-introduced Agile practices. Daniel will answer questions such as: "How do you quickly raise a team's overall tempo?" and "How can a change to Agile reduce change?". The talk includes recommendations for making 'all-in' people, process and technology transformations 'stick' and deliver, and a candid view of the pitfalls and learnings during REA's journey.</p>
+
+agile-agile:
+    date: Wed 11:30AM
+    title: >
+        Agile Agile: Using Agile techniques to adopt Agile
+    speakers: ben-hogan
+    description: |
+        <p>Agile Organisation, Process and Practice brolly If you are currently introducing Agile into an organisation or thinking of doing so then this talk is for you. In this talk, Ben Hogan looks at the idea of using an Agile approach to introducing Agile into an organisation in a congruent and incremental way and with the benefits of using an Agile method: early delivery of business value, the flexibility to adapt to organisational constraints. Drawing on Ben's eight years of Agile experience and a number of recent publications this talk gives attendees a practical approach to introducing Agile into their organisation. Ben will answer questions such as: "Where do I start?" and "How do I introduce Agile into a large traditional organisation?" The talk includes an introduction to the most important organisational change models and provides attendees a number of recommendations and tips on what to avoid in their Agile journey.</p>
+
+
+culture-stupid:
+    date: Wed 12:15PM
+    title: It's the culture, stupid! - Agile as an organisational paradigm
+    speakers: rob-thomsett
+    description: |
+        <p>Culture, Leadership, People brolly Too many organisations and some Agilists see Agile as a "quick fix". In searching for a "silver bullet" as Fred Brooks stated so many years ago, the disruptive nature of Agile to an organisation's processes, management models and culture is too often ignored until too late.</p>
+        <p>Agile is not a new method for project development, it is a total re-definition of how an organisation delivers change. In this session, Rob will present a systemic view of Agile and how two leading organisations have used Agile sponsorship, Agile project management, and Agile development as a critical part of building a new organisational paradigm.</p>
+
+jemena-case-study:
+    date: Wed 12:15PM
+    title: Case study - energy utility, Jemena
+    speakers: paula-ngov
+    description: |
+        <p>Business Value brolly This case study examines the positive impact of introducing Agile development processes in an environment that is made up of regulatory requirements, extension of legacy systems, tight and non-negotiable deadlines, old technology, multiple vendors, traditional methodologies, and integration with external and market systems.</p>
+        <p>This presentation outlines the way in which DIUS computing and Energy Utility - Jemena, have overcome many of the issues confronting large complex projects, by applying agile techniques such as behaviour and test driven development (BDD and TDD).</p>
+
+maturity-assessment:
+    date: Wed 12:15PM
+    title: You can take your Agile Maturity Assessment and...
+    speakers: jason-yip, marina-chiovetti
+    description: |
+        <p>Agile Organisation, Process and Practice brolly It's a common and understandable request to want to know how "Agile" you are but there is a great risk of being distracted by process compliance rather than staying focused on improvement and delivering business value. Agile Maturity Assessments typically take a few people's opinions of where the team is at, then dictates how to change - but that rarely 'sticks.' The problem still exists that we need to know how well we are doing and what to do next, and teams will buy in and drive this change if they assess the situation themselves. This presentation will discuss how to do this in a way that stays focused on our goals and not on our Agile score.</p>
+
+aconex-case-study:
+    date: Wed 02:00PM
+    title: Case study - Aconex
+    speakers: leigh-jasper
+    description: |
+        <p>Business Value brolly By 2008, Aconex had established itself as one of Australia's largest and fastest growing SaaS companies, yet it needed to evolve to remain successful in its over sixty overseas markets. Despite facing unprecedented global economic uncertainty, Aconex made the decision to transition to Agile. CEO Leigh Jasper will present on how Agile aligned with the company's core values, how it helped them navigate the global financial crisis and has now positioned Aconex well for future growth.</p>
+
+flavours-panel:
+    date: Wed 02:00PM
+    title: Flavours of Agile panel
+    speakers:
+    description:
+
+continuous-deployment:
+    date: Wed 02:00PM
+    title: Working with Continuous Deployment to reduce cycle time
+    speakers: kane-mar
+    description: |
+        <p>Innovation and Emerging Ideas brolly Continuous Deployment (CD) is becoming fashionable, driven primarily by both the Agile and Lean communities to deliver online services more rapidly. But what is CD? How can CD be used to get feedback on our services? And, what are the business advantages of adopting CD?</p>
+        <p>In this presentation, Jason would like to introduce the concept of CD, discuss real world instances of CD in use, and why for a certain niche of product the use of CD represents a compelling business advantage.</p>
+
+agile-governance:
+    date: Wed 02:45PM
+    title: Agile Governance - the key to doing more with less
+    speakers: philip-abernathy
+    description: |
+        <p>Culture, Leadership, People brolly BFC! Better Faster Cheaper! Pick any three! This talk will address how organisations can leverage Lean and Agile principle and techniques to govern the funnel of work in an efficient and effective manner thus getting more bang for buck. Phil Abernathy will draw on case studies and experience to show how Agile governance is key to the successful implementation of Agile within an organisation and how it can deliver business value faster and more cost effectively. It will also address the steps needed to make the transformation and its impact on the way of working.</p>
+
+lightning-talks-wed:
+    date: Wed 02:45PM
+    title: Lightning talks
+    speakers:
+    description: |
+        <p>Lightning Talks are concise, informal mini-presentations that generate ideas and conversation points for the audience.</p>
+        <p>Lightning Talks can be on any topic and are a maximum of FIVE minutes long. The emphasis of these mini-presentations is on knowledge sharing, generating new ideas, and having fun!</p>
+
+agile-adoption:
+    date: Wed 02:45PM
+    title: >
+        Agile Adoption: Real world lessons on getting Agile established in the enterprise
+    speakers: richard-henning
+    description: |
+        <p>Business Value brolly Allianz began to adopt elements of Agile delivery practices a few years ago, and learnt some unique lessons that led to two full blown Agile pilot projects to be established in 2009. The aim was to assess Agile and promote the practice as an acceptable alternate form of software delivery where appropriate. Also embodied in the aim was the establishment of agreed SDLC deliverables and activities to ensure relevant governance and reduce confusion. Consideration was also given to the key behaviours required in the team and how to build broader corporate adoption.</p>
+        <p>This talk will provide insight into Enterprise Agile Adoption from an experience view, sharing how Agile was adopted at Allianz Australia Insurance. We will discuss lessons learnt and tips on how to overcome inertia, what would be done differently with hindsight and how you can go about getting Agile accepted as a way of meeting ever expanding expectations.</p>
+
+agile-games:
+    date: Wed 04:00PM
+    title: Agile games
+    speakers: philip-abernathy, kane-mar
+    description:
+
+procurement-panel:
+    date: Wed 04:00PM
+    title: Procurement panel
+    speakers:
+    description:
+
+a-team:
+    date: Wed 04:00PM
+    title: >
+        Building an A-Team: I love it when a team comes together
+    speakers: craig-smith
+    description: |
+        <p>Culture, Leadership, People brolly High performing teams are something that all organisations aspire to, but how exactly do you turn a team from good to great? There is much discussion in the community about management versus leadership, working in a factory versus embracing a tribe and how to motivate a new generation of employees. In this presentation we will look at these topics and determine what makes a high performing team, how Agile techniques can help, what tools and techniques you can use to create this environment and how you can measure performance.</p>
+
+government-case-studies:
+    date: Wed 04:45PM
+    title: Government case studies
+    speakers: ian-crawford, todd-porter
+    description: |
+        <p>Business Value brolly The story of information management at NOPSA begins in the distant past, at a time when the most advanced form of information is a spreadsheet, and most business activities are completely dependent on the movement of pieces of paper. The inhabitants of this primeval world resolve to create an application that assists their core business processes, reduces their compliance burden and prevents data rot.</p>
+        <p>Unfortunately, the project faces some challenges.</p>
+        <li>The defining legislation is being added to and amended at unpredictable intervals - by three or four governments.</li>
+        <li>Some of the business processes have never been agreed on.</li>
+        <li>Senior management believe that 80% of software development projects end in catastrophic failure and financial waste.</li>
+        <li>… and a minor cargo cult has developed around the project, with each stakeholder believing that their specialised requirements will be delivered.</li>
+        <br/>
+        <p>Recognising that a classic sequential project would waste resources from day one, NOPSA began a search for a development capability that would be flexible, achieve results quickly and focus relentlessly on user needs.</p>
+        <p>This is the story of how we delivered less software, but more business value than we expected. It is also a story of how management skepticism evolved into commitment, and how our inspectors' anxiety gave way to ownership.</p>
+        <p>There is a brief discussion of what worked well, particularly those characteristics of NOPSA that were useful to the process (yes, they can exist in a government agency !).</p>
+        <p>This session finishes with a summary of the factors that have made Agile 'the way we do things' at NOPSA.</p>
+
+open-house:
+    date: Wed 05:30PM
+    title: Open House - ThoughtWorks Offices
+    speakers:
+    description: |
+        <p>Following on from the success of the last Open House last year, we will be opening the doors of our Melbourne office which will be filled with food, drinks and Agile enthusiasts. Join us after Agile10 on Wednesday evening at 6.00pm. Register at the ThoughtWorks booth.</p>
+
+delivering-business-value:
+    date: Thu 09:00AM
+    title: Delivering business value with Agile
+    speakers: jeff-smith
+    description: |
+        <p>Suncorp's business and technology teams have a strong track record of deploying solutions for competitive advantage and being able to drive business value faster with a strong return on investment. Key to this approach is their commitment to collaborate on projects using the Agile values, principles and practices to optimise the broader team performance and meet business needs. Jeff Smith, Group Executive, Suncorp Business Services, sees the Agile development methodology as not just about making good technology but as an approach that can be applied by any successful business.</p>
+
+legacy-gold:
+    date: Thu 10:30AM
+    title: Legacy Gold - Using Lean and Agile to extract maximum value from your legacy and enterprise application portfolio
+    speakers: dave-thomas
+    description: |
+        <p>Agile Organisation, Process and Practice brolly Successful businesses have large application and product legacies which require care and feeding over their useful lifetime. In major product companies significant revenue comes from customers of existing legacy products and their support revenues. Hence it isn't surprising that 70-85% of the software development budget is allocated to the operation and enhancement Legacy Code. For many companies their most successful product/application has become their worst enemy. Painfully we have learned that languages, tools, methods and practices we have often been unable to replace or even substantially reduce the entropy of our legacy code. Indeed it is generally accepted today that a major rewrite of any large legacy application has way too much risk and way too little business value to be given serious consideration. We have no choice but to live with and improve our Legacy!</p>
+        <p>Unfortunately major Legacy Systems is an area where most in Agile community fear to tread. This is due in part to their lack of experience in these environments. It is also due to their expectations for tool chains and deployment models which are matched to the Agile expectations of incremental OO development and associated tool chains.</p>
+        <p>In this talk we discuss how Lean thinking and Agile have been applied to real legacy systems spanning mainframe, military, embedded and multi-vendor integration of legacy and EAP applications. We illustrate by example how organisations can benefit by using Lean and Agile to reduce the entropy (improve Agility) of their legacy systems and hence maximize the value they can get from them. We discuss appropriate investments in training, tooling and practices for different legacy environments.</p>
+
+about-trust:
+    date: Thu 10:30AM
+    title: It's about trust…
+    speakers: josh-melville
+    description: |
+        <p>Culture, Leadership, People brolly Agile requires a fundamental change in how we manage projects and lead people. How we motivate and provide structure for project teams requires equal emphasis with what we are delivering.</p>
+        <p>Accordingly, our view of project managers is changing. In contrast to more traditional approaches, Agile promotes project management into the realms of business management as a truly valued capability in its own right. Underscoring this increased profile is a need to quickly establish credibility and trust - in that context, an Agile approach is particularly effective.</p>
+        <p>I will be elaborating on the changing role of project managers within organisations and the application of Agile practices with business teams. Specifically, the new skills required by project managers to become more effective facilitators of change and delivery along with some of the challenges of adopting Agile with business teams.</p>
+
+emergent-design:
+    date: Thu 10:30AM
+    title: Implementing Emergent Design
+    speakers: neal-ford
+    description: |
+        <p>Innovation and Emerging Ideas brolly This session describes the current thinking about emergent design, discovering design in code. The hazard of Big Design Up Front in software is that you don't yet know what you don't know, and design decisions made too early are just speculations without facts. Emergent design techniques allow you to wait until the last responsible moment to make design decisions. This talk covers three areas: emergent design enablers, battling things that make emergent design hard, finding idiomatic patterns, and how to leverage the patterns you find. It includes both proactive (test-driven development) and reactive (refactoring, metrics, visualisations, tests) approaches to discovering design, and discusses the use of custom attributes, DSLs, and other techniques for utilising them. The goal of this talk is to provide nomenclature, strategies, and techniques for allowing design to emerge from projects as they proceed, keeping you code in sync with the problem domain. This talk shows lots of examples of how to make this concept work in your environment.</p>
+
+introspection-leadership:
+    date: Thu 11:15AM
+    title: Introspection and leadership
+    speakers: martin-kearns
+    description: |
+        <p>Culture, Leadership, People brolly Who has ever thought about why Agile is such a simple concept that is so difficult to implement? Fact is, it is not simple at all - the problem of creating innovative solutions through the collective effort of a group of individuals is extremely difficult and one that needs significant effort. But the harder question is the one to ask that guy looking at you in the mirror. The hardest and most difficult problem we have is to introspect and understand what I must do. My presentation will consider: what is leadership for an Agile project and how/what are the tools we need to ask ourselves regularly. Introspection is the best tool I have learnt as a coach and my goal is to encourage you to the same.</p>
+
+mars-venus:
+    date: Thu 11:15AM
+    title: Developers are from Mars, Product Owners are from Venus
+    speakers: adam-boas
+    description: |
+        <p>Culture, Leadership, People brolly When a business adopts Agile it must quickly learn to get the most from its development teams. High performing teams are highly aligned, aligned from the business right the way through to developers and testers. Achieving such an alignment needs understanding, a clear plan, and skilful execution. Product owners and developers think differently, are motivated by different goals and can often talk at cross-purposes. Each side has its own success and failure stereotypes. Often these are from polar opposites and can have immense difficulty communicating effectively with each other.</p>
+        <p>Resolving this dichotomy requires teams to speak the same language and to speak it fluently. That language is expressed in User Stories. They must:</p>
+        <ul>
+            <li>Articulate the business need in a language everyone appreciates</li>
+            <li>Incorporate technical value in business speak</li>
+            <li>Require consistent dialogue leading to less assumptions and errors</li>
+            <li>Be prioritized to allow a trade off between scope and time while maintaining value</li>
+        </ul>
+
+truly-agile:
+    date: Thu 11:15AM
+    title: >
+        Truly Agile : Building Agile software using Agile techniques
+    speakers: jean-christophe-huet
+    description: |
+        <p>Business Value brolly GreenHopper, an Agile planning tool from Atlassian, began as a one-man show three years ago. GreenHopper is now a team of five with customers spread across the globe and over 10,000 licenses sold. GreenHopper customers have enjoyed more than 30 releases in less than three years, making this a product which truly reflects the needs of our users.</p>
+        <p>I will share my 10 priceless tips for building a successful product - and team - using Agile techniques. You will hear first-hand the challenges and lessons learned over the past three years, my experiences with listening and responding to the changing needs of customers and our continued focus on delivering quality, fast.</p>
+
+agile-lawyers:
+    date: Thu 01:00PM
+    title: Agile Lawyers? The transition from Agile IT to a radically Agile organisation at Lonely Planet
+    speakers: nigel-dalton
+    description: |
+        <p>Innovation and Emerging Ideas brolly Many Australian organisations are being driven to find a better way to deliver projects at the pace that competition demands in 2010. Lonely Planet started on that journey in their IT group in late 2007, and three years later the petrie dish that was the initial Agile implementation has overflowed with interesting organisms. Agile principles are now evident in teams as variable as legal, HR, guidebook publishing, product development, and IT operations.</p>
+        <p>A field trip to Lonely Planet starts to answer the question "what happens when a whole company starts adopting Agile methods?" Since not everyone can come to Footscray however, in this presentation you will see which Agile principles work for each team, how groups work together, whether 'competitive Agile' can work, and the flywheel effect on the productivity of core IT teams from widespread understanding of Agile principles - now that their colleagues across the business use card walls, talk about stories and conduct daily stand-ups.</p>
+        <p>You will also hear how key steps in the broader adoption of Agile, how the insistence of uniformity of Agile process can be a killer of innovation, and how Agile underpinned the delivery of a new iPad digital product from the day Apple called to say "we've announced the iPad, we've emailed your SDK - we expect a product in iTunes when we hit the market in a month".</p>
+
+lightning-talks-thursday:
+    date: Thu 01:00PM
+    title: Lightning talks
+    speakers:
+    description: |
+        <p>Lightning Talks are concise, informal mini-presentations that generate ideas and conversation points for the audience.</p>
+        <p>Lightning Talks can be on any topic and are a maximum of FIVE minutes long. The emphasis of these mini-presentations is on knowledge sharing, generating new ideas, and having fun!</p>
+
+red:
+    date: Thu 01:00PM
+    title: Dr W. Edwards Deming's famous Red Bead Experiment
+    speakers: david-joyce
+    description: |
+        <p>Culture, Leadership, People brolly Come along and participate in Dr W. Edwards Deming's famous Red Bead Experiment. This classic learning tool helps illustrate the impact that a system, and traditional management approaches, can have on individuals who work within an organisation.</p>
+        <p>The experiment introduces many of Deming's ideas about management, including his 14 Points for Management. It also introduces the Statistical Process Control Chart.</p>
+        <p>Originally used by Dr Deming as part of his four-day seminar, the experiment represents a corporation formed of "willing workers", quality control personnel, a data recorder, a Project Manager and a Product Owner, each of which is staffed by volunteers from the audience.</p>
+        <p>The corporation's aim is to produce white beads. The production of beads is controlled by an approved procedure to ensure the removal of defective red beads.</p>
+        <p>After the experiment there will be a discussion of the issues addressed by the experiment, including: understanding variation in work, the role of the system on the performance of the workers, the effectiveness of managing with slogans, the usefulness of targets, annual appraisals and financial rewards, and how to improve quality.</p>
+        <p>We will also relate this experiment to approaches to Software Development and the management of software development teams.</p>
+
+trials-tribulations:
+    date: Thu 01:45PM
+    title: Trials and tribulations of ensuring enterprise architecture with Agile delivery
+    speakers: john-sullivan
+    description: |
+        <p>Agile Organisation, Process and Practice brolly</p>
+
+distributed-panel:
+    date: Thu 01:45PM
+    title: Distributed Agile Panel
+    speakers:
+    description:
+
+achieving-quality:
+    date: Thu 01:45PM
+    title: Achieving quality
+    speakers: sharon-robson
+    description: |
+        <p>Agile Organisation, Process and Practice brolly</p>
+
+open-space:
+    date: Thu 03:00PM
+    title: Open Space
+    speakers:
+    description: |
+        <p>Open Space is a chance for you to drive part of the Agile Australia conference! If we've missed an important topic you'd like to discuss, or haven't addressed one of your burning questions, Open Space will provide the opportunity for you to discuss or have discussed any question or topic you like!</p>
+        <p>Participating in Open Space</p>
+        <p>We will be collecting issues, questions, topics, thoughts, ideas and challenges on the butcher's paper in the foyer. Please contribute! We ask you to help us group the contributions into common themes during the conference. The Open Space will be lots of small groups talking on a specific topic. Each group will be allocated a facilitator, whose only task is to keep the discussion flowing. It's an open and collaborative space, which allows all perspectives to be heard and respected. You may stay put in the one group or you may choose to be a "butterfly" and flutter around the groups listening to what is going on, or be a "bee" and visit various groups and contribute to each.</p>
+        <p>The Open Space session at Agile Australia 2010 will be a great opportunity for you share your ideas and experiences, and learn from the experiences of others!</p>
+
+running-company-agile:
+    date: Thu 03:00PM
+    title: Running a company Agile
+    speakers: tim-hunt-smith
+    description: |
+        <p>Business Value brolly The retail energy industry in Australia is one of the most competitive in the world and characterised by complex systems and processes which constrain speed to market. Tim Hunt-Smith shares his experience of transforming an energy retail company into a nimble and effective competitor by implementing lean/agile techniques as a management system for the company</p>
+
+technical-debt:
+    date: Thu 03:45PM
+    title: Technical Debt panel
+    speakers:
+    description:
+
+against-odds:
+    date: Thu 03:45PM
+    title: Delivery against the odds - How Agile practices can save your project
+    speakers: holger-kaufmann
+    description: |
+        <p>Business Value brolly A case study on a large, highly time-critical development project for an iron ore industry client, the talk will describe how Agile practices can be used to achieve delivery against the odds. Topics will include effective on-boarding, no-waste production, and optimal utilisation of time and people.</p>
+        <p>Team organisation, iteration planning, monitoring and reporting for a large team (>15) will be presented and the effectiveness of different Agile tools and practices in the context of a large (>$40 M) integration project with a predictive PM methodology will be discussed.</p>
