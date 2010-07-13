@@ -5,43 +5,10 @@
      <title>Agile 2010</title>
      <style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
      <style type="text/css" media="screen">@import "themes/jqt/theme.css";</style>
-     <style type="text/css" media="screen">
-	     #jqt.fullscreen #home .info {
-	         display: none;
-	     }
-	     div#jqt #about {
-	         padding: 100px 10px 40px;
-	         text-shadow: rgba(255, 255, 255, 0.3) 0px -1px 0;
-	         font-size: 13px;
-	         text-align: center;
-	         background: #161618;
-	     }
-	     div#jqt #about p {
-	         margin-bottom: 8px;
-	     }
-	     div#jqt #about a {
-	         color: #fff;
-	         font-weight: bold;
-	         text-decoration: none;
-	     }
-
-		div#jqt .toolbar > h1 { font-size: 13pt; }
-		#jqt ul li a, #jqt li.img a + a { font-size: 12pt; white-space: normal; }
-		.topic { padding: 10px; padding-bottom: 0; font-size: 14pt; font-weight: bold; }
-		.speaker { font-size: 12pt; }
-		.speaker-title { font-style: italic; font-weight: none; font-size: 10pt; color: gray; margin-top: 3px; white-space: normal;  }
-		.speaker-title2 { font-style: italic; font-weight: none; font-size: 12pt; color: gray; margin-top: 3px; margin-bottom: 10px; white-space: normal; }
-		.speaker-title3 { font-style: italic; font-weight: lighter; font-size: 10pt; color: gray; white-space: normal; }
-		.description { border-top: 1px solid gray; margin: 10px; padding: 5px; padding-top: 10px; }
-		.description p { margin-bottom: 7px; }
-		.speaker-info { padding: 15px; }
-		.speaker-info p { margin-bottom: 7px; }
-		.speaker-photo { float: left; margin-right:15px; margin-bottom: 5px; }
-		.attend-button { margin-left: 10px; margin-right: 10px; margin-top: -5px; text-align: center; }
-
-     </style>
+     <style type="text/css" media="screen">@import "agile2010.css";</style>
      <script src="jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
      <script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+     <script src="agile2010.js" type="application/x-javascript" charset="utf-8"></script>
      <script type="text/javascript" charset="utf-8">
          var jQT = new $.jQTouch({
              icon: 'icon.png',
@@ -57,47 +24,7 @@
                  'themes/jqt/img/loading.gif'
                  ]
          })
-
-		$(document).ready(function() { 
-			
-			$('.speaker').after('<a href="#" class="attend-button grayButton" style="font-size: 12pt;"></a>')
-			
-			$('.schedule a').click(function() { 
-				id = $(this).attr('href').substring(1)
-				attend = (localStorage.getItem(id)!=null)
-				$('#' + id + " .attend-button").html(attend ? "I attend" : "I don't attend")
-			})
-			
-			$('.attend-button').click(function() {
-				id = $(this).parent().attr('id')
-				title = $(this).parent().children('.topic').attr('innerHTML')
-				when = $(this).parent().children('.toolbar').children('h1').attr('innerHTML')
-				if (this.innerHTML == 'I attend') {
-					localStorage.setItem(id, when + '|' + title)
-					this.innerHTML = "I don't attend"
-				} else {
-					localStorage.removeItem(id)
-					this.innerHTML = 'I attend'
-				}
-				return false
-			})
-			
-			$('#my-sessions-link').click(function() {
-				listHtml = ''
-				for (i=0; i<localStorage.length; i++) {
-					id = localStorage.key(i)
-					values = localStorage.getItem(id).split('|')
-					when = values[0]
-					title = values[1]
-					listHtml += '<li class="sep">' + when + '</li>'
-					listHtml += '<li><a href="#' + id + '">' + title + '</a></li>'
-				}
-				$('#my-sessions > .edgetoedge').html(listHtml)
-			})
-		})
-
 	</script>
-
  </head>
 
 <body>

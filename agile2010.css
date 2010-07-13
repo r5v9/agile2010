@@ -1,0 +1,100 @@
+#jqt.fullscreen #home .info {
+	display: none;
+}
+
+div#jqt #about {
+	padding: 100px 10px 40px;
+	text-shadow: rgba(255, 255, 255, 0.3) 0px -1px 0;
+	font-size: 13px;
+	text-align: center;
+	background: #161618;
+}
+
+div#jqt #about p {
+	margin-bottom: 8px;
+}
+
+div#jqt #about a {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+div#jqt .toolbar > h1 {
+	font-size: 13pt;
+}
+
+#jqt ul li a, #jqt li.img a + a {
+	font-size: 12pt;
+	white-space: normal;
+}
+
+.topic {
+	padding: 10px;
+	padding-bottom: 0;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.speaker {
+	font-size: 12pt;
+}
+
+.speaker-title {
+	font-style: italic;
+	font-weight: none;
+	font-size: 10pt;
+	color: gray;
+	margin-top: 3px;
+	white-space: normal;
+}
+
+.speaker-title2 {
+	font-style: italic;
+	font-weight: none;
+	font-size: 12pt;
+	color: gray;
+	margin-top: 3px;
+	margin-bottom: 10px;
+	white-space: normal;
+}
+
+.speaker-title3 {
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 10pt;
+	color: gray;
+	white-space: normal;
+}
+
+.description {
+	border-top: 1px solid gray;
+	margin: 10px;
+	padding: 5px;
+	padding-top: 10px;
+}
+
+.description p {
+	margin-bottom: 7px;
+}
+
+.speaker-info {
+	padding: 15px;
+}
+
+.speaker-info p {
+	margin-bottom: 7px;
+}
+
+.speaker-photo {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 5px;
+}
+
+.attend-button {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: -5px;
+	text-align: center;
+}
