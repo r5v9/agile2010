@@ -24,7 +24,8 @@
 				 'themes/jqt/img/button_clicked.png',
 				 'themes/jqt/img/grayButton.png',
 				 'themes/jqt/img/whiteButton.png',
-				 'themes/jqt/img/loading.gif'
+				 'themes/jqt/img/loading.gif',
+				 'yes_no.png'
 			]
 		 })
 	</script>
@@ -71,11 +72,16 @@
 				%>
 				<li class="arrow">
 					<a href="#<%=speaker_id%>">
-						<%=speaker['name']%>
+						<span class="speaker-name"><%=speaker['name']%></span> <!-- fix for multiple speakers -->
 						<div class="speaker-title"><%=speaker['title']%></div>
 					</a>
 				</li>
 				<% end %>
+			</ul>
+			<ul>
+				<li style="color:#E0E0E0;">
+					I will attend <span class="toggle toggle-yes-no"><input type="checkbox" topic="<%=id%>"/></span>
+				</li>
 			</ul>
 			<div class="description">
 				<%=topic['description']%>

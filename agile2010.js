@@ -34,28 +34,18 @@ function removeFromMySessions(id) {
 }
 
 
-$(document).ready(function() { 
+$(document).ready(function() {
 	
-	$('.speaker').after('<a href="#" class="attend-button grayButton" style="font-size: 12pt;"></a>')
-	
-	$('.schedule a').click(function() { 
-		id = $(this).attr('href').substring(1)
-		attend = isInMySessions(id)
-		$('#' + id + " .attend-button").html(attend ? "I attend" : "I don't attend")
-	})
-	
-	$('.attend-button').click(function() {
-		id = $(this).parent().attr('id')
-		title = $(this).parent().children('.topic').attr('innerHTML')
-		date = $(this).parent().children('.toolbar').children('h1').attr('innerHTML')
-		if (this.innerHTML == 'I attend') {
-			addToMySessions(id, date, title)
-			this.innerHTML = "I don't attend"
+	$('.toggle-yes-no input').click(function() {
+		id = $(this).attr('topic')
+		title = $("#" + id + ' .topic').attr('innerHTML')
+		date = $("#" + id + ' .toolbar h1').attr('innerHTML')
+		author = $("#" + id + ' .speaker-name').attr('innerHTML')
+		if (this.checked) {
+			addToMySessions(id, date, title, author)
 		} else {
 			removeFromMySessions(id)
-			this.innerHTML = 'I attend'
 		}
-		return false
 	})
 	
 	$('#my-sessions-link').click(function() {

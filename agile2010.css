@@ -98,3 +98,22 @@ div#jqt .toolbar > h1 {
 	margin-top: -5px;
 	text-align: center;
 }
+
+#jqt .toggle-yes-no {
+    width: 94px;
+    position: relative;
+    height: 27px;
+    display: block;
+    overflow: hidden;
+    float: right;
+}
+
+#jqt .toggle-yes-no input[type="checkbox"] {
+    background: #fff url(./yes_no.png) 0 0 no-repeat;
+}
+
+.toggle-caption {
+	color: white;
+}
+
+
