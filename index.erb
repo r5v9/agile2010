@@ -80,7 +80,7 @@
 			</ul>
 			<ul>
 				<li style="color:#E0E0E0;">
-					I will attend <span class="toggle toggle-yes-no"><input type="checkbox" topic="<%=id%>"/></span>
+					I will attend <span class="toggle toggle-yes-no"><input type="checkbox" topic="<%=id%>" class="attend-slider"/></span>
 				</li>
 			</ul>
 			<div class="description">
@@ -115,7 +115,7 @@
 					end
 				%>
 				<li>
-					<a href="#<%=id%>"><%=topic['title']%></a>
+					<a href="#<%=id%>" class="topic-link"><%=topic['title']%></a>
 					<span class="speaker-title3">
 						<% topic_speakers = topic['speakers']==nil ? [] : topic['speakers'].split(',') %>
 						<%= topic_speakers.map { |speaker_id| speakers[speaker_id.strip]['name'] }.join(' and ')%>

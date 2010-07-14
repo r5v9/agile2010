@@ -1,5 +1,5 @@
 
-function Session(id, date, title) {
+function Session(id, date, title, author) {
 	this.id = id
 	this.date = date
 	this.title = title
@@ -33,9 +33,26 @@ function removeFromMySessions(id) {
 	 localStorage.removeItem(id)
 }
 
+function rebuildMySessions() {
+	listHtml = ''
+	lastDate = ''
+	sessions = getMySessions()
+	for (i in sessions) {
+		session = sessions[i]
+		if (lastDate != session.date) {
+			listHtml += '<li class="sep">' + session.date + '</li>'
+			lastDate = session.date
+		}
+		listHtml += '<li><a href="#' + session.id + '">' + session.title + '</a></li>'
+	}
+	$('#my-sessions > .edgetoedge').html(listHtml)
+}
 
 $(document).ready(function() {
 	
+	rebuildMySessions()
+	
+	// add/remove topic into/from local storage once slider changes and rebuild my sessions list
 	$('.toggle-yes-no input').click(function() {
 		id = $(this).attr('topic')
 		title = $("#" + id + ' .topic').attr('innerHTML')
@@ -46,20 +63,14 @@ $(document).ready(function() {
 		} else {
 			removeFromMySessions(id)
 		}
+		rebuildMySessions()
+	})
+		
+	// set the state for the slider based on what's saved in local storage
+	$('topic-link').click(function() {
+		id = $(this).attr(href).substring(1)
+		slider = $('#' + id + " .attend-slider")
+		slider.checked = isInMySessions(id)
 	})
 	
-	$('#my-sessions-link').click(function() {
-		listHtml = ''
-		lastDate = ''
-		sessions = getMySessions()
-		for (i in sessions) {
-			session = sessions[i]
-			if (lastDate != session.date) {
-				listHtml += '<li class="sep">' + session.date + '</li>'
-				lastDate = session.date
-			}
-			listHtml += '<li><a href="#' + session.id + '">' + session.title + '</a></li>'
-		}
-		$('#my-sessions > .edgetoedge').html(listHtml)
-	})
 })
