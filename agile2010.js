@@ -43,7 +43,7 @@ function rebuildMySessions() {
 			listHtml += '<li class="sep">' + session.date + '</li>'
 			lastDate = session.date
 		}
-		listHtml += '<li><a href="#' + session.id + '">' + session.title + '</a></li>'
+		listHtml += '<li><a href="#' + session.id + '" class="topic-link">' + session.title + '</a></li>'
 	}
 	$('#my-sessions > .edgetoedge').html(listHtml)
 }
