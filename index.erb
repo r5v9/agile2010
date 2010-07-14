@@ -63,16 +63,18 @@
 				<a class="button back" href="#">Back</a>
 			</div>
 			<div class="topic"><%=topic['title']%></div>
-			<ul class="speaker">
+			<%
+				topic_speakers = topic['speakers']==nil ? [] : topic['speakers'].split(',')
+			%>
+			<ul class="speaker" speakers="<%= topic_speakers.map { |speaker_id| speakers[speaker_id.strip]['name'] }.join(' and ')%>">
 				<%
-					topic_speakers = topic['speakers']==nil ? [] : topic['speakers'].split(',')
 					topic_speakers.each do |speaker_id|
 					speaker_id.strip!
 					speaker = speakers[speaker_id]
 				%>
-				<li class="arrow">
+				<li class="arrow" class="speaker-names">
 					<a href="#<%=speaker_id%>">
-						<span class="speaker-name"><%=speaker['name']%></span> <!-- fix for multiple speakers -->
+						<%=speaker['name']%>
 						<div class="speaker-title"><%=speaker['title']%></div>
 					</a>
 				</li>

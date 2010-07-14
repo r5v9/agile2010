@@ -1,9 +1,9 @@
 
-function Session(id, date, title, author) {
+function Session(id, date, title, speakers) {
 	this.id = id
 	this.date = date
 	this.title = title
-	this.author = author
+	this.speakers = speakers
 }
 
 function isInMySessions(id) {
@@ -44,8 +44,8 @@ function getMySessions() {
 	})
 }
 
-function addToMySessions(id, date, title, author) {
-	 localStorage.setItem(id, date + '|' + title + "|" + author)
+function addToMySessions(id, date, title, speakers) {
+	 localStorage.setItem(id, date + '|' + title + "|" + speakers)
 }
 
 function removeFromMySessions(id) {
@@ -62,7 +62,7 @@ function rebuildMySessions() {
 			listHtml += '<li class="sep">' + session.date + '</li>'
 			lastDate = session.date
 		}
-		listHtml += '<li><a href="#' + session.id + '" class="topic-link">' + session.title + '</a></li>'
+		listHtml += '<li><a href="#' + session.id + '" class="topic-link">' + session.title + '</a><span class="speaker-title3">' + session.speakers + '</span></li>'
 	}
 	$('#my-sessions > .edgetoedge').html(listHtml)
 }
@@ -76,9 +76,9 @@ $(document).ready(function() {
 		id = $(this).attr('topic')
 		title = $("#" + id + ' .topic').attr('innerHTML')
 		date = $("#" + id + ' .toolbar h1').attr('innerHTML')
-		author = $("#" + id + ' .speaker-name').attr('innerHTML')
+		speakers = $("#" + id + ' .speaker').attr('speakers')
 		if (this.checked) {
-			addToMySessions(id, date, title, author)
+			addToMySessions(id, date, title, speakers)
 		} else {
 			removeFromMySessions(id)
 		}
