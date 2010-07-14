@@ -85,11 +85,11 @@ $(document).ready(function() {
 		rebuildMySessions()
 	})
 		
-	// set the state for the slider based on what's saved in local storage
-	$('topic-link').click(function() {
-		id = $(this).attr(href).substring(1)
+	// set the state for the slider based on what's saved in local storage	
+	$('.topic-page').bind('pageAnimationStart', function() {
+		id = $(this).attr('id')
 		slider = $('#' + id + " .attend-slider")
-		slider.checked = isInMySessions(id)
+		slider.attr('checked', isInMySessions(id))
 	})
 	
 })
