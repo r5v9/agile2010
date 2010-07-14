@@ -10,6 +10,23 @@ function isInMySessions(id) {
 	return localStorage.getItem(id)!=null
 }
 
+function toDate(d) {
+	tokens = d.split(' ')
+	dayOfTheWeek = tokens[0]
+	timeAmPm = tokens[1]
+	time = timeAmPm.substring(0, timeAmPm.length-2)
+	if (/PM$/.test(timeAmPm)) {
+		timeTokens = time.split(':')
+		time =  '' + (parseInt(timeTokens[0])+ 12) + ':' + timeTokens[1]
+	}
+	if (dayOfTheWeek=='Wed') {
+		day = 'September 15, 2010'
+	} else {
+		day = 'September 16, 2010'
+	}
+	return new Date(day + ' ' + time)
+}
+
 function getMySessions() {
 	sessions = []
 	for (i=0; i<localStorage.length; i++) {
@@ -18,9 +35,11 @@ function getMySessions() {
 		tokens = session.split('|')
 		sessions.push(new Session(id, tokens[0], tokens[1], tokens[2]))
 	}
-	return sessions.sort(function(a,b) {
-		if (a.date < b.date) return -1
-		if (a.date > b.date) return 1
+	return sessions.sort(function(a,b) { 
+		da = toDate(a.date)
+		db = toDate(b.date)
+		if (da < db) return -1
+		if (da > db) return 1
 		return 0
 	})
 }
