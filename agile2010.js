@@ -82,6 +82,9 @@ $(document).ready(function() {
 		} else {
 			removeFromMySessions(id)
 		}
+	})
+	
+	$('#my-sessions').bind('pageAnimationStart', function() {
 		rebuildMySessions()
 	})
 		
