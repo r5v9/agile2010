@@ -116,4 +116,22 @@ div#jqt .toolbar > h1 {
 	color: white;
 }
 
+.tweet {
+	font-size: 11pt;
+	color: white;
+}
+
+.tweet-user {
+	margin-top: 5pt;
+	font-size: 10pt;
+	color: gray;
+}
+
+.tweet-profile-image {
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+
 

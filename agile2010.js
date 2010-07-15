@@ -67,9 +67,21 @@ function rebuildMySessions() {
 	$('#my-sessions > .edgetoedge').html(listHtml)
 }
 
+function requestTweetsJson() {
+	$.getScript("http://search.twitter.com/search.json?q=agile&rpp=10&callback=rebuildTweets")
+}
+
+function rebuildTweets(json) {
+	results = json['results']
+	postsHtml = ''
+	for(i in results) {
+		result = results[i]
+		postsHtml += '<li><img src="' + result['profile_image_url'] + '" class="tweet-profile-image"/><div class="tweet">' + result['text'] + '</div><div class="tweet-user">' + result['from_user'] + '</div></li>'
+	}
+	$('#twitter-feed').html('<ul class="edgetoedge">' + postsHtml + '</ul>')		
+}
+
 $(document).ready(function() {
-	
-	rebuildMySessions()
 	
 	// add/remove topic into/from local storage once slider changes and rebuild my sessions list
 	$('.toggle-yes-no input').click(function() {
@@ -83,16 +95,16 @@ $(document).ready(function() {
 			removeFromMySessions(id)
 		}
 	})
-	
-	$('#my-sessions').bind('pageAnimationStart', function() {
-		rebuildMySessions()
-	})
 		
 	// set the state for the slider based on what's saved in local storage	
 	$('.topic-page').bind('pageAnimationStart', function() {
 		id = $(this).attr('id')
 		slider = $('#' + id + " .attend-slider")
 		slider.attr('checked', isInMySessions(id))
+	})
+	
+	$('#twitter-link').click(function() {
+		requestTweetsJson()
 	})
 	
 })

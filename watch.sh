@@ -1,6 +1,6 @@
 #!/bin/sh
 
-files_to_watch="index.erb topics.yml speakers.yml"
+files_to_watch="build-html.rb index.erb topics.yml speakers.yml"
 
 old_timestamp=`ls -lT $files_to_watch`
 

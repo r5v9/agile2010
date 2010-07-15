@@ -142,6 +142,17 @@
 			</div>
 			<ul class="edgetoedge schedule">
 			</ul>
+		</div>		
+		
+		<!-- twitter -->
+		<div id="twitter" class="selectable">
+			<div class="toolbar">
+				<h1>Twitter #agileaus</h1>
+				<a class="button back" href="#">Back</a>
+			</div>
+			<div id="twitter-feed">
+				<center><img src="loader.gif"> loading </center>
+			</div>
 		</div>
 		
 		<!-- home -->
@@ -157,6 +168,9 @@
 				<% days.each do |day| %>
 				<li class="arrow"><a href="#<%=day[:full]%>"><%=day[:full]%></a></li>
 				<% end %>
+			</ul>
+			<ul class="rounded">
+				<li class="arrow"><a href="#twitter" id="twitter-link">Twitter</a></li>
 			</ul>
 		</div>	
 		
