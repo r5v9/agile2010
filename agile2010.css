@@ -124,6 +124,12 @@ div#jqt .toolbar > h1 {
 .tweet-user {
 	margin-top: 5pt;
 	font-size: 10pt;
+	color: lightgray;
+}
+
+.tweet-date {
+	margin-top: 5pt;
+	font-size: 10pt;
 	color: gray;
 }
 

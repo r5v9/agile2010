@@ -67,7 +67,47 @@ function rebuildMySessions() {
 	$('#my-sessions > .edgetoedge').html(listHtml)
 }
 
+function differentialTime(date) {
+	now = new Date()
+	diff = now - new Date(date)
+	millisecondsInDay = 24*60*60*1000
+	millisecondsInHour = 60*60*1000
+	millisecondsInMinute = 60*1000
+	days = 0;
+	hours = 0;
+	minutes = 0;
+	if (diff > millisecondsInDay) {
+		days = Math.floor(diff/millisecondsInDay)
+		diff = diff - days * millisecondsInDay
+	}
+	if (diff > millisecondsInHour) {
+		hours = Math.floor(diff/millisecondsInHour)
+		diff = diff - hours * millisecondsInHour
+	}
+	if (diff > millisecondsInMinute) {
+		minutes = Math.floor(diff/millisecondsInMinute)
+	}
+	var s=""
+	if (days>0) {
+		s = ", " + days + " day" + (days>1 ? "s" : "")
+	}
+	if (hours>0) {
+		s += ", " + hours + " hour" + (hours>1 ? "s" : "")
+	}	
+	if (minutes>0 && days==0) {
+		//s += ", " + minutes + " minutes" + (minutes>1 ? "s" : "")
+		s += ", " + minutes + " min"
+	}
+	if (s=="") {
+		s = "less than 1 minute ago"
+	} else {
+		s = s.substring(2) + " ago"
+	}
+	return s
+}
+
 function requestTweetsJson() {
+	$('#twitter-feed').html('<div style="text-align:center;"><img src="spinner.gif" align="center" width="31" height="31" style="margin-top:50px"></div>')
 	$.getScript("http://search.twitter.com/search.json?q=agile&rpp=10&callback=rebuildTweets")
 }
 
@@ -76,7 +116,8 @@ function rebuildTweets(json) {
 	postsHtml = ''
 	for(i in results) {
 		result = results[i]
-		postsHtml += '<li><img src="' + result['profile_image_url'] + '" class="tweet-profile-image"/><div class="tweet">' + result['text'] + '</div><div class="tweet-user">' + result['from_user'] + '</div></li>'
+		dateDiff = differentialTime(result['created_at'])
+		postsHtml += '<li><img src="' + result['profile_image_url'] + '" class="tweet-profile-image"/><div class="tweet">' + result['text'] + '</div><div><span class="tweet-user">' + result['from_user'] + '</span><span class="tweet-date">, ' + dateDiff + '</span></div></li>'
 	}
 	$('#twitter-feed').html('<ul class="edgetoedge">' + postsHtml + '</ul>')		
 }
@@ -101,10 +142,6 @@ $(document).ready(function() {
 		id = $(this).attr('id')
 		slider = $('#' + id + " .attend-slider")
 		slider.attr('checked', isInMySessions(id))
-	})
-	
-	$('#twitter-link').click(function() {
-		requestTweetsJson()
 	})
 	
 })

@@ -1879,9 +1879,9 @@
 			<div class="toolbar">
 				<h1>Twitter #agileaus</h1>
 				<a class="button back" href="#">Back</a>
+				<a class="button slideup" href="#" onclick="requestTweetsJson(); return false;">Reload</a>
 			</div>
 			<div id="twitter-feed">
-				<center><img src="loader.gif"> loading </center>
 			</div>
 		</div>
 		
@@ -1902,7 +1902,7 @@
 				
 			</ul>
 			<ul class="rounded">
-				<li class="arrow"><a href="#twitter" id="twitter-link">Twitter</a></li>
+				<li class="arrow"><a href="#twitter" id="twitter-link" onclick="requestTweetsJson()">Twitter</a></li>
 			</ul>
 		</div>	
 		
