@@ -144,4 +144,8 @@ $(document).ready(function() {
 		slider.attr('checked', isInMySessions(id))
 	})
 	
+	$('#my-sessions').bind('pageAnimationStart', function() {
+		rebuildMySessions()
+	})
+	
 })
