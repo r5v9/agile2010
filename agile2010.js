@@ -122,6 +122,38 @@ function rebuildTweets(json) {
 	$('#twitter-feed').html('<ul class="edgetoedge">' + postsHtml + '</ul>')		
 }
 
+function localiser() {
+    if ($("#map_canvas").html()) return;
+
+    if ((window.orientation == (-90)) || (window.orientation == (90))) {
+        var width = 520; var height = 285;
+        $('#map_canvas').css("width",width+"px");
+        $('#map_canvas').css("height",height+"px");
+        $('#map-overflow').css("width",(width-40)+"px");
+        $('#map-overflow').css("height",(height-10)+"px");
+    } else {
+        var width = 360; var height = 435;
+        $('#map_canvas').css("width",width+"px");
+        $('#map_canvas').css("height",height+"px");
+        $('#map-overflow').css("width",(width-40)+"px");
+        $('#map-overflow').css("height",(height-10)+"px");
+    }
+
+    var myLatlng = new google.maps.LatLng(-37.816526, 144.963763);
+    var myOptions = {
+      zoom: 15,
+      center: myLatlng,
+      disableDefaultUI: true,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Map'
+    });
+}
+
 $(document).ready(function() {
 	
 	// add/remove topic into/from local storage once slider changes and rebuild my sessions list
@@ -151,5 +183,32 @@ $(document).ready(function() {
 	$('#twitter').bind('pageAnimationStart', function() {
 		requestTweetsJson()
 	})
+	
+    $('body').bind('turn', function(event, info){
+        var curr = $(".current").attr("id");
+        switch (curr) {
+        case "map":
+          if (info.orientation == "landscape") {
+              var width = 520; var height = 285
+              $('#map_canvas').css("width",width+"px")
+              $('#map_canvas').css("height",height+"px")
+              $('#map-overflow').css("width",(width-40)+"px")
+              $('#map-overflow').css("height",(height-10)+"px")
+          } else {
+              var width = 360; var height = 435
+              $('#map_canvas').css("width",width+"px")
+              $('#map_canvas').css("height",height+"px")
+              $('#map-overflow').css("width",(width-40)+"px")
+              $('#map-overflow').css("height",(height-10)+"px")
+          }
+          break
+       }
+    })
+
+    $('#map').bind('pageAnimationEnd', function(event, info){
+        if (info.direction == 'in') {
+            localiser();
+        }
+    });
 	
 })

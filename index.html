@@ -10,7 +10,8 @@
 
 	 <script src="jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	 <script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
-	 <script src="agile2010.js" type="application/x-javascript" charset="utf-8"></script>
+     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+     <script src="agile2010.js" type="application/x-javascript" charset="utf-8"></script>
 
 	 <script type="text/javascript" charset="utf-8">
 		 var jQT = new $.jQTouch({
@@ -27,7 +28,6 @@
 				 'themes/jqt/img/loading.gif',
 				 'yes_no.png',
 				 'spinner.gif'
-				
 			]
 		 })
 	</script>
@@ -1887,6 +1887,20 @@
 			</div>
 		</div>
 		
+		<!-- map -->
+		<div id="map" class="notransform">
+            <div class="toolbar">
+                <h1>Map</h1>
+                <a href="#" class="back">Back</a>
+            </div>
+            <div id="map-container" class="notransform">
+                <div id="map_text">ThoughtWorks<br/> 303 Collins Street, Melbourne VIC 3000</div>
+                <div id="map-overflow" style="overflow: hidden; padding: 0; border: 0;" class="notransform">
+                    <div id="map_canvas" style="margin-left: -20px; margin-top: -20px;" class="notransform"></div>
+                </div>
+            </div>
+        </div>
+		
 		<!-- home -->
 		<div id="home" class="current">
 			<div class="toolbar">
@@ -1905,6 +1919,9 @@
 			</ul>
 			<ul class="rounded">
 				<li class="arrow"><a href="#twitter">Twitter</a></li>
+			</ul>			
+			<ul class="rounded">
+				<li class="arrow"><a href="#map">Map</a></li>
 			</ul>
 		</div>	
 		
