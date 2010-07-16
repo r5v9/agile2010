@@ -147,5 +147,9 @@ $(document).ready(function() {
 	$('#my-sessions').bind('pageAnimationStart', function() {
 		rebuildMySessions()
 	})
+
+	$('#twitter').bind('pageAnimationStart', function() {
+		requestTweetsJson()
+	})
 	
 })
