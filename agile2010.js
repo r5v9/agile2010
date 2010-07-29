@@ -139,19 +139,34 @@ function localiser() {
         $('#map-overflow').css("height",(height-10)+"px");
     }
 
-    var myLatlng = new google.maps.LatLng(-37.816526, 144.963763);
+    var myLatLong = new google.maps.LatLng(-37.816526, 144.963763);
     var myOptions = {
       zoom: 15,
-      center: myLatlng,
+      center: new google.maps.LatLng(-37.81843, 144.96009),
       disableDefaultUI: true,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+	addMarkerToMap(map, new google.maps.LatLng(-37.816526, 144.963763), 'After Party Venue', 'ThoughtWorks, 303 Collins St, Melbourne', 'http://www.thoughtworks.com.au/');
+	addMarkerToMap(map, new google.maps.LatLng(-37.824332, 144.956869), 'Conference Venue', 'Crown Towers, 8 Whiteman St, Southbank', 'http://www.crowntowers.com.au/');
+}
+
+function addMarkerToMap(map, latLong, title, content, link) {
     var marker = new google.maps.Marker({
-      position: myLatlng,
+      position: latLong,
       map: map,
-      title: 'Map'
+      title: title
     });
+	var infoWindow = new google.maps.InfoWindow({
+		maxWidth: 10,
+		position: latLong,
+		content: '<div class="infobubble"><h3>'+ title + '</h3><p>' + content + '</p><p><a href="' + link + '">More information</a></div>',
+		pixelOffset: new google.maps.Size(0,-30),
+		disableAutoPan: true
+	});
+	google.maps.event.addListener(marker, "click", function() {
+		infoWindow.open(map);
+	}); 
 }
 
 $(document).ready(function() {
