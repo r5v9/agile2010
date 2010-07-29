@@ -180,3 +180,23 @@ body.landscape #map_canvas {
     margin-bottom: 5px;
     background-color: #FFF;
 }
+
+a {
+	text-style: italic;
+}
+
+a:link { 
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+a:active { 
+  color: white;
+}
