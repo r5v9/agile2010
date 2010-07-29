@@ -157,7 +157,7 @@ function addMarkerToMap(map, latLong, title, content, link) {
       title: title
     });
 	google.maps.event.addListener(marker, "click", function() {
-		$('#map_text').html('<h3>'+ title + '</h3><p>' + content + '</p><p><a href="' + link + '">More information</a></div>')
+		$('#map_text').html('<h3>'+ title + '</h3><p>' + content + '</p><p><a href="' + link + '" target="_blank">More information</a></div>')
 	}); 
 }
 
