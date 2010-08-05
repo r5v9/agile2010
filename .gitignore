@@ -2,3 +2,5 @@
 .idea
 phonegap-iphone/build
 phonegap-iphone/www
+phonegap-iphone/phonegap-iphone.xcodeproj/*.mode1v3
+phonegap-iphone/phonegap-iphone.xcodeproj/*.pbxuser

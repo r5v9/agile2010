@@ -58,7 +58,6 @@ ul.segmented li a{
    position:              relative;
 }
 
-ul.segmented li a:hover,
 ul.segmented li a.selected {
    background-color:      #528CE7; /* For V2.2.1 */
    background:            -webkit-gradient(linear, 0% 0%, 0% 100%, from(#336ed2), to(#70aafc));
