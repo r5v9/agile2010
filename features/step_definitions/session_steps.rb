@@ -1,10 +1,10 @@
 
 Given /I open the app/ do
-  @browser = Watir::Browser.new
-  @browser.goto "#{Dir.getwd}/index.html"
+  $browser.goto "#{Dir.getwd}/index.html"
 end
 
 When /the home page appears/ do
+  $browser.title.should == "Agile 2010"
 end
 
 Then /I should see (\w+) selected/ do |schedule_day|
