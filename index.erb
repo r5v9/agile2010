@@ -37,9 +37,8 @@
 
 <body>
 	<div id="jqt">
-		
 		<!-- speakers -->
-		<% 
+		<%
 			speakers.each_key do |id| 
 			speaker = speakers[id] 
 		%>
@@ -61,7 +60,7 @@
 			topics.each_key do |id|
 			topic = topics[id]
 		%>
-		<div id="<%=id%>" class="topic-page">
+		<div id="<%=id%>" class="uses_local_data">
 			<div class="toolbar">
 				<h1><%=topic['date']%></h1>
 				<a class="button back" href="#">Back</a>
@@ -97,14 +96,21 @@
 		
 		<!-- schedules -->
 		<%
-			days = [ {:full => "Wednesday", :short => "Wed"}, {:full => "Thursday", :short => "Thu"} ]
+			days = [ {:full => "Wednesday", :short => "Wed", :class => "current"}, {:full => "Thursday", :short => "Thu"} ]
 			days.each do |day|
 		%>
-		<div id="<%=day[:full]%>" class="selectable">
+		<div id="<%=day[:full]%>" class="selectable uses_local_data <%=day[:class]%>">
 			<div class="toolbar">
-				<h1><%=day[:full]%></h1>
-				<a class="button back" href="#">Back</a>
+				<div class="toolbar">
+                    <h1>Agile 2010</h1>
+                    <a class="button slideup" id="infoButton" href="#about">About</a>
+			    </div>
 			</div>
+            <div class="info">
+              <% days.each do |day_button_header|%>
+                <a style="position:relative;" class="button swap <%=day==day_button_header ? "custom_active" : ""%>" href="#<%=day_button_header[:full]%>"><%=day_button_header[:full]%></a>
+              <%end%>
+            </div>
 			<ul class="edgetoedge schedule">
 				<%
 					previous_date = ''
@@ -126,6 +132,7 @@
 						<% topic_speakers = topic['speakers']==nil ? [] : topic['speakers'].split(',') %>
 						<%= topic_speakers.map { |speaker_id| speakers[speaker_id.strip]['name'] }.join(' and ')%>
 					</span>
+                    <span class="toggle toggle-yes-no"><input type="checkbox" topic="<%=id%>" class="attend-slider"/></span>
 				</li>
 				<% end %>
 			</ul>
@@ -134,7 +141,7 @@
 		
 		<!-- about -->
 		<div id="about" class="selectable">
-			<p>About Agile 201022</p>
+			<p>About Agile 2010</p>
 			<p><br/><br/><a href="#" class="grayButton goback">Close</a></p>
 		</div>
 
@@ -181,29 +188,7 @@
             </div>
 			<img src="floorplan.jpg"/>
         </div>
-		
-		<!-- home -->
-		<div id="home" class="current">
-			<div class="toolbar">
-				<h1>Agile 2010</h1>
-				<a class="button slideup" id="infoButton" href="#about">About</a>
-			</div>
-			<ul class="rounded">
-				<li class="arrow"><a href="#my-sessions" id="my-sessions-link">My Sessions</a></li>
-			</ul>
-			<ul class="rounded">
-				<% days.each do |day| %>
-				<li class="arrow"><a href="#<%=day[:full]%>"><%=day[:full]%></a></li>
-				<% end %>
-			</ul>
-			<ul class="rounded">
-				<li class="arrow"><a href="#twitter">Twitter</a></li>
-			</ul>			
-			<ul class="rounded">
-				<li class="arrow"><a href="#map">Map</a></li>
-				<li class="arrow"><a href="#floorplan">Conference Floor Plan</a></li>
-			</ul>
-		</div>	
-		
+
 	</div>
 </body>
+</html>
