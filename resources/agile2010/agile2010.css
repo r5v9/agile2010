@@ -109,7 +109,7 @@ div#jqt .toolbar > h1 {
 }
 
 #jqt .toggle-yes-no input[type="checkbox"] {
-    background: #fff url(./yes_no.png) 0 0 no-repeat;
+    background: #fff url(../yes_no.png) 0 0 no-repeat;
 }
 
 .toggle-caption {

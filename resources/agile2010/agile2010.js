@@ -51,7 +51,7 @@ function differentialTime(date) {
 }
 
 function requestTweetsJson() {
-	$('#twitter-feed').html('<div style="text-align:center;"><img src="spinner.gif" align="center" width="31" height="31" style="margin-top:50px"></div>')
+	$('#twitter-feed').html('<div style="text-align:center;"><img src="themes/jqt/img/loading.gif" align="center" width="31" height="31" style="margin-top:50px"></div>')
 	$.getScript("http://search.twitter.com/search.json?q=agile&rpp=10&callback=rebuildTweets")
 }
 

@@ -3,6 +3,7 @@
 require 'yaml'
 require 'erb'
 require 'time'
+require 'fileutils'
 
 class Main
 
@@ -18,9 +19,9 @@ class Main
     b = binding
     template = ERB.new(File.read('index.erb'))
 
-    f= File.new('index.html', 'w')
-    f.puts template.result(b)
-    f.close
+    index_file = File.new('index.html', 'w')
+    index_file.puts template.result(b)
+    index_file.close
   end
   
   def topic_keys_sorted(topics, day)
@@ -46,10 +47,15 @@ class Main
     return valid
   end
 
+  def build_iphone_app
+    FileUtils.cp_r(%w(index.html resources/ jqtouch/ themes/), 'phonegap-iphone/www')
+  end
+
 end
 
 if __FILE__ == $0
   main = Main.new
   main.build_html
+  main.build_iphone_app
 end
 

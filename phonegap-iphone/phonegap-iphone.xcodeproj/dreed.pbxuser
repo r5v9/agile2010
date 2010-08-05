@@ -1,0 +1,250 @@
+// !$*UTF8*$!
+{
+	03F4EB17120A7477003EDCAF /* phonegap-iphone */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "phonegap-iphone";
+		sourceDirectories = (
+		);
+	};
+	03F4EB39120A7492003EDCAF /* index.html */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.html;
+		name = index.html;
+		path = "/Users/dreed/work/projects/tw/agile2010/phonegap-iphone/www/index.html";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {666, 28056}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 972}";
+		};
+	};
+	03F4EB3D120A7492003EDCAF /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	03F4EB3E120A7492003EDCAF /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	03F4EBAF120A7C28003EDCAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03F4EB39120A7492003EDCAF /* index.html */;
+		name = "index.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 972;
+		vrLoc = 0;
+	};
+	03F4EBB2120A7C28003EDCAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03F4EB39120A7492003EDCAF /* index.html */;
+		name = "index.html: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 972;
+		vrLoc = 0;
+	};
+	03F4EC0C120A829A003EDCAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* phonegap_iphoneAppDelegate.h */;
+		name = "phonegap_iphoneAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 282;
+		vrLoc = 0;
+	};
+	03F4EC0D120A829A003EDCAF /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 1D3623250D0F684500981E51 /* phonegap_iphoneAppDelegate.m */;
+	};
+	03F4EC0E120A829A003EDCAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* phonegap_iphoneAppDelegate.h */;
+		name = "phonegap_iphoneAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 282;
+		vrLoc = 0;
+	};
+	03F4EC26120A8767003EDCAF /* Camera.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = Camera.m;
+		path = /Users/dreed/Documents/PhoneGapLib/Classes/Camera.m;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1074, 2170}}";
+			sepNavSelRange = "{4937, 12}";
+			sepNavVisRange = "{1114, 1211}";
+		};
+	};
+	03F4EC27120A8767003EDCAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03F4EC26120A8767003EDCAF /* Camera.m */;
+		rLen = 12;
+		rLoc = 4937;
+		rType = 0;
+	};
+	03F4EC30120A8F57003EDCAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* phonegap_iphoneAppDelegate.m */;
+		name = "phonegap_iphoneAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 507;
+		vrLoc = 0;
+	};
+	03F4EC31120A8F57003EDCAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03F4EC32120A8F57003EDCAF /* Camera.m */;
+		name = "Camera.m: 136";
+		rLen = 12;
+		rLoc = 4937;
+		rType = 0;
+		vrLen = 1266;
+		vrLoc = 1114;
+	};
+	03F4EC32120A8F57003EDCAF /* Camera.m */ = {
+		isa = PBXFileReference;
+		name = Camera.m;
+		path = /Users/dreed/Documents/PhoneGapLib/Classes/Camera.m;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1074, 2254}}";
+			sepNavSelRange = "{4937, 12}";
+			sepNavVisRange = "{4833, 148}";
+			sepNavWindowFrame = "{{682, 207}, {750, 558}}";
+		};
+	};
+	1D3623240D0F684500981E51 /* phonegap_iphoneAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 253}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 282}";
+		};
+	};
+	1D3623250D0F684500981E51 /* phonegap_iphoneAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {809, 1204}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 507}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* phonegap-iphone */ = {
+		activeExec = 0;
+		executables = (
+			03F4EB17120A7477003EDCAF /* phonegap-iphone */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 03F4EB17120A7477003EDCAF /* phonegap-iphone */;
+		activeSDKPreference = iphonesimulator3.1;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* phonegap-iphone */;
+		codeSenseManager = 03F4EB3E120A7492003EDCAF /* Code sense */;
+		executables = (
+			03F4EB17120A7477003EDCAF /* phonegap-iphone */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					732,
+					89,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					229,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					631,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 302676967;
+			PBXWorkspaceStateSaveDate = 302676967;
+		};
+		perUserProjectItems = {
+			03F4EBAF120A7C28003EDCAF /* PBXTextBookmark */ = 03F4EBAF120A7C28003EDCAF /* PBXTextBookmark */;
+			03F4EBB2120A7C28003EDCAF /* PBXTextBookmark */ = 03F4EBB2120A7C28003EDCAF /* PBXTextBookmark */;
+			03F4EC0C120A829A003EDCAF /* PBXTextBookmark */ = 03F4EC0C120A829A003EDCAF /* PBXTextBookmark */;
+			03F4EC0D120A829A003EDCAF /* PBXBookmark */ = 03F4EC0D120A829A003EDCAF /* PBXBookmark */;
+			03F4EC0E120A829A003EDCAF /* PBXTextBookmark */ = 03F4EC0E120A829A003EDCAF /* PBXTextBookmark */;
+			03F4EC27120A8767003EDCAF /* PBXTextBookmark */ = 03F4EC27120A8767003EDCAF /* PBXTextBookmark */;
+			03F4EC30120A8F57003EDCAF /* PBXTextBookmark */ = 03F4EC30120A8F57003EDCAF /* PBXTextBookmark */;
+			03F4EC31120A8F57003EDCAF /* PBXTextBookmark */ = 03F4EC31120A8F57003EDCAF /* PBXTextBookmark */;
+		};
+		sourceControlManager = 03F4EB3D120A7492003EDCAF /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 430}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 393}";
+			sepNavWindowFrame = "{{38, 294}, {750, 558}}";
+		};
+	};
+}

@@ -1,2 +1,4 @@
 .DS_Store
 .idea
+phonegap-iphone/build
+phonegap-iphone/www
