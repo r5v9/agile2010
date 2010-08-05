@@ -6,8 +6,9 @@
 	 <title>Agile 2010</title>
 
 	 <style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
-	 <style type="text/css" media="screen">@import "themes/jqt/theme.css";</style>
-	 <style type="text/css" media="screen">@import "agile2010.css";</style>
+     <style type="text/css" media="screen">@import "jqtouch/SegmentedMenu.css";</style>
+     <style type="text/css" media="screen">@import "themes/jqt/theme.css";</style>
+     <style type="text/css" media="screen">@import "agile2010.css";</style>
 
 	 <script src="jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	 <script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
@@ -106,11 +107,9 @@
                     <a class="button slideup" id="infoButton" href="#about">About</a>
 			    </div>
 			</div>
-            <div class="info">
-              <% days.each do |day_button_header|%>
-                <a style="position:relative;" class="button swap <%=day==day_button_header ? "custom_active" : ""%>" href="#<%=day_button_header[:full]%>"><%=day_button_header[:full]%></a>
-              <%end%>
-            </div>
+            <ul class="segmented two">
+              <% days.each do |day_button_header|%><li><a class="<%=day==day_button_header ? "selected" : ""%>" href="#<%=day_button_header[:full]%>"><%=day_button_header[:full]%></a></li><%end%>
+            </ul>
 			<ul class="edgetoedge schedule">
 				<%
 					previous_date = ''

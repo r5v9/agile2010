@@ -6,8 +6,9 @@
 	 <title>Agile 2010</title>
 
 	 <style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
-	 <style type="text/css" media="screen">@import "themes/jqt/theme.css";</style>
-	 <style type="text/css" media="screen">@import "agile2010.css";</style>
+     <style type="text/css" media="screen">@import "jqtouch/SegmentedMenu.css";</style>
+     <style type="text/css" media="screen">@import "themes/jqt/theme.css";</style>
+     <style type="text/css" media="screen">@import "agile2010.css";</style>
 
 	 <script src="jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	 <script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
@@ -1515,13 +1516,9 @@
                     <a class="button slideup" id="infoButton" href="#about">About</a>
 			    </div>
 			</div>
-            <div class="info">
-              
-                <a style="position:relative;" class="button swap custom_active" href="#Wednesday">Wednesday</a>
-              
-                <a style="position:relative;" class="button swap " href="#Thursday">Thursday</a>
-              
-            </div>
+            <ul class="segmented two">
+              <li><a class="selected" href="#Wednesday">Wednesday</a></li><li><a class="" href="#Thursday">Thursday</a></li>
+            </ul>
 			<ul class="edgetoedge schedule">
 				
 				
@@ -1758,13 +1755,9 @@
                     <a class="button slideup" id="infoButton" href="#about">About</a>
 			    </div>
 			</div>
-            <div class="info">
-              
-                <a style="position:relative;" class="button swap " href="#Wednesday">Wednesday</a>
-              
-                <a style="position:relative;" class="button swap custom_active" href="#Thursday">Thursday</a>
-              
-            </div>
+            <ul class="segmented two">
+              <li><a class="" href="#Wednesday">Wednesday</a></li><li><a class="selected" href="#Thursday">Thursday</a></li>
+            </ul>
 			<ul class="edgetoedge schedule">
 				
 				
