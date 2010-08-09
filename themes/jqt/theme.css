@@ -1,9 +1,9 @@
 body {
-    background: #FFF;
+    background: #000;
     color: #ddd;
 }
 div#jqt > * {
-    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#5e5e65)); */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#5e5e65));
 }
 #jqt h1, #jqt h2 {
     font: bold 18px "Helvetica Neue", Helvetica;
@@ -13,10 +13,12 @@ div#jqt > * {
 }
 /* @group Toolbar */
 #jqt .toolbar {
-	-webkit-box-sizing: border-box;
-	height: 57px;
-	position: relative;
-	background-image: url(img/header_bg.png);
+    -webkit-box-sizing: border-box;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    height: 45px;
+    background: url(img/toolbar.png) #000000 repeat-x;
+    position: relative;
 }
 #jqt .black-translucent .toolbar {
 	margin-top: 20px;
@@ -65,7 +67,7 @@ div#jqt.landscape .toolbar > h1 {
     -webkit-border-image: url(img/button.png) 0 5 0 5;
 }
 #jqt .button.active, #jqt .cancel.active, #jqt .add.active, #jqt .back.active {
-    /* -webkit-border-image: url(img/button_clicked.png) 0 5 0 5; */
+    -webkit-border-image: url(img/button_clicked.png) 0 5 0 5;
     color: #aaa;
 }
 #jqt .blueButton {
@@ -136,6 +138,7 @@ div#jqt.landscape .toolbar > h1 {
 }
 #jqt ul {
     color: #aaa;
+    border: 1px solid #333333;
     font: bold 18px "Helvetica Neue", Helvetica;
     padding: 0;
     margin: 15px 10px 17px 10px;
@@ -154,14 +157,16 @@ div#jqt.landscape .toolbar > h1 {
     -webkit-border-bottom-right-radius: 8px;
 }
 #jqt ul li {
-    /*color: #666;*/
+    color: #666;
+    border-top: 1px solid #333;
+    border-bottom: #555858;
     list-style-type: none;
     padding: 10px 10px 10px 10px;
-    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
     overflow: hidden;
 }
 #jqt ul li.arrow {
-    /background-image: url(img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
+    background-image: url(img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
     background-position: right center;
     background-repeat: no-repeat;
 }
@@ -177,7 +182,7 @@ div#jqt.landscape .toolbar > h1 {
 }
 /* universal links on list */
 #jqt ul li a, #jqt li.img a + a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -186,7 +191,7 @@ div#jqt.landscape .toolbar > h1 {
     padding: 12px 10px 12px 10px;
     margin: -10px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    /*text-shadow: rgba(0,0,0,.2) 0 1px 1px;*/
+    text-shadow: rgba(0,0,0,.2) 0 1px 1px;
 }
 #jqt ul li a.active, #jqt ul li a.button {
     background-color: #53b401;
@@ -275,7 +280,7 @@ div#jqt.landscape .toolbar > h1 {
 #jqt ul li textarea,
 #jqt ul li select {
     color: #777;
-   /background: transparent url('data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='); 
+    background: transparent url('data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
     border: 0;
     font: normal 17px "Helvetica Neue", Helvetica;
     padding: 0;
@@ -352,7 +357,7 @@ div#jqt.landscape .toolbar > h1 {
     -webkit-box-shadow: none;
 }
 #jqt ul.individual li {
-     background: #4c4d4e; 
+    background: #4c4d4e;
     border: 1px solid #333;
     font-size: 14px;
     text-align: center;
@@ -363,7 +368,7 @@ div#jqt.landscape .toolbar > h1 {
     display: block;
     padding: 11px 10px 14px 10px;
     -webkit-box-shadow: rgba(0,0,0,.2) 1px 1px 3px;
-    /background: (linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142)); 
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
 }
 #jqt ul.individual li + li {
     float: right;
@@ -407,7 +412,7 @@ div#jqt.landscape .toolbar > h1 {
 /* @end */
 /* @group Info */
 #jqt .info {
-     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ccc), to(#aaa), color-stop(.6,#CCCCCC)); 
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ccc), to(#aaa), color-stop(.6,#CCCCCC));
     font-size: 12px;
     line-height: 16px;
     text-align: center;
@@ -425,22 +430,21 @@ div#jqt.landscape .toolbar > h1 {
     padding: 0;
 }
 #jqt ul.edgetoedge li {
-    background-color:#E0E0E0;
-	/*border-color:#4A4B4D #4A4B4D #000000;*/
-	border-style:solid;
-	border-width:1px;
-	font-size:20px;
-	margin:12px;
-	-webkit-border-radius: 8px;
-	
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1e1f21), to(#272729));
+    border-bottom: 2px solid #000;
+    border-top: 1px solid #4a4b4d;
+    font-size: 20px;
+    margin-bottom: -1px;
 }
 #jqt ul.edgetoedge li.sep {
-    /* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,.5))); */
-    border: 0px;
-    color: #CC0000;
-    font-size: 12px;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,.5)));
+    border-bottom: 1px solid #111113;
+    border-top: 1px solid #666;
+    color: #3e9ac3;
+    font-size: 16px;
+    margin: 1px 0 0 0;
     padding: 2px 10px;
-	background-color: #FFF;
+    text-shadow: #000 0 1px 0;
 }
 #jqt ul.edgetoedge li em {
     font-weight: normal;
@@ -517,7 +521,7 @@ div#jqt.landscape .toolbar > h1 {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #666;
     font-size: 26px;
-    background:  (linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1))); 
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1)));
 }
 #jqt ul.metal li a {
     line-height: 26px;
@@ -546,7 +550,7 @@ div#jqt.landscape .toolbar > h1 {
     background-image: url(img/chevron.png);
     background-position: right center;
     background-repeat: no-repeat;
-   background-image: url(img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1)));
+    background-image: url(img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1)));
     background-repeat: no-repeat;
     background-position: right center;
 }
