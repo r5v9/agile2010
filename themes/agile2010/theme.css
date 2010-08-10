@@ -99,17 +99,8 @@ div#jqt .toolbar > h1 {
     text-align: center;
 }
 
-#jqt .toggle-yes-no {
-    width: 94px;
-    position: relative;
-    height: 27px;
-    display: block;
-    overflow: hidden;
-    float: right;
-}
-
-#jqt .toggle-yes-no input[type="checkbox"] {
-    background: #fff url(img/yes_no.png) 0 0 no-repeat;
+#jqt .toggle.yes-no input[type="checkbox"] {
+    background-image: url(img/yes_no.png);
 }
 
 .toggle-caption {
