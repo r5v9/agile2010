@@ -42,7 +42,7 @@ div#jqt .toolbar > h1 {
 
 .speaker-title {
     font-style: italic;
-    font-weight: none;
+    font-weight: normal;
     font-size: 10pt;
     color: gray;
     margin-top: 3px;
@@ -51,7 +51,7 @@ div#jqt .toolbar > h1 {
 
 .speaker-title2 {
     font-style: italic;
-    font-weight: none;
+    font-weight: normal;
     font-size: 12pt;
     color: gray;
     margin-top: 3px;
@@ -211,9 +211,7 @@ body {
     background: #FFF;
     color: #ddd;
 }
-div#jqt > * {
-    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#5e5e65)); */
-}
+
 #jqt h1, #jqt h2 {
     font: bold 18px "Helvetica Neue", Helvetica;
     text-shadow: rgba(255,255,255,.2) 0 1px 1px;
@@ -274,7 +272,6 @@ div#jqt.landscape .toolbar > h1 {
     -webkit-border-image: url(img/button.png) 0 5 0 5;
 }
 #jqt .button.active, #jqt .cancel.active, #jqt .add.active, #jqt .back.active {
-    /* -webkit-border-image: url(img/button_clicked.png) 0 5 0 5; */
     color: #aaa;
 }
 #jqt .blueButton {
@@ -337,7 +334,6 @@ div#jqt.landscape .toolbar > h1 {
     color: #FFFFFF;
 }
 
-
 /* @end */
 /* @group Lists */
 #jqt h1 + ul, #jqt h2 + ul, #jqt h3 + ul, #jqt h4 + ul, #jqt h5 + ul, #jqt h6 + ul {
@@ -363,14 +359,12 @@ div#jqt.landscape .toolbar > h1 {
     -webkit-border-bottom-right-radius: 8px;
 }
 #jqt ul li {
-    /*color: #666;*/
     list-style-type: none;
     padding: 10px 10px 10px 10px;
-    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));*/
     overflow: hidden;
 }
 #jqt ul li.arrow {
-    /background-image: url(img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
+    background-image: url(img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
     background-position: right center;
     background-repeat: no-repeat;
 }
@@ -395,10 +389,8 @@ div#jqt.landscape .toolbar > h1 {
     padding: 12px 10px 12px 10px;
     margin: -10px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    /*text-shadow: rgba(0,0,0,.2) 0 1px 1px;*/
 }
 #jqt ul li a.active, #jqt ul li a.button {
-    background-color: #53b401;
     color: #fff;
 }
 #jqt ul li a.active.loading {
@@ -484,7 +476,7 @@ div#jqt.landscape .toolbar > h1 {
 #jqt ul li textarea,
 #jqt ul li select {
     color: #777;
-   /background: transparent url('data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+    background: transparent url('data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
     border: 0;
     font: normal 17px "Helvetica Neue", Helvetica;
     padding: 0;
@@ -635,7 +627,6 @@ div#jqt.landscape .toolbar > h1 {
 }
 #jqt ul.edgetoedge li {
     background-color:#E0E0E0;
-	/*border-color:#4A4B4D #4A4B4D #000000;*/
 	border-style:solid;
 	border-width:1px;
 	font-size:20px;
@@ -644,7 +635,6 @@ div#jqt.landscape .toolbar > h1 {
 
 }
 #jqt ul.edgetoedge li.sep {
-    /* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,.5))); */
     border: 0px;
     color: #CC0000;
     font-size: 12px;
@@ -755,9 +745,6 @@ div#jqt.landscape .toolbar > h1 {
     background-image: url(img/chevron.png);
     background-position: right center;
     background-repeat: no-repeat;
-   background-image: url(img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1)));
-    background-repeat: no-repeat;
-    background-position: right center;
 }
 #jqt ul.metal li.arrow a small {
     padding-right: 15px;

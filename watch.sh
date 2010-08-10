@@ -1,6 +1,6 @@
 #!/bin/sh
 
-files_to_watch="build-html.rb index.erb topics.yml speakers.yml jqtouch/*.* jqtouch/extensions/*.* jqtouch/extensions/*/*.* themes/*/*.* themes/*/img/*.*"
+files_to_watch="build-html.rb index.erb topics.yml speakers.yml jqtouch/*.* jqtouch/extensions/*/*.* themes/*/*.* themes/*/img/*.*"
 
 while [ true ]; do
 	current_timestamp=`ls -lT $files_to_watch`

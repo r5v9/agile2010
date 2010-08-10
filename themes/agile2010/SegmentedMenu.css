@@ -25,7 +25,7 @@ ul.segmented li{
    text-align:            center;
    font-weight:           bold;
    background-color:      #e1e1e1; /* For V2.2.1 */
-   background:            -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fcfcfc), to(#c7c7c7));
+   background:            -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999999), to(#666666));
 
    -webkit-box-sizing:    border-box;
    -webkit-box-shadow:    rgba(255,255,255,0.8) 0px 1px 2px;
@@ -50,8 +50,8 @@ ul.segmented li:first-child a {
 }
 
 ul.segmented li a{
-   color:                 #777777;
-   text-shadow:           rgba(255,255,255,.8) 1px 1px 0px;
+   color:                 white !important;
+   text-shadow:           rgba(0,0,0,.8) 1px 1px 0px;
    text-decoration:       none;
    padding:               10px;
    display:               block;
@@ -60,9 +60,8 @@ ul.segmented li a{
 
 ul.segmented li a.selected {
    background-color:      #528CE7; /* For V2.2.1 */
-   background:            -webkit-gradient(linear, 0% 0%, 0% 100%, from(#336ed2), to(#70aafc));
+   background:            -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff6666), to(#cc3333));
    color:                 #eee;
-   text-shadow:           0px -1px 1px rgba(0, 0, 0, .4);
    overflow:              hidden;
 }
 ul.segmented li a.selected::before,
