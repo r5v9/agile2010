@@ -99,6 +99,10 @@ div#jqt .toolbar > h1 {
     text-align: center;
 }
 
+#jqt .toggle.go-skip input[type="checkbox"] {
+    background-image: url(img/go_skip.png);
+}
+
 #jqt .toggle.yes-no input[type="checkbox"] {
     background-image: url(img/yes_no.png);
 }

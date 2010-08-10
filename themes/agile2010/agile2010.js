@@ -116,7 +116,7 @@ $(window).load(function()
 $(document).ready(function() {
 
 	// add/remove topic into/from local storage once slider changes and rebuild my sessions list
-	$('.toggle-yes-no input').click(function() {
+	$('.toggle.yes-no input, .toggle.go-skip input').click(function() {
 		id = $(this).attr('topic')
 		if (this.checked) {
             addToMySessions(id)
