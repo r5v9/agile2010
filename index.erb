@@ -11,9 +11,10 @@
 
     <script src="jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
-    <script src="jqtouch/extensions/jqextensions/jqt.scrolling.js" type="application/x-javascript" charset="utf-8"></script>
+	<script src="jqtouch/extensions/jqextensions/jqt.scrolling.js" type="application/x-javascript" charset="utf-8"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script src="themes/agile2010/agile2010.js" type="application/x-javascript" charset="utf-8"></script>
+
 
     <script type="text/javascript" charset="utf-8">
         var jQT = new $.jQTouch({
@@ -32,123 +33,47 @@
                 'themes/agile2010/img/yes_no.png',
                 'themes/agile2010/floorplan.jpg'
             ]
-        })
+        });
     </script>
 </head>
 
 <body>
 <div id="jqt">
-    <!-- speakers -->
-    <%
-       speakers.each_key do |id|
-           speaker = speakers[id]
-    %>
-        <div id="<%= id %>">
-            <div class="toolbar">
-                <h1><%= speaker['name'] %></h1>
-                <a class="button back" href="#">Back</a>
-            </div>
-            <div class="speaker-info">
-                <img src="themes/agile2010/img/speakers/<%= id %>.gif" width="80" height="120" class="speaker-photo"/>
-
-                <div class="speaker-title2"><%= speaker['title'] %></div>
-                <%= speaker['description'] %>
-            </div>
-        </div>
-    <% end %>
-
-    <!-- topics -->
-    <%
-       topics.each_key do |id|
-           topic = topics[id]
-    %>
-        <div id="<%= id %>" class="uses_local_data">
-            <div class="toolbar">
-                <h1><%= topic['date'] %></h1>
-                <a class="button back" href="#">Back</a>
-            </div>
-            <div class="topic"><%= topic['title'] %></div>
-            <%
-               topic_speakers = topic['speakers']==nil ? [] : topic['speakers'].split(',')
-            %>
-            <ul class="speaker" speakers="<%= topic_speakers.map { |speaker_id| speakers[speaker_id.strip]['name'] }.join(' and ') %>">
-                <%
-                   topic_speakers.each do |speaker_id|
-                       speaker_id.strip!
-                       speaker = speakers[speaker_id]
-                %>
-                    <li class="arrow" class="speaker-names">
-                        <a href="#<%= speaker_id %>">
-                            <%= speaker['name'] %>
-                            <div class="speaker-title"><%= speaker['title'] %></div>
-                        </a>
-                    </li>
-                <% end %>
-            </ul>
-            <ul>
-                <li style="color:#E0E0E0;">
-                    I will attend
-                    <span class="toggle go-skip"><input type="checkbox" topic="<%= id %>" class="attend-slider"/></span>
-                </li>
-            </ul>
-            <div class="description">
-                <%= topic['description'] %>
-            </div>
-        </div>
-    <% end %>
-
     <!-- schedules -->
-    <%
-       days = [{:full => "Wednesday", :short => "Wed", :class => "current"}, {:full => "Thursday", :short => "Thu"}]
-       days.each do |day|
-    %>
-        <div id="<%= day[:full] %>" class="selectable uses_local_data <%= day[:class] %>">
-            <div class="toolbar">
-                <img src="themes/agile2010/img/toolbar_logo.png" />
-                <a href="#about" class="button slideup icon">Info</a>
-                <a href="#twitter" class="button swap  icon">Buzz</a>
-                <a href="#floorplan" class="button swap icon">Rooms</a>
-                <a href="#map" class="button swap icon">Where</a>
-            </div>
-            <ul class="segmented two">
-                <% days.each do |day_button_header| %><li><a class="dissolve <%= day==day_button_header ? "selected" : "" %>" href="#<%= day_button_header[:full] %>"><%= day_button_header[:full] %></a></li><% end %>
-            </ul>
-            <div class="vertical-scroll">
-                <div>
-                    <ul class="edgetoedge schedule">
-                        <%
-                           previous_date = ''
-                           topic_keys[day[:short]].each do |id|
-                               topic = topics[id]
-                        %>
-                            <%
-                               date = topic['date'][4..-1].strip
-                               if date!=previous_date
-                            %>
-                                <li class="sep"><%= date %></li>
-                            <%
-                               previous_date = date
-                               end
-                            %>
-                            <li>
-                                <a href="#<%= id %>" class="topic-link"><%= topic['title'] %></a>
-                                <span class="speaker-title3">
-                                    <% topic_speakers = topic['speakers']==nil ? [] : topic['speakers'].split(',') %>
-                                    <%= topic_speakers.map { |speaker_id| speakers[speaker_id.strip]['name'] }.join(' and ') %>
-                                </span>
-                                <span class="toggle go-skip"><input type="checkbox" topic="<%= id %>" class="attend-slider"/></span>
-                            </li>
-                        <% end %>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    <% end %>
+ 	<div id="Wednesday" class="selectable uses_local_data">
+		<div class="toolbar">
+			<img src="themes/agile2010/img/toolbar_logo.png" />
+            <a href="#about" class="button slideup icon">Info</a>
+            <a href="#twitter" class="button swap  icon">Buzz</a>
+            <a href="#floorplan" class="button swap icon">Rooms</a>
+            <a href="#map" class="button swap icon">Where</a>
+		</div>
+		<ul class="segmented two"></ul>
+		<div class="vertical-scroll">
+			<div>
+				<ul class="edgetoedge schedule"></ul>
+			</div>
+		</div>
+	</div>
+ 	<div id="Thursday" class="selectable uses_local_data">
+ 		<div class="toolbar">
+ 			<img src="themes/agile2010/img/toolbar_logo.png" />
+            <a href="#about" class="button slideup icon">Info</a>
+            <a href="#twitter" class="button swap  icon">Buzz</a>
+            <a href="#floorplan" class="button swap icon">Rooms</a>
+            <a href="#map" class="button swap icon">Where</a>
+ 		</div>
+		<ul class="segmented two"></ul>
+		<div class="vertical-scroll">
+			<div>
+				<ul class="edgetoedge schedule"></ul>
+			</div>
+		</div>
+ 	</div>
 
-    <!-- about -->
+	<!-- about -->
     <div id="about" class="selectable">
         <p>About Agile 2010</p>
-
         <p><br/><br/><a href="#" class="grayButton goback">Close</a></p>
     </div>
 
@@ -185,7 +110,7 @@
         </div>
         <img src="themes/agile2010/floorplan.jpg"/>
     </div>
-
 </div>
+
 </body>
 </html>
