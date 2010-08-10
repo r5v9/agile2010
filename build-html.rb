@@ -48,7 +48,7 @@ class Main
   end
 
   def build_iphone_app
-    FileUtils.cp_r(%w(index.html resources/ jqtouch/ themes/), 'phonegap-iphone/www')
+    FileUtils.cp_r(%w(index.html jqtouch/ themes/), 'phonegap-iphone/www')
   end
 
 end
