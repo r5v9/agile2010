@@ -212,6 +212,17 @@ function registerJQTHandlers() {
     });
 }
 
+function getLastModifiedRequestHeader(XMLHttpRequestObj) {
+    var headers = XMLHttpRequestObj.getAllResponseHeaders().split("\n");
+    for (var i = 0; i < headers.length; ++i) {
+        var header = headers[i];
+        if (header.indexOf("Last-Modified") != -1) {
+            return header.split(": ")[1];
+        }
+    }
+    return null;
+}
+
 function AgileConference() {
     this.days = [
         {'full': "Wednesday", 'shortName': "Wed", 'cssClass': "current"},
@@ -221,7 +232,52 @@ function AgileConference() {
     this.conferenceSessions = null;
 }
 
+AgileConference.prototype.shouldLoadSpeakerInfo = function() {
+    var shouldLoadInfo = true;
+    $.ajax({
+        type: 'HEAD',
+        url: 'http://samagile2010.appspot.com/speakersTimestamp',
+        dataType: 'text',
+        async: false,
+        timeout: 30000,
+        complete: function(XMLHttpRequestObj, data) {
+            var speakersTimestamp = getLastModifiedRequestHeader(XMLHttpRequestObj);
+            if (localStorage.getItem('speakersTimestamp') === speakersTimestamp) {
+                shouldLoadInfo = false;
+            } else {
+                localStorage.setItem('speakersTimestamp', speakersTimestamp);    
+            }
+        }
+    });
+    return shouldLoadInfo;
+};
+
+AgileConference.prototype.shouldLoadSessionInfo = function() {
+    var shouldLoadInfo = true;
+    $.ajax({
+        type: 'HEAD',
+        url: 'http://samagile2010.appspot.com/topicsTimestamp',
+        dataType: 'text',
+        async: false,
+        timeout: 30000,
+        complete: function(XMLHttpRequestObj, data) {
+            var sessionsTimestamp = getLastModifiedRequestHeader(XMLHttpRequestObj);
+            if (localStorage.getItem('sessionsTimestamp') === sessionsTimestamp) {
+                shouldLoadInfo = false;
+            } else {
+                localStorage.setItem('sessionsTimestamp', sessionsTimestamp);
+            }
+        }
+    });
+    return shouldLoadInfo;
+};
+
 AgileConference.prototype.loadSpeakerInfo = function() { 
+    if (!this.shouldLoadSpeakerInfo()) {
+        this.conferenceSpeakers = $.parseJSON(localStorage.getItem("speakers"));
+        return;
+    }
+    
     var conference = this;
     $.ajax({
         url: 'http://agileaustralia2010.appspot.com/speakers',
@@ -236,6 +292,11 @@ AgileConference.prototype.loadSpeakerInfo = function() {
 };
 
 AgileConference.prototype.loadSessionInfo = function() {
+    if (!this.shouldLoadSessionInfo()) {
+        this.conferenceSessions = $.parseJSON(localStorage.getItem("sessions"));
+        return;
+    }
+    
     var conference = this;
     $.ajax({
         url: 'http://agileaustralia2010.appspot.com/topics',
@@ -304,14 +365,9 @@ ConferenceDOMBuilder.prototype.updateSessionsDOM = function() {
 
 ConferenceDOMBuilder.prototype.updateDayMenu = function(day, dayDiv) {
     var dayList = $('.segmented', dayDiv);
-    var numberOfDays = this.conference.days.length;
-    for (var dayIndex = 0; dayIndex < numberOfDays; ++dayIndex) {
+    for (var dayIndex = 0; dayIndex < this.conference.days.length; ++dayIndex) {
         var day_button_header = this.conference.days[dayIndex];
-        dayList.append($('<li style="width:'+ 100/numberOfDays +'%">'
-                + '<a class="dissolve '+(day == day_button_header ? "selected" : "")+'"'
-                + ' href="#'+day_button_header.full
-                + '">'
-                + day_button_header.full+'</a></li>'));
+        dayList.append($('<li><a class="dissolve '+(day == day_button_header ? "selected" : "")+'" href="#'+day_button_header.full+'">'+day_button_header.full+'</a></li>'));
     }
 };
 
