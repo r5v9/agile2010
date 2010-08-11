@@ -199,11 +199,17 @@ a:active {
 #jqt .toolbar a.button.icon {
     position: relative;
     float: right;
-    margin-left:4px;
-    width:28px;
-    font-size:8px;
-    text-align:center;
-    padding: 0 0;
+    height:auto;
+    top:0;
+    -webkit-border-image: none;
+    line-height: 0;
+    padding: 0;
+}
+
+.toolbar.bottom .logo {
+    float:left;
+    overflow: hidden;
+    line-height: 0;
 }
 
 /* @start "copy of jqt/themes.css" */
@@ -224,6 +230,9 @@ body {
 	height: 46px;
 	position: relative;
 	background-image: url(img/header_bg.png);
+}
+#jqt .toolbar.bottom {
+	background-image: url(img/footer_bg.png);
 }
 #jqt .black-translucent .toolbar {
 	margin-top: 20px;

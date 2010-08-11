@@ -10,7 +10,8 @@
    list-style:            none;
    text-align:            center;
    font-size:             1px;
-   margin:                2px 2px 2px 2px;
+   padding:               2px;
+   margin:                0px;
    -webkit-border-radius: 8px;
 }
 
