@@ -304,9 +304,14 @@ ConferenceDOMBuilder.prototype.updateSessionsDOM = function() {
 
 ConferenceDOMBuilder.prototype.updateDayMenu = function(day, dayDiv) {
     var dayList = $('.segmented', dayDiv);
-    for (var dayIndex = 0; dayIndex < this.conference.days.length; ++dayIndex) {
+    var numberOfDays = this.conference.days.length;
+    for (var dayIndex = 0; dayIndex < numberOfDays; ++dayIndex) {
         var day_button_header = this.conference.days[dayIndex];
-        dayList.append($('<li><a class="dissolve '+(day == day_button_header ? "selected" : "")+'" href="#'+day_button_header.full+'">'+day_button_header.full+'</a></li>'));
+        dayList.append($('<li style="width:'+ 100/numberOfDays +'%">'
+                + '<a class="dissolve '+(day == day_button_header ? "selected" : "")+'"'
+                + ' href="#'+day_button_header.full
+                + '">'
+                + day_button_header.full+'</a></li>'));
     }
 };
 
