@@ -4,13 +4,12 @@
 
 #jqt ul.segmented {
    border:                0px;
-   padding-bottom:        1px;
    background:            none;
    overflow:              hidden;
    list-style:            none;
    text-align:            center;
    font-size:             1px;
-   padding:               2px;
+   padding:               1px 1px 0 1px;
    margin:                0px;
    -webkit-border-radius: 8px;
 }
