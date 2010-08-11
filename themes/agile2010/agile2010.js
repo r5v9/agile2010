@@ -212,6 +212,25 @@ function registerJQTHandlers() {
     });
 }
 
+function getLastModifiedRequestHeader(XMLHttpRequestObj) {
+    var headers = XMLHttpRequestObj.getAllResponseHeaders().split("\n");
+    for (var i = 0; i < headers.length; ++i) {
+        var header = headers[i];
+        if (header.indexOf("Last-Modified") != -1) {
+            return header.split(": ")[1];
+        }
+    }
+    return null;
+}
+
+function buildDom(conference) {
+    var domBuilder = new ConferenceDOMBuilder(conference);
+    domBuilder.updateSpeakersDOM();
+    domBuilder.updateSessionsDOM();
+    domBuilder.updateIndexPageDOM();
+    registerJQTHandlers();       
+}
+
 function AgileConference() {
     this.days = [
         {'full': "Wednesday", 'shortName': "Wed", 'cssClass': "current"},
@@ -223,30 +242,44 @@ function AgileConference() {
 
 AgileConference.prototype.loadSpeakerInfo = function() {
     var conference = this;
-    $.ajax({
-        url: 'http://agileaustralia2010.appspot.com/speakers',
-        dataType: 'text',
-        async: false,
-        timeout: 30000,
-        success: function(speakersData) {
-            localStorage.setItem("speakers", speakersData);
-            conference.conferenceSpeakers = $.parseJSON(speakersData);
+    jQuery.getJSON('http://samagile2010.appspot.com/speakersTimestamp?callback=?',
+        function(speakersTimestamp) {
+            if (localStorage.getItem('speakersTimestamp') === speakersTimestamp['timestamp']) {
+                conference.conferenceSpeakers = $.parseJSON(localStorage.getItem('speakers'));
+                conference.loadSessionInfo();
+            } else {
+                localStorage.setItem('speakersTimestamp', speakersTimestamp['timestamp']);
+                $.getJSON('http://samagile2010.appspot.com/speakers?callback=?',
+                    function(speakersData) {
+                        localStorage.setItem("speakers", $.toJSON(speakersData));
+                        conference.conferenceSpeakers = speakersData;
+                        conference.loadSessionInfo();
+                    }
+                );
+            }
         }
-    });
+    );
 };
 
 AgileConference.prototype.loadSessionInfo = function() {
     var conference = this;
-    $.ajax({
-        url: 'http://agileaustralia2010.appspot.com/topics',
-        dataType: 'text',
-        async: false,
-        timeout: 30000,
-        success: function(sessionsData) {
-            localStorage.setItem("sessions", sessionsData);
-            conference.conferenceSessions = $.parseJSON(sessionsData);
+    jQuery.getJSON('http://samagile2010.appspot.com/topicsTimestamp?callback=?',
+        function(sessionsTimestamp) {
+            if (localStorage.getItem('sessionsTimestamp') === sessionsTimestamp['timestamp']) {
+                conference.conferenceSessions = $.parseJSON(localStorage.getItem('sessions'));
+                buildDom(conference);
+            } else {
+                localStorage.setItem('sessionsTimestamp', sessionsTimestamp['timestamp']);
+                $.getJSON('http://samagile2010.appspot.com/topics?callback=?',
+                    function(sessionsData) {
+                        localStorage.setItem("sessions", $.toJSON(sessionsData));
+                        conference.conferenceSessions = sessionsData;
+                        buildDom(conference);
+                    }
+                );
+            }
         }
-    });
+    );
 };
 
 AgileConference.prototype.getPrettySpeakersList = function(speakerIDs) {
@@ -355,10 +388,4 @@ ConferenceDOMBuilder.prototype.updateIndexPageDOM = function() {
 $(document).ready(function() {
     var conference = new AgileConference();
     conference.loadSpeakerInfo();
-    conference.loadSessionInfo();
-    var domBuilder = new ConferenceDOMBuilder(conference);
-    domBuilder.updateSpeakersDOM();
-    domBuilder.updateSessionsDOM();
-    domBuilder.updateIndexPageDOM();
-    registerJQTHandlers();
 });
