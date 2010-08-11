@@ -27,6 +27,8 @@ class Main
   end
 
   def build_iphone_app
+    FileUtils.remove_dir('phonegap-iphone/www', force = true)
+    FileUtils.mkdir('phonegap-iphone/www')
     FileUtils.cp_r(%w(index.html jqtouch/ themes/), 'phonegap-iphone/www')
     #TODO: invoke the xcode build script for 'release'
   end
