@@ -221,7 +221,7 @@ body {
 /* @group Toolbar */
 #jqt .toolbar {
 	-webkit-box-sizing: border-box;
-	height: 42px;
+	height: 46px;
 	position: relative;
 	background-image: url(img/header_bg.png);
 }

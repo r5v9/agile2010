@@ -7,30 +7,9 @@ require 'fileutils'
 
 class Main
 
-  def build_html
+  def check_speakers
     topics = YAML::load(File.open('topics.yml'))
     speakers = YAML::load(File.open('speakers.yml'))
-    topic_keys = { 'Wed' => topic_keys_sorted(topics, 'Wed'), 'Thu' => topic_keys_sorted(topics, 'Thu') }
-
-		if !check_speakers(topics, speakers)
-		  return
-		end
-  
-    b = binding
-    template = ERB.new(File.read('index.erb'))
-
-    index_file = File.new('index.html', 'w')
-    index_file.puts template.result(b)
-    index_file.close
-  end
-  
-  def topic_keys_sorted(topics, day)
-    return topics.select { |k,v| v['date'].match(/#{day}/) } \
-	        .sort { |a,b| Time.parse(a[1]['date'])<=>Time.parse(b[1]['date']) } \
-	        .map { |a| a[0] }
-  end
-  
-  def check_speakers(topics, speakers)
     valid = true
     topics.each_key do |id|
       topic_speakers = topics[id]['speakers']
@@ -49,13 +28,14 @@ class Main
 
   def build_iphone_app
     FileUtils.cp_r(%w(index.html jqtouch/ themes/), 'phonegap-iphone/www')
+    #TODO: invoke the xcode build script for 'release'
   end
 
 end
 
 if __FILE__ == $0
   main = Main.new
-  main.build_html
+  main.check_speakers
   main.build_iphone_app
 end
 
