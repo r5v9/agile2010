@@ -438,10 +438,7 @@
          *
          *    @var Function
          */
-//        bottomToolbar = function(vars){return (window.innerHeight - (vars.toolbarHeight * 2)) + "px !important"},
-        // Hack to control where the bottom toolbar shows up 
-        // TODO: make sure this is done in more maintainable way
-        bottomToolbar = function(vars){return (window.innerHeight - (vars.toolbarHeight * 2) - vars.extraNonScrollingHeight) + "px !important"},
+        bottomToolbar = function(vars){return (window.innerHeight - (vars.toolbarHeight * 2)) + "px !important"},
 
         /**
          *    Dynamically determine the window height minus the toolbar height
@@ -470,8 +467,7 @@
              *    @var Object
              */
             variables : {
-                toolbarHeight: 46,
-                extraNonScrollingHeight: 90
+                toolbarHeight: 46
             },
 
             /**

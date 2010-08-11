@@ -2,7 +2,7 @@
 
 /* @group Segmented */
 
-ul.segmented {
+#jqt ul.segmented {
    border:                0px;
    padding-bottom:        1px;
    background:            none;
@@ -10,11 +10,11 @@ ul.segmented {
    list-style:            none;
    text-align:            center;
    font-size:             1px;
-   margin-top:            10px;
+   margin:                2px 0px 2px 0px;
    -webkit-border-radius: 8px;
 }
 
-ul.segmented li{
+#jqt ul.segmented li{
    border:                1px solid rgba(180, 180, 180, 0.8);
    border-left:           0;
    border-right:          1;
@@ -32,24 +32,24 @@ ul.segmented li{
    -webkit-border-radius: 0;
 
 }
-ul.segmented li:last-child,
-ul.segmented li:last-child a {
+#jqt ul.segmented li:last-child,
+#jqt ul.segmented li:last-child a {
    -webkit-border-radius:               8px;
    -webkit-border-bottom-left-radius:   0px;
    -webkit-border-top-left-radius:      0px;
 }
 
-ul.segmented li:first-child{
+#jqt ul.segmented li:first-child{
   border-left: 1px solid rgba(180, 180, 180, 0.4);
 }
-ul.segmented li:first-child,
-ul.segmented li:first-child a {
+#jqt ul.segmented li:first-child,
+#jqt ul.segmented li:first-child a {
    -webkit-border-radius:               8px;
    -webkit-border-bottom-right-radius:  0px;
    -webkit-border-top-right-radius:     0px;
 }
 
-ul.segmented li a{
+#jqt ul.segmented li a{
    color:                 white !important;
    text-shadow:           rgba(0,0,0,.8) 1px 1px 0px;
    text-decoration:       none;
@@ -58,27 +58,27 @@ ul.segmented li a{
    position:              relative;
 }
 
-ul.segmented li a.selected {
+#jqt ul.segmented li a.selected {
    background-color:      #528CE7; /* For V2.2.1 */
    background:            -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff6666), to(#cc3333));
    color:                 #eee;
    overflow:              hidden;
 }
-ul.segmented li a.selected::before,
-ul.segmented li a.selected::after{
+#jqt ul.segmented li a.selected::before,
+#jqt ul.segmented li a.selected::after{
   content:                " ";
   display:                block;
   position:               absolute;
   -webkit-box-shadow:     rgba(0, 0, 0, 0.95) 0px 0px 10px;
 }
-ul.segmented li a.selected::after {
+#jqt ul.segmented li a.selected::after {
   height:                 1px;
   width:                  100%;
   top:                    0px;
   right:                  0px;
 }
 
-ul.segmented li a.selected::before{
+#jqt ul.segmented li a.selected::before{
   height:                 100%;
   width:                  1px;
   top:                    0px;
