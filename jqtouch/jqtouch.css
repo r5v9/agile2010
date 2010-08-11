@@ -1,7 +1,7 @@
-* {
+/** {
     margin: 0;
     padding: 0;
-}
+}*/
 a {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -30,7 +30,8 @@ body {
     -webkit-transform: none !important;
 }
 
-#jqt > * {
+/*#jqt > * {*/
+#jqt > div {
     -webkit-backface-visibility: hidden;
     -webkit-box-sizing: border-box;
     display: none;
@@ -42,9 +43,9 @@ body {
     overflow-x: hidden;
 }
 
-#jqt > .current {
+/*#jqt > .current {
     display: block !important;
-}
+}*/
 #jqt .in.start, #jqt .out.start {
     -webkit-transition-duration: 350ms;
     -webkit-transition-timing-function: ease-in-out;

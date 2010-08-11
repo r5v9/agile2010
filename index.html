@@ -3,16 +3,17 @@
 <head>
 	<meta charset="UTF-8"/>
 	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<title>Agile 2010</title>
 
 	<style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
+	<style type="text/css" media="screen">@import "jqtouch/extensions/jqt.scroll/jqt.scroll.css";</style>
 	<style type="text/css" media="screen">@import "themes/agile2010/SegmentedMenu.css";</style>
 	<style type="text/css" media="screen">@import "themes/agile2010/theme.css";</style>
 
 	<script src="jqtouch/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
-	<script src="jqtouch/extensions/jqextensions/jqt.scrolling.js" type="application/x-javascript"
-			charset="utf-8"></script>
+	<script src="jqtouch/extensions/jqt.scroll/jqt.scroll.js" type="application/x-javascript" charset="utf-8"></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<script src="themes/agile2010/agile2010.js" type="application/x-javascript" charset="utf-8"></script>
 
@@ -22,7 +23,7 @@
 			icon: 'themes/agile2010/icon.png',
 			addGlossToIcon: false,
 			startupScreen: 'themes/agile2010/startup.png',
-			slideSelector: '#jqt li a, .slide',
+			slideSelector: '.slide',
 			preloadImages: [
 				'themes/agile2010/img/back_button.png',
 				'themes/agile2010/img/back_button_clicked.png',
@@ -41,50 +42,36 @@
 <body>
 <div id="jqt">
 	<!-- schedules -->
-	<div id="Wednesday" class="selectable uses_local_data">
+	<div id="Wednesday" class="uses_local_data content">
 		<div class="toolbar">
 			<ul class="segmented"></ul>
 		</div>
-		<div class="vertical-scroll use-bottom-toolbar">
+		<div class="scroll">
 			<div>
 				<ul class="edgetoedge schedule"></ul>
 			</div>
-		</div>
-		<div class="toolbar bottom">
-			<a href="http://www.agileaustralia.com/" class="logo"><img src="themes/agile2010/img/footer_logo.png" alt="Agile Australia 2010"/></a>
-			<a href="#about" class="button slideup icon"><img src="themes/agile2010/img/footer_info.png" alt="More Info"/></a>
-			<a href="#twitter" class="button swap  icon"><img src="themes/agile2010/img/footer_buzz.png" alt="Twitter Feed"/></a>
-			<a href="#floorplan" class="button swap icon"><img src="themes/agile2010/img/footer_rooms.png" alt="Rooms"/></a>
-			<a href="#map" class="button swap icon"><img src="themes/agile2010/img/footer_where.png" alt="Getting There"/></a>
 		</div>
 	</div>
-	<div id="Thursday" class="selectable uses_local_data">
+	<div id="Thursday" class="uses_local_data content">
 		<div class="toolbar">
 			<ul class="segmented"></ul>
 		</div>
-		<div class="vertical-scroll use-bottom-toolbar">
+		<div class="scroll">
 			<div>
 				<ul class="edgetoedge schedule"></ul>
 			</div>
-		</div>
-		<div class="toolbar bottom">
-			<a href="http://www.agileaustralia.com/" class="logo"><img src="themes/agile2010/img/footer_logo.png" alt="Agile Australia 2010"/></a>
-			<a href="#about" class="button slideup icon"><img src="themes/agile2010/img/footer_info.png" alt="More Info"/></a>
-			<a href="#twitter" class="button swap  icon"><img src="themes/agile2010/img/footer_buzz.png" alt="Twitter Feed"/></a>
-			<a href="#floorplan" class="button swap icon"><img src="themes/agile2010/img/footer_rooms.png" alt="Rooms"/></a>
-			<a href="#map" class="button swap icon"><img src="themes/agile2010/img/footer_where.png" alt="Getting There"/></a>
 		</div>
 	</div>
 
 	<!-- about -->
-	<div id="about" class="selectable">
+	<div id="about" class="content">
 		<p>About Agile 2010</p>
 
 		<p><br/><br/><a href="#" class="grayButton goback">Close</a></p>
 	</div>
 
 	<!-- twitter -->
-	<div id="twitter" class="selectable">
+	<div id="twitter" class="content">
 		<div class="toolbar">
 			<h1>Twitter #agileaus</h1>
 			<a class="button back" href="#">Back</a>
@@ -95,7 +82,7 @@
 	</div>
 
 	<!-- map -->
-	<div id="map" class="notransform">
+	<div id="map" class="content">
 		<div class="toolbar">
 			<h1>Map</h1>
 			<a href="#" class="back">Back</a>
@@ -109,13 +96,33 @@
 	</div>
 
 	<!-- floorplan -->
-	<div id="floorplan" class="notransform">
+	<div id="floorplan" class="content">
 		<div class="toolbar">
 			<h1>Floor Plan</h1>
 			<a href="#" class="back">Back</a>
 		</div>
 		<img src="themes/agile2010/floorplan.jpg"/>
 	</div>
+
+    <nav id="tabbar">
+        <ul>
+            <li>
+                <a href="http://www.agileaustralia.com/" class="logo"><img src="themes/agile2010/img/footer_logo.png" alt="Agile Australia 2010"/></a>
+            </li>
+            <li>
+                <a href="#about" class="button slideup icon"><img src="themes/agile2010/img/footer_info.png" alt="More Info"/></a>
+            </li>
+            <li>
+                <a href="#twitter" class="button swap  icon"><img src="themes/agile2010/img/footer_buzz.png" alt="Twitter Feed"/></a>
+            </li>
+            <li>
+                <a href="#floorplan" class="button swap icon"><img src="themes/agile2010/img/footer_rooms.png" alt="Rooms"/></a>
+            </li>
+            <li>
+                <a href="#map" class="button swap icon"><img src="themes/agile2010/img/footer_where.png" alt="Getting There"/></a>
+            </li>
+        </ul>
+    </nav>
 </div>
 
 </body>

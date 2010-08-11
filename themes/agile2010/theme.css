@@ -195,10 +195,12 @@ a:hover {
 a:active {
     color: white;
 }
-
-#jqt .toolbar a.button.icon {
+#tabbar {
+    bottom: 19px;
+}
+#tabbar a.button.icon {
     position: relative;
-    float: right;
+    /*float: right;*/
     height:auto;
     top:0;
     -webkit-border-image: none;
@@ -206,10 +208,17 @@ a:active {
     padding: 0;
 }
 
-.toolbar.bottom .logo {
-    float:left;
-    overflow: hidden;
+#tabbar .logo {
+    /*background-image: url(img/footer_logo.png);*/
+    /*float:left;*/
+    /*overflow: hidden;*/
     line-height: 0;
+}
+#tabbar ul li a {
+    margin: 0 !important;
+}
+#tabbar ul li a img {
+    margin-top: -30px;
 }
 
 /* @start "copy of jqt/themes.css" */
@@ -392,8 +401,8 @@ div#jqt.landscape .toolbar > h1 {
     color: #000;
     text-decoration: none;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
     display: block;
     padding: 12px 10px 12px 10px;
     margin: -10px;
@@ -447,8 +456,8 @@ div#jqt.landscape .toolbar > h1 {
     color: #000;
     font: 14px "Helvetica Neue", Helvetica;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
     display: block;
     margin: 0;
     padding: 0;
@@ -457,8 +466,8 @@ div#jqt.landscape .toolbar > h1 {
     color: #666;
     font: 13px "Helvetica Neue", Helvetica;
     margin: 0;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    /*text-overflow: ellipsis;*/
+    /*white-space: nowrap;*/
     overflow: hidden;
     display: block;
     padding: 0;
@@ -525,8 +534,8 @@ div#jqt.landscape .toolbar > h1 {
     font: 17px "Helvetica Neue", Helvetica;
     text-align: right;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
     display: block;
     width: 23%;
     float: right;
