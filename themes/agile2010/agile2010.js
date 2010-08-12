@@ -300,7 +300,7 @@ function ConferenceDOMBuilder(conference) {
 ConferenceDOMBuilder.prototype.buildSpeakerDOM = function(speakerID, speaker) {
     var speakerDiv = $('<div id="' + speakerID + '" class="content"></div>');
     speakerDiv.append($('<div class="toolbar"><h1>' + speaker.name + '</h1><a class="button back" href="#">Back</a></div>'));
-    speakerDiv.append($('<div class="speaker-info scroll"><img src="themes/agile2010/img/speakers/' + speakerID + '.gif" width="80" height="120" class="speaker-photo"/><div class="speaker-title2">' + speaker.title + '</div>' + speaker.description + '</div>'));
+    speakerDiv.append($('<div class="speaker-info description scroll"><img src="themes/agile2010/img/speakers/' + speakerID + '.gif" width="80" height="120" class="speaker-photo"/><div class="speaker-title2">' + speaker.title + '</div>' + speaker.description + '</div>'));
     return speakerDiv;
 };
 
@@ -331,7 +331,7 @@ ConferenceDOMBuilder.prototype.buildSessionDOM = function(sessionID, session) {
     sessionDiv.append(contentDiv);
     contentDiv.append($('div class="topic">' + session.topic + '</div>'));
     contentDiv.append(this.buildSessionSpeakerList(session));
-    contentDiv.append($('<ul><li style="color:#E0E0E0;">I will attend<span class="toggle go-skip"><input type="checkbox" topic="' + sessionID + '" class="attend-slider"/></span></li></ul>'));
+    contentDiv.append($('<ul><li class="attending">Planning to Skip or Go?<span class="toggle go-skip"><input type="checkbox" topic="' + sessionID + '" class="attend-slider"/></span></li></ul>'));
     contentDiv.append($('<div class="description">' + session.description + '</div>'));
     return sessionDiv;
 };
