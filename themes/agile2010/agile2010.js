@@ -60,7 +60,7 @@ function rebuildTweets(json) {
     for (i in results) {
         result = results[i];
         dateDiff = differentialTime(result.created_at);
-        postsHtml += '<li><img src="' + result.profile_image_url + '" class="tweet-profile-image"/><div class="tweet">' + result.text + '</div><div><span class="tweet-user">' + result.from_user + '</span><span class="tweet-date">, ' + dateDiff + '</span></div></li>';
+        postsHtml += '<li><img src="' + result.profile_image_url + '" class="tweet-profile-image"/><div class="tweet">' + result.text + '</div><div><span class="tweet-user"> via twitter : ' + result.from_user + '</span><span class="tweet-date">, ' + dateDiff + '</span></div></li>';
     }
     $('#twitter-feed').html('<ul class="edgetoedge">' + postsHtml + '</ul>');
 }

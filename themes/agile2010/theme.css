@@ -9,12 +9,6 @@ div#jqt #about {
 	background-color: #FFF;
 }
 
-div#jqt #about a {
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 div#jqt .toolbar > h1 {
     font-size: 13pt;
 }
@@ -29,6 +23,15 @@ div#jqt .toolbar > h1 {
 	position: absolute;
 	top: 46px;
 }
+
+
+#about-agile-links a {
+   color: #C00;
+   font-size:14px;
+   text-decoration: none;
+}
+
+
 
 #twitter-feed
 {
@@ -340,7 +343,7 @@ div#jqt.landscape .toolbar > h1 {
 }
 #jqt .back.active {
     -webkit-border-image: url(img/back_button_clicked.png) 0 8 0 14;
-    color: #aaa;
+    color: #fff;
 }
 #jqt .leftButton, #jqt .cancel {
     left: 6px;
