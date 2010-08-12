@@ -30,6 +30,21 @@ div#jqt .toolbar > h1 {
 	top: 46px;
 }
 
+#twitter-feed
+{
+	margin-top: 10px;
+}
+
+#floorplan-container
+{
+	background-color: #FFF;
+}
+
+#map-container
+{
+	background-color: #FFF;
+}
+
 .topic {
     padding: 10px;
     padding-bottom: 0;
@@ -133,13 +148,13 @@ div#jqt .toolbar > h1 {
 
 .tweet {
     font-size: 11pt;
-    color: white;
+    color: #000;
 }
 
 .tweet-user {
     margin-top: 5pt;
     font-size: 10pt;
-    color: lightgray;
+    color: gray;
 }
 
 .tweet-date {
@@ -244,7 +259,7 @@ a:active {
 /* @start "copy of jqt/themes.css" */
 body {
     background: #FFF;
-    color: #ddd;
+    color: #000;
 }
 
 #jqt h1, #jqt h2 {
