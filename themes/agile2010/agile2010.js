@@ -159,6 +159,18 @@ function getSortedSessionsForDay(sessions, day) {
     return sessionsForDay;
 }
 
+function updateSliderState() {
+    $("input.attend-slider").each(function() {
+        slider = $(this);
+        id = slider.attr('topic');
+        slider.attr('checked', isInMySessions(id));
+    });
+}
+
+function cleanSpeakerID(speakerID) {
+    return speakerID.replace(" ","").replace("%20","");
+}
+
 function registerJQTHandlers() {
     // add/remove topic into/from local storage once slider changes and rebuild my sessions list
     $('.toggle.yes-no input, .toggle.go-skip input').click(function() {
@@ -170,7 +182,6 @@ function registerJQTHandlers() {
         }
     });
 
-    // set the state for the slider based on what's saved in local storage
     $('.uses_local_data').bind('pageAnimationStart', function() {
         $(this).find("input.attend-slider").each(function() {
             slider = $(this);
@@ -212,23 +223,11 @@ function registerJQTHandlers() {
     });
 }
 
-function getLastModifiedRequestHeader(XMLHttpRequestObj) {
-    var headers = XMLHttpRequestObj.getAllResponseHeaders().split("\n");
-    for (var i = 0; i < headers.length; ++i) {
-        var header = headers[i];
-        if (header.indexOf("Last-Modified") != -1) {
-            return header.split(": ")[1];
-        }
-    }
-    return null;
-}
-
 function buildDom(conference) {
     var domBuilder = new ConferenceDOMBuilder(conference);
     domBuilder.updateSpeakersDOM();
     domBuilder.updateSessionsDOM();
     domBuilder.updateIndexPageDOM();
-    registerJQTHandlers();       
 }
 
 function AgileConference() {
@@ -242,39 +241,41 @@ function AgileConference() {
 
 AgileConference.prototype.loadSpeakerInfo = function() {
     var conference = this;
-    jQuery.getJSON('http://samagile2010.appspot.com/speakersTimestamp?callback=?',
+    conference.conferenceSpeakers = $.parseJSON(localStorage.getItem('speakers'));
+    conference.loadSessionInfo();
+    
+    $.getJSON('http://samagile2010.appspot.com/speakersTimestamp?callback=?',
         function(speakersTimestamp) {
-            if (localStorage.getItem('speakersTimestamp') === speakersTimestamp['timestamp']) {
-                conference.conferenceSpeakers = $.parseJSON(localStorage.getItem('speakers'));
-                conference.loadSessionInfo();
-            } else {
-                localStorage.setItem('speakersTimestamp', speakersTimestamp['timestamp']);
+            if (localStorage.getItem('speakersTimestamp') !== speakersTimestamp['timestamp']) {
                 $.getJSON('http://samagile2010.appspot.com/speakers?callback=?',
                     function(speakersData) {
                         localStorage.setItem("speakers", $.toJSON(speakersData));
+                        localStorage.setItem('speakersTimestamp', speakersTimestamp['timestamp']);
                         conference.conferenceSpeakers = speakersData;
-                        conference.loadSessionInfo();
+                        conference.loadSessionInfo();   
                     }
                 );
             }
         }
-    );
+    );       
 };
 
 AgileConference.prototype.loadSessionInfo = function() {
     var conference = this;
-    jQuery.getJSON('http://samagile2010.appspot.com/topicsTimestamp?callback=?',
+    conference.conferenceSessions = $.parseJSON(localStorage.getItem('sessions'));
+    buildDom(conference);
+    registerJQTHandlers();
+
+    $.getJSON('http://samagile2010.appspot.com/topicsTimestamp?callback=?',
         function(sessionsTimestamp) {
-            if (localStorage.getItem('sessionsTimestamp') === sessionsTimestamp['timestamp']) {
-                conference.conferenceSessions = $.parseJSON(localStorage.getItem('sessions'));
-                buildDom(conference);
-            } else {
-                localStorage.setItem('sessionsTimestamp', sessionsTimestamp['timestamp']);
+            if (localStorage.getItem('sessionsTimestamp') !== sessionsTimestamp['timestamp']) {
                 $.getJSON('http://samagile2010.appspot.com/topics?callback=?',
                     function(sessionsData) {
                         localStorage.setItem("sessions", $.toJSON(sessionsData));
+                        localStorage.setItem('sessionsTimestamp', sessionsTimestamp['timestamp']);
                         conference.conferenceSessions = sessionsData;
                         buildDom(conference);
+                        registerJQTHandlers();
                     }
                 );
             }
@@ -288,7 +289,7 @@ AgileConference.prototype.getPrettySpeakersList = function(speakerIDs) {
     }
     var _this = this;
     return $.map(speakerIDs, function(id, i) {
-        return _this.conferenceSpeakers[id.replace(" ", "")].name;
+        return _this.conferenceSpeakers[cleanSpeakerID(id)].name;
     }).join(' and ');
 }
 
@@ -305,8 +306,10 @@ ConferenceDOMBuilder.prototype.buildSpeakerDOM = function(speakerID, speaker) {
 
 ConferenceDOMBuilder.prototype.updateSpeakersDOM = function() {
     for (speakerID in this.conference.conferenceSpeakers) {
-        var cleanSpeakerID = speakerID.replace(" ", "");
-        this.buildSpeakerDOM(cleanSpeakerID, this.conference.conferenceSpeakers[cleanSpeakerID]).insertBefore("#Wednesday");
+        var cleanID = cleanSpeakerID(speakerID);
+        $("#"+cleanID).remove();
+        this.buildSpeakerDOM(cleanID,
+            this.conference.conferenceSpeakers[cleanID]).insertBefore("#Wednesday");
     }
 };
 
@@ -314,9 +317,9 @@ ConferenceDOMBuilder.prototype.buildSessionSpeakerList = function(session) {
     var speakers = (session.speakers === null ? [] : session.speakers.split(','));
     var speakerList = $('<ul class="speaker" speakers="' + this.conference.getPrettySpeakersList(speakers) + '"></ul>');
     for (var i = 0; i < speakers.length; ++i) {
-        var speakerID = speakers[i].replace(" ", "");
+        var speakerID = cleanSpeakerID(speakers[i]);
         var speaker = this.conference.conferenceSpeakers[speakerID];
-        speakerList.append('<li class="arrow speaker-names"><a href="#' + speakers[i] + '" class="slide">' + speaker.name + '<div class="speaker-title">' + speaker.title + '</div></li>');
+        speakerList.append('<li class="arrow speaker-names"><a href="#' + speakerID + '" class="slide">' + speaker.name + '<div class="speaker-title">' + speaker.title + '</div></li>');
     }
     return speakerList;
 };
@@ -335,12 +338,14 @@ ConferenceDOMBuilder.prototype.buildSessionDOM = function(sessionID, session) {
 
 ConferenceDOMBuilder.prototype.updateSessionsDOM = function() {
     for (sessionID in this.conference.conferenceSessions) {
+        $("#"+sessionID).remove();
         this.buildSessionDOM(sessionID, this.conference.conferenceSessions[sessionID]).insertBefore("#Wednesday");
     }
 };
 
 ConferenceDOMBuilder.prototype.updateDayMenu = function(day, dayDiv) {
     var dayList = $('.segmented', dayDiv);
+    dayList.empty();
     var numberOfDays = this.conference.days.length;
     for (var dayIndex = 0; dayIndex < numberOfDays; ++dayIndex) {
         var day_button_header = this.conference.days[dayIndex];
@@ -356,6 +361,7 @@ ConferenceDOMBuilder.prototype.updateTopicList = function(day, dayDiv) {
     var topicKeys = { "Wed" : getSortedSessionsForDay(this.conference.conferenceSessions, "Wed"),
         "Thu" : getSortedSessionsForDay(this.conference.conferenceSessions, "Thu")};
     var topicList = $('ul.edgetoedge', dayDiv);
+    topicList.empty();
     var previousDate = '';
     var dayTopics = topicKeys[day.shortName];
     for (var sessionIndex = 0; sessionIndex < dayTopics.length; sessionIndex++) {
