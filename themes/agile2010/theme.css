@@ -36,6 +36,14 @@ div#jqt .toolbar > h1 {
     font-weight: bold;
 }
 
+.attending {
+ 
+    font-size: 10pt;
+	vertical-align: -5px;
+	
+
+}
+
 .speaker {
     font-size: 12pt;
 }
@@ -658,6 +666,7 @@ div#jqt.landscape .toolbar > h1 {
     border-width: 1px 0;
     margin: 0;
     padding: 0;
+	background-color:white;
 }
 #jqt ul.edgetoedge li {
     background-color:#E0E0E0;
