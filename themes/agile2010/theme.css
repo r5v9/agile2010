@@ -3,15 +3,10 @@
 }
 
 div#jqt #about {
-    padding: 100px 10px 40px;
     text-shadow: rgba(255, 255, 255, 0.3) 0px -1px 0;
     font-size: 13px;
     text-align: center;
-    background: #161618;
-}
-
-div#jqt #about p {
-    margin-bottom: 8px;
+	background-color: #FFF;
 }
 
 div#jqt #about a {
@@ -27,6 +22,12 @@ div#jqt .toolbar > h1 {
 #jqt ul li a, #jqt li.img a + a {
     font-size: 12pt;
     white-space: normal;
+}
+
+#about-agile
+{
+	position: absolute;
+	top: 46px;
 }
 
 .topic {
