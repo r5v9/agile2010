@@ -233,8 +233,8 @@ function AgileConference() {
         {'full': "Wednesday", 'shortName': "Wed", 'cssClass': "current"},
         {'full': "Thursday", 'shortName': "Thu"}
     ];
-    this.conferenceSpeakers = null;
-    this.conferenceSessions = null;
+    this.conferenceSpeakers = $.parseJSON(localStorage.getItem('speakers'));
+    this.conferenceSessions = $.parseJSON(localStorage.getItem('sessions'));
 }
 
 AgileConference.prototype.loadSpeakerInfo = function() {
@@ -385,7 +385,10 @@ ConferenceDOMBuilder.prototype.updateIndexPageDOM = function() {
 
 $(document).ready(function() {
     var conference = new AgileConference();
+    buildSpeakerDom(conference);
+    buildSessionDom(conference);
+    registerJQTHandlers();
+    
     conference.loadSpeakerInfo();
     conference.loadSessionInfo();
-    registerJQTHandlers();
 });
