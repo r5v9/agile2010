@@ -326,12 +326,13 @@ ConferenceDOMBuilder.prototype.buildSessionSpeakerList = function(session) {
 
 ConferenceDOMBuilder.prototype.buildSessionDOM = function(sessionID, session) {
     var sessionDiv = $('<div id="' + sessionID + '" class="uses_local_data content"></div>');
-    sessionDiv.append($('<div class="toolbar"><h1>' + session.title + '</h1></div>'));
+    sessionDiv.append($('<div class="toolbar"><h1>' + session.date + '</h1></div>'));
     var contentDiv = $('<div class="scroll"></div>');
     sessionDiv.append(contentDiv);
-    contentDiv.append($('div class="topic">' + session.topic + '</div>'));
-    contentDiv.append(this.buildSessionSpeakerList(session));
+	contentDiv.append($('<div class=""><h1>' + session.title + '</h1></div>'));
     contentDiv.append($('<ul><li class="attending">Planning to Skip or Go?<span class="toggle go-skip"><input type="checkbox" topic="' + sessionID + '" class="attend-slider"/></span></li></ul>'));
+	contentDiv.append($('div class="topic">' + session.topic + '</div>'));
+    contentDiv.append(this.buildSessionSpeakerList(session));
     contentDiv.append($('<div class="description">' + session.description + '</div>'));
     return sessionDiv;
 };
