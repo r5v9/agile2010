@@ -80,7 +80,7 @@ aconex-case-study:
 flavours-panel:
     date: Wed 02:00PM
     title: Flavours of Agile panel
-    speakers:
+    speakers: bruce-taylor, steve-lawrence, james-brett, john-sullivan
     description:
 
 continuous-deployment:
@@ -151,7 +151,16 @@ government-case-studies:
         <p>This is the story of how we delivered less software, but more business value than we expected. It is also a story of how management skepticism evolved into commitment, and how our inspectors' anxiety gave way to ownership.</p>
         <p>There is a brief discussion of what worked well, particularly those characteristics of NOPSA that were useful to the process (yes, they can exist in a government agency !).</p>
         <p>This session finishes with a summary of the factors that have made Agile 'the way we do things' at NOPSA.</p>
-
+        
+engaging-the-business
+    date: Wed 04:45PM
+    title: Engaging the Business on an Agile Project
+    speakers: jay-jenkins
+    description: |
+        <p>In early 2010, ANZ Bank engaged Renewtek to build a reusable process automation solution. The solution was developed using Renewtek’s Agile-BPM and Agile development practices with teams in Melbourne and Vietnam. Since this is a reusable asset across multiple business units, Renewtek had to engage a broad range of stakeholders to prioritise functions and create a foundation for further enhancement.</p> 
+        <p>The solution itself is unique in that it takes a business value and Agile approach to deliver small working solutions on an incremental and regular basis. The business was engaged throughout the development process and empowered to make decisions to ensure the high level of business value is delivered within the project budget. Toolsets for rapid process composition and management were vital to the success of this approach.</p> 
+        <p>This solution has won a 2010 AIIA iAward Commendation in the Financial Industry Applications and has been entered as a finalist in the National iAwards.</p> 
+    
 open-house:
     date: Wed 05:30PM
     title: Open House - ThoughtWorks Offices
@@ -201,7 +210,7 @@ introspection-leadership:
 mars-venus:
     date: Thu 11:15AM
     title: Developers are from Mars, Product Owners are from Venus
-    speakers: adam-boas
+    speakers: adam-boas, nick-strybosch
     description: |
         <p>Culture, Leadership, People brolly When a business adopts Agile it must quickly learn to get the most from its development teams. High performing teams are highly aligned, aligned from the business right the way through to developers and testers. Achieving such an alignment needs understanding, a clear plan, and skilful execution. Product owners and developers think differently, are motivated by different goals and can often talk at cross-purposes. Each side has its own success and failure stereotypes. Often these are from polar opposites and can have immense difficulty communicating effectively with each other.</p>
         <p>Resolving this dichotomy requires teams to speak the same language and to speak it fluently. That language is expressed in User Stories. They must:</p>
