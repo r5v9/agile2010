@@ -1,8 +1,8 @@
 //
 //  main.m
-//  phonegap-iphone
+//  AgileAus2010
 //
-//  Created by David Reed on 5/08/10.
+//  Created by David Reed on 12/08/10.
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 int main(int argc, char *argv[]) {
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, @"phonegap_iphoneAppDelegate");
+    int retVal = UIApplicationMain(argc, argv, nil, @"AgileAus2010AppDelegate");
     [pool release];
     return retVal;
 }
