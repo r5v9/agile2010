@@ -52,9 +52,7 @@
 <div id="jqt" class="portrait">
 	<div id="Wednesday" class="uses_local_data content current" style="top: 0px; ">
 		<div class="toolbar">
-			<div class="toolbar">
-				<ul class="segmented"></ul>
-			</div>
+			<ul class="segmented"></ul>
 		</div>
 		<div class="scroll">
 			<div>
@@ -64,9 +62,7 @@
 	</div>
 	<div id="Thursday" class="uses_local_data content">
 		<div class="toolbar">
-			<div class="toolbar">
-				<ul class="segmented"></ul>
-			</div>
+			<ul class="segmented"></ul>
 		</div>
 		<div class="scroll">
 			<div>
@@ -81,8 +77,8 @@
 			<h1>Info</h1>
 			<a href="#" class="back">Back</a>
 		</div>
-		<div id="about-agile">
-			<div class="scroll description">
+		<div id="about-agile" class="scroll">
+			<div class="description">
 				<p>
 					<img src="themes/agile2010/img/poweredbyTW.png" width="235" height="40">
 
@@ -134,7 +130,8 @@
 			<div class="refresh"><a class="slideup" href="#" onClick="requestTweetsJson(); return false;"><img
 					src="themes/agile2010/img/reload.gif" width="24" height="27"></a></div>
 		</div>
-		<div id="twitter-feed">
+		<div class="scroll">
+			<div id="twitter-feed"></div>
 		</div>
 	</div>
 
@@ -144,10 +141,12 @@
 			<h1>Map</h1>
 			<a href="#" class="back">Back</a>
 		</div>
-		<div id="map-container" class="notransform">
-			<div id="map_text">Click on a marker for the description</div>
-			<div id="map-overflow" style="overflow: hidden; padding: 0; border: 0;" class="notransform">
-				<div id="map_canvas" style="margin-left: -20px; margin-top: -20px;" class="notransform"></div>
+		<div class="scroll">
+			<div id="map-container" class="notransform">
+				<div id="map_text">Click on a marker for the description</div>
+				<div id="map-overflow" style="overflow: hidden; padding: 0; border: 0;" class="notransform">
+					<div id="map_canvas" style="margin-left: -20px; margin-top: -20px;" class="notransform"></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -158,8 +157,10 @@
 			<h1>Floor Plan</h1>
 			<a href="#" class="back">Back</a>
 		</div>
-		<div id="floorplan-container">
-			<img src="themes/agile2010/floorplan.jpg"/>
+		<div class="scroll">
+			<div id="floorplan-container">
+				<img src="themes/agile2010/floorplan.jpg"/>
+			</div>
 		</div>
 	</div>
 

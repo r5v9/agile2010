@@ -18,20 +18,11 @@ div#jqt .toolbar > h1 {
     white-space: normal;
 }
 
-#about-agile
-{
-	position: absolute;
-	top: 46px;
-}
-
-
 #about-agile-links a {
    color: #C00;
    font-size:14px;
    text-decoration: none;
 }
-
-
 
 #twitter-feed
 {
