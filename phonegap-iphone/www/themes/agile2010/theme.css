@@ -3,10 +3,21 @@
 }
 
 div#jqt #about {
+    padding: 100px 10px 40px;
     text-shadow: rgba(255, 255, 255, 0.3) 0px -1px 0;
     font-size: 13px;
     text-align: center;
-	background-color: #FFF;
+    background: #161618;
+}
+
+div#jqt #about p {
+    margin-bottom: 8px;
+}
+
+div#jqt #about a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 div#jqt .toolbar > h1 {
@@ -18,49 +29,11 @@ div#jqt .toolbar > h1 {
     white-space: normal;
 }
 
-#about-agile
-{
-	position: absolute;
-	top: 46px;
-}
-
-
-#about-agile-links a {
-   color: #C00;
-   font-size:14px;
-   text-decoration: none;
-}
-
-
-
-#twitter-feed
-{
-	margin-top: 10px;
-}
-
-#floorplan-container
-{
-	background-color: #FFF;
-}
-
-#map-container
-{
-	background-color: #FFF;
-}
-
 .topic {
     padding: 10px;
     padding-bottom: 0;
     font-size: 14pt;
     font-weight: bold;
-}
-
-.attending {
- 
-    font-size: 10pt;
-	vertical-align: -5px;
-	
-
 }
 
 .speaker {
@@ -95,29 +68,18 @@ div#jqt .toolbar > h1 {
 }
 
 .description {
-    
+    border-top: 1px solid gray;
     margin: 10px;
-    padding: 10px;
-	background-color:#E0E0E0;
-	border-style:solid;
-	border-width:1px;
-	border-color:#999;
-	font-size:20px;
-	margin:12px;
-	-webkit-border-radius: 8px;
-	
+    padding: 5px;
+    padding-top: 10px;
 }
 
 .description p {
     margin-bottom: 7px;
-	color:#000;
-	font-size:16px;
 }
 
 .speaker-info {
     padding: 15px;
-	color:#000;
-	font-size:16px;
 }
 
 .speaker-info p {
@@ -151,13 +113,13 @@ div#jqt .toolbar > h1 {
 
 .tweet {
     font-size: 11pt;
-    color: #000;
+    color: white;
 }
 
 .tweet-user {
     margin-top: 5pt;
     font-size: 10pt;
-    color: gray;
+    color: lightgray;
 }
 
 .tweet-date {
@@ -219,19 +181,19 @@ a {
 }
 
 a:link {
-    color: black;
+    color: white;
 }
 
 a:visited {
-    color: black;
+    color: white;
 }
 
 a:hover {
-    color: black;
+    color: white;
 }
 
 a:active {
-    color: black;
+    color: white;
 }
 #tabbar {
     bottom: 19px;
@@ -262,7 +224,7 @@ a:active {
 /* @start "copy of jqt/themes.css" */
 body {
     background: #FFF;
-    color: #000;
+    color: #ddd;
 }
 
 #jqt h1, #jqt h2 {
@@ -276,10 +238,10 @@ body {
 	-webkit-box-sizing: border-box;
 	height: 46px;
 	position: relative;
-	background-image: url(img/nav_bg.png);
+	background-image: url(img/header_bg.png);
 }
 #jqt .toolbar.bottom {
-	background-image: url(img/nav_bg.png);
+	background-image: url(img/footer_bg.png);
 }
 #jqt .black-translucent .toolbar {
 	margin-top: 20px;
@@ -295,10 +257,11 @@ div#jqt .toolbar > h1 {
     font-size: 20px;
     width: 150px;
     font-weight: bold;
+    text-shadow: rgba(0,0,0,1) 0 -1px 1px;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #CCC;
+    color: #fff;
 }
 div#jqt.landscape .toolbar > h1 {
     margin-left: -125px;
@@ -326,19 +289,6 @@ div#jqt.landscape .toolbar > h1 {
     background: none;
     -webkit-border-image: url(img/button.png) 0 5 0 5;
 }
-
-.refresh a {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    padding: 0 3px;
-
-   
-
-}
-
-
-
 #jqt .button.active, #jqt .cancel.active, #jqt .add.active, #jqt .back.active {
     color: #aaa;
 }
@@ -356,7 +306,7 @@ div#jqt.landscape .toolbar > h1 {
 }
 #jqt .back.active {
     -webkit-border-image: url(img/back_button_clicked.png) 0 8 0 14;
-    color: #fff;
+    color: #aaa;
 }
 #jqt .leftButton, #jqt .cancel {
     left: 6px;
@@ -432,14 +382,9 @@ div#jqt.landscape .toolbar > h1 {
     overflow: hidden;
 }
 #jqt ul li.arrow {
-    background-image: url(img/chevron.png);
+    background-image: url(img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
     background-position: right center;
     background-repeat: no-repeat;
-	background-color:#E0E0E0;
-	border-style:solid;
-	border-width:1px;
-	font-size:20px;
-	-webkit-border-radius: 8px;
 }
 
 #jqt ul li.arrow a {
@@ -459,10 +404,9 @@ div#jqt.landscape .toolbar > h1 {
     /*white-space: nowrap;*/
     /*overflow: hidden;*/
     display: block;
-    padding: 10px 10px 16px 10px;
+    padding: 12px 10px 12px 10px;
     margin: -10px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-
 }
 #jqt ul li a.active, #jqt ul li a.button {
     color: #fff;
@@ -698,7 +642,6 @@ div#jqt.landscape .toolbar > h1 {
     border-width: 1px 0;
     margin: 0;
     padding: 0;
-	background-color:white;
 }
 #jqt ul.edgetoedge li {
     background-color:#E0E0E0;
