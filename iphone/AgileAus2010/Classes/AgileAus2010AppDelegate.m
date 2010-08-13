@@ -1,15 +1,15 @@
 //
-//  phonegap_iphoneAppDelegate.m
-//  phonegap-iphone
+//  AgileAus2010AppDelegate.m
+//  AgileAus2010
 //
-//  Created by David Reed on 5/08/10.
+//  Created by David Reed on 12/08/10.
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
-#import "phonegap_iphoneAppDelegate.h"
+#import "AgileAus2010AppDelegate.h"
 #import "PhoneGapViewController.h"
 
-@implementation phonegap_iphoneAppDelegate
+@implementation AgileAus2010AppDelegate
 
 - (id) init
 {	

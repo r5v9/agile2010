@@ -1,6 +1,7 @@
 .DS_Store
 .idea
-phonegap-iphone/build
-phonegap-iphone/www
-phonegap-iphone/phonegap-iphone.xcodeproj/*.mode1v3
-phonegap-iphone/phonegap-iphone.xcodeproj/*.pbxuser
+iphone/AgileAus2010/build
+iphone/AgileAus2010/www
+iphone/AgileAus2010/AgileAus2010.xcodeproj/*.mode1v3
+iphone/AgileAus2010/AgileAus2010.xcodeproj/*.pbxuser
+iphone/AgileAus2010/AgileAus2010.xcodeproj/*.perspectivev3
