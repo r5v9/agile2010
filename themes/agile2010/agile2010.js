@@ -51,7 +51,7 @@ function differentialTime(date) {
 
 function requestTweetsJson() {
     $('#twitter-feed').html('<div style="text-align:center;"><img src="themes/jqt/img/loading.gif" align="center" width="31" height="31" style="margin-top:50px"></div>');
-    $.getScript("http://search.twitter.com/search.json?q=agile&rpp=10&callback=rebuildTweets");
+    $.getScript("http://search.twitter.com/search.json?q=agileaus&callback=rebuildTweets");
 }
 
 function rebuildTweets(json) {
@@ -60,7 +60,7 @@ function rebuildTweets(json) {
     for (i in results) {
         result = results[i];
         dateDiff = differentialTime(result.created_at);
-        postsHtml += '<li><img src="' + result.profile_image_url + '" class="tweet-profile-image"/><div class="tweet">' + result.text + '</div><div><span class="tweet-user">' + result.from_user + '</span><span class="tweet-date">, ' + dateDiff + '</span></div></li>';
+        postsHtml += '<li><img src="' + result.profile_image_url + '" class="tweet-profile-image"/><div class="tweet">' + result.text + '</div><div><span class="tweet-user"> via twitter : ' + result.from_user + '</span><span class="tweet-date">, ' + dateDiff + '</span></div></li>';
     }
     $('#twitter-feed').html('<ul class="edgetoedge">' + postsHtml + '</ul>');
 }
@@ -134,6 +134,7 @@ function buildDateStringForSession(session) {
     return dateString;
 }
 
+
 function sortSessionsByTime(session1, session2) {
     var session1Date = new Date(buildDateStringForSession(session1));
     var session2Date = new Date(buildDateStringForSession(session2));
@@ -159,6 +160,10 @@ function getSortedSessionsForDay(sessions, day) {
     return sessionsForDay;
 }
 
+function cleanSpeakerID(speakerID) {
+    return speakerID.replace(" ","").replace("%20","");
+}
+
 function registerJQTHandlers() {
     // add/remove topic into/from local storage once slider changes and rebuild my sessions list
     $('.toggle.yes-no input, .toggle.go-skip input').click(function() {
@@ -170,7 +175,6 @@ function registerJQTHandlers() {
         }
     });
 
-    // set the state for the slider based on what's saved in local storage
     $('.uses_local_data').bind('pageAnimationStart', function() {
         $(this).find("input.attend-slider").each(function() {
             slider = $(this);
@@ -212,23 +216,16 @@ function registerJQTHandlers() {
     });
 }
 
-function getLastModifiedRequestHeader(XMLHttpRequestObj) {
-    var headers = XMLHttpRequestObj.getAllResponseHeaders().split("\n");
-    for (var i = 0; i < headers.length; ++i) {
-        var header = headers[i];
-        if (header.indexOf("Last-Modified") != -1) {
-            return header.split(": ")[1];
-        }
-    }
-    return null;
-}
-
-function buildDom(conference) {
+function buildSessionDom(conference) {
     var domBuilder = new ConferenceDOMBuilder(conference);
-    domBuilder.updateSpeakersDOM();
     domBuilder.updateSessionsDOM();
     domBuilder.updateIndexPageDOM();
-    registerJQTHandlers();       
+    registerJQTHandlers();
+}
+
+function buildSpeakerDom(conference) {
+    var domBuilder = new ConferenceDOMBuilder(conference);
+    domBuilder.updateSpeakersDOM();
 }
 
 function AgileConference() {
@@ -242,39 +239,35 @@ function AgileConference() {
 
 AgileConference.prototype.loadSpeakerInfo = function() {
     var conference = this;
-    jQuery.getJSON('http://samagile2010.appspot.com/speakersTimestamp?callback=?',
+    
+    $.getJSON('http://samagile2010.appspot.com/speakersTimestamp?callback=?',
         function(speakersTimestamp) {
-            if (localStorage.getItem('speakersTimestamp') === speakersTimestamp['timestamp']) {
-                conference.conferenceSpeakers = $.parseJSON(localStorage.getItem('speakers'));
-                conference.loadSessionInfo();
-            } else {
-                localStorage.setItem('speakersTimestamp', speakersTimestamp['timestamp']);
+            if (localStorage.getItem('speakersTimestamp') !== speakersTimestamp['timestamp']) {
                 $.getJSON('http://samagile2010.appspot.com/speakers?callback=?',
                     function(speakersData) {
                         localStorage.setItem("speakers", $.toJSON(speakersData));
+                        localStorage.setItem('speakersTimestamp', speakersTimestamp['timestamp']);
                         conference.conferenceSpeakers = speakersData;
-                        conference.loadSessionInfo();
+                        buildSpeakerDom(conference);
                     }
                 );
             }
         }
-    );
+    );       
 };
 
 AgileConference.prototype.loadSessionInfo = function() {
     var conference = this;
-    jQuery.getJSON('http://samagile2010.appspot.com/topicsTimestamp?callback=?',
+
+    $.getJSON('http://samagile2010.appspot.com/topicsTimestamp?callback=?',
         function(sessionsTimestamp) {
-            if (localStorage.getItem('sessionsTimestamp') === sessionsTimestamp['timestamp']) {
-                conference.conferenceSessions = $.parseJSON(localStorage.getItem('sessions'));
-                buildDom(conference);
-            } else {
-                localStorage.setItem('sessionsTimestamp', sessionsTimestamp['timestamp']);
+            if (localStorage.getItem('sessionsTimestamp') !== sessionsTimestamp['timestamp']) {
                 $.getJSON('http://samagile2010.appspot.com/topics?callback=?',
                     function(sessionsData) {
                         localStorage.setItem("sessions", $.toJSON(sessionsData));
+                        localStorage.setItem('sessionsTimestamp', sessionsTimestamp['timestamp']);
                         conference.conferenceSessions = sessionsData;
-                        buildDom(conference);
+                        buildSessionDom(conference);
                     }
                 );
             }
@@ -288,7 +281,7 @@ AgileConference.prototype.getPrettySpeakersList = function(speakerIDs) {
     }
     var _this = this;
     return $.map(speakerIDs, function(id, i) {
-        return _this.conferenceSpeakers[id.replace(" ", "")].name;
+        return _this.conferenceSpeakers[cleanSpeakerID(id)].name;
     }).join(' and ');
 }
 
@@ -305,8 +298,10 @@ ConferenceDOMBuilder.prototype.buildSpeakerDOM = function(speakerID, speaker) {
 
 ConferenceDOMBuilder.prototype.updateSpeakersDOM = function() {
     for (speakerID in this.conference.conferenceSpeakers) {
-        var cleanSpeakerID = speakerID.replace(" ", "");
-        this.buildSpeakerDOM(cleanSpeakerID, this.conference.conferenceSpeakers[cleanSpeakerID]).insertBefore("#Wednesday");
+        var cleanID = cleanSpeakerID(speakerID);
+        $("#"+cleanID).remove();
+        this.buildSpeakerDOM(cleanID,
+            this.conference.conferenceSpeakers[cleanID]).insertBefore("#Wednesday");
     }
 };
 
@@ -314,33 +309,35 @@ ConferenceDOMBuilder.prototype.buildSessionSpeakerList = function(session) {
     var speakers = (session.speakers === null ? [] : session.speakers.split(','));
     var speakerList = $('<ul class="speaker" speakers="' + this.conference.getPrettySpeakersList(speakers) + '"></ul>');
     for (var i = 0; i < speakers.length; ++i) {
-        var speakerID = speakers[i].replace(" ", "");
+        var speakerID = cleanSpeakerID(speakers[i]);
         var speaker = this.conference.conferenceSpeakers[speakerID];
-        speakerList.append('<li class="arrow speaker-names"><a href="#' + speakers[i] + '" class="slide">' + speaker.name + '<div class="speaker-title">' + speaker.title + '</div></li>');
+        speakerList.append('<li class="arrow speaker-names"><a href="#' + speakerID + '" class="slide">' + speaker.name + '<div class="speaker-title">' + speaker.title + '</div></li>');
     }
     return speakerList;
 };
 
 ConferenceDOMBuilder.prototype.buildSessionDOM = function(sessionID, session) {
     var sessionDiv = $('<div id="' + sessionID + '" class="uses_local_data content"></div>');
-    sessionDiv.append($('<div class="toolbar"><h1>' + session.title + '</h1><a class="button back">Back</a></div>'));
+    sessionDiv.append($('<div class="toolbar"><h1>' + session.date + '</h1></div>'));
     var contentDiv = $('<div class="scroll"></div>');
     sessionDiv.append(contentDiv);
-    contentDiv.append($('div class="topic">' + session.topic + '</div>'));
+	contentDiv.append($('<div class="description"><span class="session-header">' + session.title + '</span><span style=""><span class="toggle go-skip" style="display: inline-block;"><input type="checkbox" topic="' + sessionID + '" class="attend-slider"/></span></span></div>'));
+	contentDiv.append($('div class="topic">' + session.topic + '</div>'));
     contentDiv.append(this.buildSessionSpeakerList(session));
-    contentDiv.append($('<ul><li class="attending">Planning to Skip or Go?<span class="toggle go-skip"><input type="checkbox" topic="' + sessionID + '" class="attend-slider"/></span></li></ul>'));
     contentDiv.append($('<div class="description">' + session.description + '</div>'));
     return sessionDiv;
 };
 
 ConferenceDOMBuilder.prototype.updateSessionsDOM = function() {
     for (sessionID in this.conference.conferenceSessions) {
+        $("#"+sessionID).remove();
         this.buildSessionDOM(sessionID, this.conference.conferenceSessions[sessionID]).insertBefore("#Wednesday");
     }
 };
 
 ConferenceDOMBuilder.prototype.updateDayMenu = function(day, dayDiv) {
     var dayList = $('.segmented', dayDiv);
+    dayList.empty();
     var numberOfDays = this.conference.days.length;
     for (var dayIndex = 0; dayIndex < numberOfDays; ++dayIndex) {
         var day_button_header = this.conference.days[dayIndex];
@@ -356,6 +353,7 @@ ConferenceDOMBuilder.prototype.updateTopicList = function(day, dayDiv) {
     var topicKeys = { "Wed" : getSortedSessionsForDay(this.conference.conferenceSessions, "Wed"),
         "Thu" : getSortedSessionsForDay(this.conference.conferenceSessions, "Thu")};
     var topicList = $('ul.edgetoedge', dayDiv);
+    topicList.empty();
     var previousDate = '';
     var dayTopics = topicKeys[day.shortName];
     for (var sessionIndex = 0; sessionIndex < dayTopics.length; sessionIndex++) {
@@ -388,4 +386,6 @@ ConferenceDOMBuilder.prototype.updateIndexPageDOM = function() {
 $(document).ready(function() {
     var conference = new AgileConference();
     conference.loadSpeakerInfo();
+    conference.loadSessionInfo();
+    registerJQTHandlers();
 });

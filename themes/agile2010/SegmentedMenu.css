@@ -9,13 +9,13 @@
    list-style:            none;
    text-align:            center;
    font-size:             1px;
-   padding:               1px 1px 0 1px;
+   padding:               4px 3px 0 3px;
    margin:                0px;
    -webkit-border-radius: 8px;
 }
 
 #jqt ul.segmented li{
-   border:                1px solid rgba(180, 180, 180, 0.8);
+   border:                1px solid #999;
    border-left:           0;
    border-right:          1;
 
@@ -53,7 +53,7 @@
    color:                 white !important;
    text-shadow:           rgba(0,0,0,.8) 1px 1px 0px;
    text-decoration:       none;
-   padding:               10px;
+   padding:               8px;
    display:               block;
    position:              relative;
 }
