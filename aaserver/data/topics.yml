@@ -1,6 +1,7 @@
 breakfast:
     date: Wed 07:00AM
     title: Executive Breakfast with Jim Highsmith
+    
     speakers: jim-highsmith
     description: |
         <p><a href="https://www.slatteryit.com.au/RegoPages/Agile2010Breakfast.aspx" target="_blank">Register for this session</a></p>
@@ -159,7 +160,10 @@ open-house:
     title: Open House - ThoughtWorks Offices
     speakers:
     description: |
-        <p>Following on from the success of the last Open House last year, we will be opening the doors of our Melbourne office which will be filled with food, drinks and Agile enthusiasts. Join us after Agile10 on Wednesday evening at 6.00pm. Register at the ThoughtWorks booth.</p>
+        <p>Following on from the success of the ThoughtWorks Open House last year, we will be opening the doors of our Melbourne office which will be filled with food, drinks and Agile enthusiasts. Join us after Agile10 on Wednesday evening at 6.00pm. 
+        <p>ThoughtWorks Melbourne Office is located at 303 Collins Street, Melbourne</p>
+        <p>Register at the ThoughtWorks booth.</p>
+        
 
 delivering-business-value:
     date: Thu 09:00AM
