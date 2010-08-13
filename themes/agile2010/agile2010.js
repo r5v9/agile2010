@@ -159,14 +159,6 @@ function getSortedSessionsForDay(sessions, day) {
     return sessionsForDay;
 }
 
-function updateSliderState() {
-    $("input.attend-slider").each(function() {
-        slider = $(this);
-        id = slider.attr('topic');
-        slider.attr('checked', isInMySessions(id));
-    });
-}
-
 function cleanSpeakerID(speakerID) {
     return speakerID.replace(" ","").replace("%20","");
 }
@@ -223,11 +215,16 @@ function registerJQTHandlers() {
     });
 }
 
-function buildDom(conference) {
+function buildSessionDom(conference) {
     var domBuilder = new ConferenceDOMBuilder(conference);
-    domBuilder.updateSpeakersDOM();
     domBuilder.updateSessionsDOM();
     domBuilder.updateIndexPageDOM();
+    registerJQTHandlers();
+}
+
+function buildSpeakerDom(conference) {
+    var domBuilder = new ConferenceDOMBuilder(conference);
+    domBuilder.updateSpeakersDOM();
 }
 
 function AgileConference() {
@@ -241,8 +238,6 @@ function AgileConference() {
 
 AgileConference.prototype.loadSpeakerInfo = function() {
     var conference = this;
-    conference.conferenceSpeakers = $.parseJSON(localStorage.getItem('speakers'));
-    conference.loadSessionInfo();
     
     $.getJSON('http://samagile2010.appspot.com/speakersTimestamp?callback=?',
         function(speakersTimestamp) {
@@ -252,7 +247,7 @@ AgileConference.prototype.loadSpeakerInfo = function() {
                         localStorage.setItem("speakers", $.toJSON(speakersData));
                         localStorage.setItem('speakersTimestamp', speakersTimestamp['timestamp']);
                         conference.conferenceSpeakers = speakersData;
-                        conference.loadSessionInfo();   
+                        buildSpeakerDom(conference);
                     }
                 );
             }
@@ -262,9 +257,6 @@ AgileConference.prototype.loadSpeakerInfo = function() {
 
 AgileConference.prototype.loadSessionInfo = function() {
     var conference = this;
-    conference.conferenceSessions = $.parseJSON(localStorage.getItem('sessions'));
-    buildDom(conference);
-    registerJQTHandlers();
 
     $.getJSON('http://samagile2010.appspot.com/topicsTimestamp?callback=?',
         function(sessionsTimestamp) {
@@ -274,8 +266,7 @@ AgileConference.prototype.loadSessionInfo = function() {
                         localStorage.setItem("sessions", $.toJSON(sessionsData));
                         localStorage.setItem('sessionsTimestamp', sessionsTimestamp['timestamp']);
                         conference.conferenceSessions = sessionsData;
-                        buildDom(conference);
-                        registerJQTHandlers();
+                        buildSessionDom(conference);
                     }
                 );
             }
@@ -394,4 +385,6 @@ ConferenceDOMBuilder.prototype.updateIndexPageDOM = function() {
 $(document).ready(function() {
     var conference = new AgileConference();
     conference.loadSpeakerInfo();
+    conference.loadSessionInfo();
+    registerJQTHandlers();
 });
