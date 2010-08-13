@@ -233,9 +233,7 @@ a:hover {
 a:active {
     color: black;
 }
-#tabbar {
-    bottom: 19px;
-}
+
 #tabbar a.button.icon {
     position: relative;
     /*float: right;*/
