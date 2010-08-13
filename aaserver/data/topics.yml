@@ -30,13 +30,6 @@ dogs-tricks:
         <p>Agile Organisation, Process and Practice brolly Context is everything - there is no 'one-size-fits-all' approach to project delivery. The Agile umbrella encompasses a wide range of techniques and approaches. This talk briefly examines a variety of the techniques and identifies the "project ecosystem" elements that will enable them to be effective, where they work best, where they are to be avoided and practical advice on how to get the maximum benefit from each of the practices.</p>
         <p>Shane presents a framework for selecting from a variety of techniques to identify the combination that will work most effectively in a specific project environment. This talk doesn't attempt to teach the techniques; rather Shane provides some concrete advice for selecting from techniques such as: brainstorming, mind maps, DeBono's thinking hats, vision box, structured interviews, questionnaires, scriptwriting, snowcards, use cases, user stories, process models, decision tables, data models, planning poker, behaviour driven development, low-fi prototypes, and CRC cards.</p>
         
-technology-transformation:
-    date: Wed 11:30AM
-    title: Delivering technology transformation in parallel with a transition to Agile
-    speakers: daniel-oertli
-    description: |
-        <p>Culture, Leadership, People brolly If you need to push through a substantial technology transformation - and are wondering whether a simultaneous transition to Agile will help or hinder your organisation to digest a major technology change - then this talk is for you.</p>
-        <p>In this talk, Daniel Oertli reflects on the experience of rebuilding a major website - realestate.com.au - in under a year on a new platform, running on new infrastructure, delivered with newly-introduced Agile practices. Daniel will answer questions such as: "How do you quickly raise a team's overall tempo?" and "How can a change to Agile reduce change?". The talk includes recommendations for making 'all-in' people, process and technology transformations 'stick' and deliver, and a candid view of the pitfalls and learnings during REA's journey.</p>
 
 agile-agile:
     date: Wed 11:30AM
@@ -269,7 +262,7 @@ trials-tribulations:
 distributed-panel:
     date: Thu 01:45PM
     title: Distributed Agile Panel
-    speakers:
+    speakers: mahesh-baxi, dave-thomas, nigel-dalton, philip-abernathy
     description:
 
 achieving-quality:
@@ -298,9 +291,9 @@ running-company-agile:
 
 technical-debt:
     date: Thu 03:45PM
-    title: Technical Debt panel
-    speakers:
-    description:
+    title: Paying Down Technical Debt Panel
+    speakers: adam-boas, martin-kearns, craig-smith, andy-marks, marina-chiovetti
+    description: <p>No matter how hard we try, accumulating some technical debt is inevitable. Yet its nebulous nature often makes it difficult for anyone apart from the development team to appreciate and communicate. Our panel of experts will provide you with a sound understanding of technical debt, its causes and the ramifications. Panelists will give some practical ways of paying down technical debt while still delivering business value.</p>
 
 against-odds:
     date: Thu 03:45PM
