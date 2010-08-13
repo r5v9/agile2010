@@ -51,7 +51,7 @@ function differentialTime(date) {
 
 function requestTweetsJson() {
     $('#twitter-feed').html('<div style="text-align:center;"><img src="themes/jqt/img/loading.gif" align="center" width="31" height="31" style="margin-top:50px"></div>');
-    $.getScript("http://search.twitter.com/search.json?q=agile&rpp=10&callback=rebuildTweets");
+    $.getScript("http://search.twitter.com/search.json?q=agileaus&callback=rebuildTweets");
 }
 
 function rebuildTweets(json) {
@@ -133,6 +133,7 @@ function buildDateStringForSession(session) {
     dateString += hours + ":" + minutes + ":00";
     return dateString;
 }
+
 
 function sortSessionsByTime(session1, session2) {
     var session1Date = new Date(buildDateStringForSession(session1));
@@ -317,12 +318,12 @@ ConferenceDOMBuilder.prototype.buildSessionSpeakerList = function(session) {
 
 ConferenceDOMBuilder.prototype.buildSessionDOM = function(sessionID, session) {
     var sessionDiv = $('<div id="' + sessionID + '" class="uses_local_data content"></div>');
-    sessionDiv.append($('<div class="toolbar"><h1>' + session.title + '</h1></div>'));
+    sessionDiv.append($('<div class="toolbar"><h1>' + session.date + '</h1></div>'));
     var contentDiv = $('<div class="scroll"></div>');
     sessionDiv.append(contentDiv);
-    contentDiv.append($('div class="topic">' + session.topic + '</div>'));
+	contentDiv.append($('<div class="description"><span class="session-header">' + session.title + '</span><span style=""><span class="toggle go-skip" style="display: inline-block;"><input type="checkbox" topic="' + sessionID + '" class="attend-slider"/></span></span></div>'));
+	contentDiv.append($('div class="topic">' + session.topic + '</div>'));
     contentDiv.append(this.buildSessionSpeakerList(session));
-    contentDiv.append($('<ul><li class="attending">Planning to Skip or Go?<span class="toggle go-skip"><input type="checkbox" topic="' + sessionID + '" class="attend-slider"/></span></li></ul>'));
     contentDiv.append($('<div class="description">' + session.description + '</div>'));
     return sessionDiv;
 };

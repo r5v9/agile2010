@@ -94,6 +94,13 @@ div#jqt .toolbar > h1 {
     white-space: normal;
 }
 
+.session-header {
+	font-size: 16px; 
+	font-weight:bold; 
+	width: 60%; 
+	display: inline-block;"
+}
+
 .description {
     
     margin: 10px;
@@ -269,7 +276,7 @@ body {
     font: bold 18px "Helvetica Neue", Helvetica;
     text-shadow: rgba(255,255,255,.2) 0 1px 1px;
     color: #000;
-    margin: 10px 20px 5px;
+    margin: 0px;
 }
 /* @group Toolbar */
 #jqt .toolbar {
