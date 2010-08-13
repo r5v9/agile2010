@@ -94,6 +94,13 @@ div#jqt .toolbar > h1 {
     white-space: normal;
 }
 
+.session-header {
+	font-size: 16px; 
+	font-weight:bold; 
+	width: 60%; 
+	display: inline-block;"
+}
+
 .description {
     
     margin: 10px;
@@ -267,17 +274,17 @@ body {
     font: bold 18px "Helvetica Neue", Helvetica;
     text-shadow: rgba(255,255,255,.2) 0 1px 1px;
     color: #000;
-    margin: 10px 20px 5px;
+    margin: 0px;
 }
 /* @group Toolbar */
 #jqt .toolbar {
 	-webkit-box-sizing: border-box;
 	height: 46px;
 	position: relative;
-	background-image: url(img/header_bg.png);
+	background-image: url(img/nav_bg.png);
 }
 #jqt .toolbar.bottom {
-	background-image: url(img/footer_bg.png);
+	background-image: url(img/nav_bg.png);
 }
 #jqt .black-translucent .toolbar {
 	margin-top: 20px;
@@ -296,7 +303,7 @@ div#jqt .toolbar > h1 {
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #000;
+    color: #CCC;
 }
 div#jqt.landscape .toolbar > h1 {
     margin-left: -125px;
@@ -324,6 +331,19 @@ div#jqt.landscape .toolbar > h1 {
     background: none;
     -webkit-border-image: url(img/button.png) 0 5 0 5;
 }
+
+.refresh a {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    padding: 0 3px;
+
+   
+
+}
+
+
+
 #jqt .button.active, #jqt .cancel.active, #jqt .add.active, #jqt .back.active {
     color: #aaa;
 }

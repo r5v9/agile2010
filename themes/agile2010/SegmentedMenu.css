@@ -15,7 +15,7 @@
 }
 
 #jqt ul.segmented li{
-   border:                1px solid rgba(180, 180, 180, 0.8);
+   border:                1px solid #999;
    border-left:           0;
    border-right:          1;
 
