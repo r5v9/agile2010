@@ -34,10 +34,11 @@
 				'themes/agile2010/img/loading.gif',
 				'themes/agile2010/img/toolbar_logo.png',
 				'themes/agile2010/img/yes_no.png',
+				'themes/agile2010/img/poweredbyTW.png',
 				'themes/agile2010/floorplan.jpg'
 			]
 		});
-		
+
 		if (!(localStorage.getItem('speakers') && localStorage.getItem('sessions'))) {
 			localStorage.setItem('sessions', $.toJSON(defaultSessionData.data));
 			localStorage.setItem('sessionsTimestamp', defaultSessionData.timestamp);
@@ -48,33 +49,31 @@
 </head>
 
 <body>
-	<div id="jqt" class="portrait">
-		<div id="Wednesday" class="uses_local_data content current" style="top: 0px; ">
-				<div class="toolbar">
-					<ul class="segmented"><li style="width:50%"><a class="dissolve selected" href="#Wednesday">Wednesday</a></li><li style="width:50%"><a class="dissolve " href="#Thursday">Thursday</a></li></ul>
-				</div>
-				<div class="scroll touchScroll touchScroll" style="position: relative; "><div style="pointer-events: none; -webkit-transition-property: opacity; -webkit-transition-duration: 250ms; opacity: 0; height: 212px; " class="touchScrollBars"><div class="touchScrollTrack touchScrollTrackX" style="display: none; "><div class="touchScrollHandle" style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; -webkit-transform: translate(0px, 0px); width: 25px; "></div></div><div class="touchScrollTrack touchScrollTrackY" style=""><div class="touchScrollHandle" style="-webkit-transform-origin-x: 0px; -webkit-transform-origin-y: 0px; -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1); -webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; -webkit-transform: translate(0px, 0px); height: 25px; "></div></div></div><div style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1); -webkit-transform: translate(0px, 0px); " class=""><div class="touchScrollInner" style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; display: inline-block; min-width: 100%; -webkit-box-sizing: border-box; -webkit-transform: translate(0px, 0px); "><div style="pointer-events: none; -webkit-transition-property: opacity; height: 212px; -webkit-transition-duration: 250ms; opacity: 0; " class="touchScrollBars"><div class="touchScrollTrack touchScrollTrackX" style="display: none; "><div class="touchScrollHandle" style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; width: 25px; "></div></div><div class="touchScrollTrack touchScrollTrackY"><div class="touchScrollHandle" style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; height: 25px; "></div></div></div><div style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; "><div class="touchScrollInner" style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; display: inline-block; min-width: 100%; -webkit-box-sizing: border-box; ">
-					<div>
-						<ul class="edgetoedge schedule"><li class="sep">07:00AM</li><li><a href="#breakfast" class="topic-link slide">Executive Breakfast with Jim Highsmith</a><span class="speaker-title3">Jim Highsmith</span><span class="toggle go-skip"><input type="checkbox" topic="breakfast" class="attend-slider"></span></li><li class="sep">09:00AM</li><li><a href="#beyond-scope-schedule-cost" class="topic-link slide">Beyond Scope, Schedule, and Cost: Rethinking Agile performance measures
-		</a><span class="speaker-title3">Jim Highsmith</span><span class="toggle go-skip"><input type="checkbox" topic="beyond-scope-schedule-cost" class="attend-slider"></span></li><li class="sep">10:00AM</li><li><a href="#essence-agile" class="topic-link slide">The Essence of Agile Software Development</a><span class="speaker-title3">Martin Fowler</span><span class="toggle go-skip"><input type="checkbox" topic="essence-agile" class="attend-slider"></span></li><li class="sep">11:30AM</li><li><a href="#technology-transformation" class="topic-link slide">Delivering technology transformation in parallel with a transition to Agile</a><span class="speaker-title3">Daniel Oertli</span><span class="toggle go-skip"><input type="checkbox" topic="technology-transformation" class="attend-slider"></span></li><li><a href="#dogs-tricks" class="topic-link slide">Old tricks for new dogs and new tricks for old dogs</a><span class="speaker-title3">Shane Hastie</span><span class="toggle go-skip"><input type="checkbox" topic="dogs-tricks" class="attend-slider"></span></li><li><a href="#agile-agile" class="topic-link slide">Agile Agile: Using Agile techniques to adopt Agile
-		</a><span class="speaker-title3">Ben Hogan</span><span class="toggle go-skip"><input type="checkbox" topic="agile-agile" class="attend-slider"></span></li><li class="sep">12:15PM</li><li><a href="#maturity-assessment" class="topic-link slide">You can take your Agile Maturity Assessment and...</a><span class="speaker-title3">Jason Yip and Marina Chiovetti</span><span class="toggle go-skip"><input type="checkbox" topic="maturity-assessment" class="attend-slider"></span></li><li><a href="#culture-stupid" class="topic-link slide">It's the culture, stupid! - Agile as an organisational paradigm</a><span class="speaker-title3">Rob Thomsett</span><span class="toggle go-skip"><input type="checkbox" topic="culture-stupid" class="attend-slider"></span></li><li><a href="#jemena-case-study" class="topic-link slide">Case study - energy utility, Jemena</a><span class="speaker-title3">Paula Ngov</span><span class="toggle go-skip"><input type="checkbox" topic="jemena-case-study" class="attend-slider"></span></li><li class="sep">02:00PM</li><li><a href="#continuous-deployment" class="topic-link slide">Working with Continuous Deployment to reduce cycle time</a><span class="speaker-title3">Kane Mar</span><span class="toggle go-skip"><input type="checkbox" topic="continuous-deployment" class="attend-slider"></span></li><li><a href="#aconex-case-study" class="topic-link slide">Case study - Aconex</a><span class="speaker-title3">Leigh Jasper</span><span class="toggle go-skip"><input type="checkbox" topic="aconex-case-study" class="attend-slider"></span></li><li><a href="#flavours-panel" class="topic-link slide">Flavours of Agile panel</a><span class="speaker-title3"></span><span class="toggle go-skip"><input type="checkbox" topic="flavours-panel" class="attend-slider"></span></li><li class="sep">02:45PM</li><li><a href="#agile-adoption" class="topic-link slide">Agile Adoption: Real world lessons on getting Agile established in the enterprise
-		</a><span class="speaker-title3">Richard Henning</span><span class="toggle go-skip"><input type="checkbox" topic="agile-adoption" class="attend-slider"></span></li><li><a href="#agile-governance" class="topic-link slide">Agile Governance - the key to doing more with less</a><span class="speaker-title3">Philip Abernathy</span><span class="toggle go-skip"><input type="checkbox" topic="agile-governance" class="attend-slider"></span></li><li><a href="#lightning-talks-wed" class="topic-link slide">Lightning talks</a><span class="speaker-title3"></span><span class="toggle go-skip"><input type="checkbox" topic="lightning-talks-wed" class="attend-slider"></span></li><li class="sep">04:00PM</li><li><a href="#procurement-panel" class="topic-link slide">Procurement panel</a><span class="speaker-title3"></span><span class="toggle go-skip"><input type="checkbox" topic="procurement-panel" class="attend-slider"></span></li><li><a href="#a-team" class="topic-link slide">Building an A-Team: I love it when a team comes together
-		</a><span class="speaker-title3">Craig Smith</span><span class="toggle go-skip"><input type="checkbox" topic="a-team" class="attend-slider"></span></li><li><a href="#agile-games" class="topic-link slide">Agile games</a><span class="speaker-title3">Philip Abernathy and Kane Mar</span><span class="toggle go-skip"><input type="checkbox" topic="agile-games" class="attend-slider"></span></li><li class="sep">04:45PM</li><li><a href="#government-case-studies" class="topic-link slide">Government case studies</a><span class="speaker-title3">Ian Crawford and Todd Porter</span><span class="toggle go-skip"><input type="checkbox" topic="government-case-studies" class="attend-slider"></span></li><li class="sep">05:30PM</li><li><a href="#open-house" class="topic-link slide">Open House - ThoughtWorks Offices</a><span class="speaker-title3"></span><span class="toggle go-skip"><input type="checkbox" topic="open-house" class="attend-slider"></span></li></ul>
-					</div>
-				</div></div></div></div></div>
+<div id="jqt" class="portrait">
+	<div id="Wednesday" class="uses_local_data content current" style="top: 0px; ">
+		<div class="toolbar">
+			<div class="toolbar">
+				<ul class="segmented"></ul>
 			</div>
-		<div id="Thursday" class="uses_local_data content">
-				<div class="toolbar">
-					<ul class="segmented"><li style="width:50%"><a class="dissolve " href="#Wednesday">Wednesday</a></li><li style="width:50%"><a class="dissolve selected" href="#Thursday">Thursday</a></li></ul>
-				</div>
-				<div class="scroll touchScroll touchScroll" style="position: relative; "><div style="pointer-events: none; -webkit-transition-property: opacity; -webkit-transition-duration: 250ms; opacity: 0; height: 0px; " class="touchScrollBars"><div class="touchScrollTrack touchScrollTrackX" style="display: none; "><div class="touchScrollHandle" style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; "></div></div><div class="touchScrollTrack touchScrollTrackY" style="display: none; "><div class="touchScrollHandle" style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; "></div></div></div><div style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; "><div class="touchScrollInner" style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; display: inline-block; min-width: 100%; -webkit-box-sizing: border-box; "><div style="pointer-events: none; -webkit-transition-property: opacity; -webkit-transition-duration: 250ms; opacity: 0; height: 0px; " class="touchScrollBars"><div class="touchScrollTrack touchScrollTrackX" style="display: none; "><div class="touchScrollHandle" style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; "></div></div><div class="touchScrollTrack touchScrollTrackY" style="display: none; "><div class="touchScrollHandle" style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; "></div></div></div><div style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; "><div class="touchScrollInner" style="-webkit-transform-style: preserve-3d; -webkit-transition-property: -webkit-transform; display: inline-block; min-width: 100%; -webkit-box-sizing: border-box; ">
-					<div>
-						<ul class="edgetoedge schedule"><li class="sep">09:00AM</li><li><a href="#delivering-business-value" class="topic-link slide">Delivering business value with Agile</a><span class="speaker-title3">Jeff Smith</span><span class="toggle go-skip"><input type="checkbox" topic="delivering-business-value" class="attend-slider"></span></li><li class="sep">10:30AM</li><li><a href="#emergent-design" class="topic-link slide">Implementing Emergent Design</a><span class="speaker-title3">Neal Ford</span><span class="toggle go-skip"><input type="checkbox" topic="emergent-design" class="attend-slider"></span></li><li><a href="#about-trust" class="topic-link slide">It's about trust…</a><span class="speaker-title3">Josh Melville</span><span class="toggle go-skip"><input type="checkbox" topic="about-trust" class="attend-slider"></span></li><li><a href="#legacy-gold" class="topic-link slide">Legacy Gold - Using Lean and Agile to extract maximum value from your legacy and enterprise application portfolio</a><span class="speaker-title3">Dave Thomas</span><span class="toggle go-skip"><input type="checkbox" topic="legacy-gold" class="attend-slider"></span></li><li class="sep">11:15AM</li><li><a href="#mars-venus" class="topic-link slide">Developers are from Mars, Product Owners are from Venus</a><span class="speaker-title3">Adam Boas</span><span class="toggle go-skip"><input type="checkbox" topic="mars-venus" class="attend-slider"></span></li><li><a href="#truly-agile" class="topic-link slide">Truly Agile : Building Agile software using Agile techniques
-		</a><span class="speaker-title3">Jean-Christophe Huet</span><span class="toggle go-skip"><input type="checkbox" topic="truly-agile" class="attend-slider"></span></li><li><a href="#introspection-leadership" class="topic-link slide">Introspection and leadership</a><span class="speaker-title3">Martin Kearns</span><span class="toggle go-skip"><input type="checkbox" topic="introspection-leadership" class="attend-slider"></span></li><li class="sep">01:00PM</li><li><a href="#agile-lawyers" class="topic-link slide">Agile Lawyers? The transition from Agile IT to a radically Agile organisation at Lonely Planet</a><span class="speaker-title3">Nigel Dalton</span><span class="toggle go-skip"><input type="checkbox" topic="agile-lawyers" class="attend-slider"></span></li><li><a href="#red" class="topic-link slide">Dr W. Edwards Deming's famous Red Bead Experiment</a><span class="speaker-title3">David Joyce</span><span class="toggle go-skip"><input type="checkbox" topic="red" class="attend-slider"></span></li><li><a href="#lightning-talks-thursday" class="topic-link slide">Lightning talks</a><span class="speaker-title3"></span><span class="toggle go-skip"><input type="checkbox" topic="lightning-talks-thursday" class="attend-slider"></span></li><li class="sep">01:45PM</li><li><a href="#trials-tribulations" class="topic-link slide">Trials and tribulations of ensuring enterprise architecture with Agile delivery</a><span class="speaker-title3">John Sullivan</span><span class="toggle go-skip"><input type="checkbox" topic="trials-tribulations" class="attend-slider"></span></li><li><a href="#achieving-quality" class="topic-link slide">Achieving quality</a><span class="speaker-title3">Sharon Robson</span><span class="toggle go-skip"><input type="checkbox" topic="achieving-quality" class="attend-slider"></span></li><li><a href="#distributed-panel" class="topic-link slide">Distributed Agile Panel</a><span class="speaker-title3"></span><span class="toggle go-skip"><input type="checkbox" topic="distributed-panel" class="attend-slider"></span></li><li class="sep">03:00PM</li><li><a href="#running-company-agile" class="topic-link slide">Running a company Agile</a><span class="speaker-title3">Tim Hunt-Smith</span><span class="toggle go-skip"><input type="checkbox" topic="running-company-agile" class="attend-slider"></span></li><li><a href="#open-space" class="topic-link slide">Open Space</a><span class="speaker-title3"></span><span class="toggle go-skip"><input type="checkbox" topic="open-space" class="attend-slider"></span></li><li class="sep">03:45PM</li><li><a href="#technical-debt" class="topic-link slide">Technical Debt panel</a><span class="speaker-title3"></span><span class="toggle go-skip"><input type="checkbox" topic="technical-debt" class="attend-slider"></span></li><li><a href="#against-odds" class="topic-link slide">Delivery against the odds - How Agile practices can save your project</a><span class="speaker-title3">Holger Kaufmann</span><span class="toggle go-skip"><input type="checkbox" topic="against-odds" class="attend-slider"></span></li></ul>
-					</div>
-				</div></div></div></div></div>
-
+		</div>
+		<div class="scroll">
+			<div>
+				<ul class="edgetoedge schedule"></ul>
 			</div>
+		</div>
+	</div>
+	<div id="Thursday" class="uses_local_data content">
+		<div class="toolbar">
+			<div class="toolbar">
+				<ul class="segmented"></ul>
+			</div>
+		</div>
+		<div class="scroll">
+			<div>
+				<ul class="edgetoedge schedule"></ul>
+			</div>
+		</div>
+	</div>
 
 	<!-- about -->
 	<div id="about" class="content">
@@ -82,46 +81,58 @@
 			<h1>Info</h1>
 			<a href="#" class="back">Back</a>
 		</div>
-    <div id="about-agile">
+		<div id="about-agile">
 			<div class="scroll description">
-            	<p> 
-                <img src="themes/agile2010/img/poweredbyTW.png" width="235" height="40"> 
-                
-                <br>
-                <br>
-                
-                <b>As a Platinum sponsor of Agile Australia 2010, ThoughtWorks is proud to share this conference application with you.</b>
-                <br>
-                <br>
-                <div id="about-agile-links"> 
-                <a href="http://www.thoughtworks.com/delivery" target="_blank">Delivery</a> | 
-                <a href="http://www.thoughtworks.com/consulting" target="_blank">Consulting</a> | 
-                <a href="http://www.thoughtworks.com/products" target="_blank">Studios</a> </div>
-                <br>
-               
-ThoughtWorks are pioneers of the most advanced and successful Agile methods of software development and best practices used in the industry today. We can solve your toughest technology challenges. This is what we do best. We enjoy the challenge of reshaping an IT division to make it more productive, of building unique high-performance systems, of creating build pipelines which are the envy of the industry, or of helping make tough decisions around technology choices. While you may consider your particular issue to be unique to you, we have a knack of thinking about things in unusual ways, and would always be interested in helping with the 'impossible'. <br>
+				<p>
+					<img src="themes/agile2010/img/poweredbyTW.png" width="235" height="40">
 
- <br>
-      
-                <div id="about-agile-links"> <a href="http://www.thoughtworks.com/technology" target="_blank">Technology</a> | 
-                <a href="http://www.thoughtworks.com/agile-and-lean" target="_blank">Agile and Lean</a> | 
-                <a href="http://www.thoughtworks.com/offshore" target="_blank">Offshore</a> | 
-                <a href="http://www.thoughtworks.com/experience-design" target="_blank">Experience Design</a> | 
-                <a href="http://www.thoughtworks.com/testing" target="_blank">Testing</a>
-                 <br>
-                 <a href="http://www.thoughtworks.com/careers" target="_blank">Interested in becoming a ThoughtWorker?</a></div>
-               
-                
-      </div>
+					<br>
+					<br>
+
+					<b>As a Platinum sponsor of Agile Australia 2010, ThoughtWorks is proud to share this conference
+					   application with you.</b>
+					<br>
+					<br>
+
+				<div id="about-agile-links">
+					<a href="http://www.thoughtworks.com/delivery" target="_blank">Delivery</a> |
+					<a href="http://www.thoughtworks.com/consulting" target="_blank">Consulting</a> |
+					<a href="http://www.thoughtworks.com/products" target="_blank">Studios</a></div>
+				<br>
+
+				ThoughtWorks are pioneers of the most advanced and successful Agile methods of software development and
+				best practices used in the industry today. We can solve your toughest technology challenges. This is
+				what we do best. We enjoy the challenge of reshaping an IT division to make it more productive, of
+				building unique high-performance systems, of creating build pipelines which are the envy of the
+				industry, or of helping make tough decisions around technology choices. While you may consider your
+				particular issue to be unique to you, we have a knack of thinking about things in unusual ways, and
+				would always be interested in helping with the 'impossible'. <br>
+
+				<br>
+
+				<div id="about-agile-links"><a href="http://www.thoughtworks.com/technology"
+											   target="_blank">Technology</a> |
+					<a href="http://www.thoughtworks.com/agile-and-lean" target="_blank">Agile and Lean</a> |
+					<a href="http://www.thoughtworks.com/offshore" target="_blank">Offshore</a> |
+					<a href="http://www.thoughtworks.com/experience-design" target="_blank">Experience Design</a> |
+					<a href="http://www.thoughtworks.com/testing" target="_blank">Testing</a>
+					<br>
+					<a href="http://www.thoughtworks.com/careers" target="_blank">Interested in becoming a
+																				  ThoughtWorker?</a></div>
+
+
+			</div>
 		</div>
 	</div>
 
 	<!-- twitter -->
 	<div id="twitter" class="content">
-	  <div class="toolbar">
-		<h1>#agileaus</h1>
-		  <a class="button back" href="#">Back</a>
-		  <div class="refresh"><a class="slideup" href="#" onClick="requestTweetsJson(); return false;"><img src="themes/agile2010/img/reload.gif" width="24" height="27"></a> </div>
+		<div class="toolbar">
+			<h1>#agileaus</h1>
+			<a class="button back" href="#">Back</a>
+
+			<div class="refresh"><a class="slideup" href="#" onClick="requestTweetsJson(); return false;"><img
+					src="themes/agile2010/img/reload.gif" width="24" height="27"></a></div>
 		</div>
 		<div id="twitter-feed">
 		</div>
@@ -148,33 +159,31 @@ ThoughtWorks are pioneers of the most advanced and successful Agile methods of s
 			<a href="#" class="back">Back</a>
 		</div>
 		<div id="floorplan-container">
-        	<img src="themes/agile2010/floorplan.jpg"/>
-        </div>
+			<img src="themes/agile2010/floorplan.jpg"/>
+		</div>
 	</div>
-    
-    <nav id="tabbar">
-            <ul>
-                <li>
-                    <a href="#Wednesday" class="fade icon"><img src="themes/agile2010/img/shed_on.png" alt="Shedule"/></a>
-                </li>
-                <li>
-                    <a href="#about" class="fade icon"><img src="themes/agile2010/img/about_off.png" alt="More Info"/></a>
-                </li>
-                <li>
-                    <a href="#twitter" class="fade  icon"><img src="themes/agile2010/img/buzz_off.png" alt="Twitter Feed"/></a>
-                </li>
-                <li>
-                    <a href="#floorplan" class="fade icon"><img src="themes/agile2010/img/rooms_off.png" alt="Rooms"/></a>
-                </li>
-                <li>
-                    <a href="#map" class="fade icon"><img src="themes/agile2010/img/where_off.png" alt="Getting There"/></a>
-                </li>
-            </ul>
-        </nav> 
+
+	<nav id="tabbar">
+		<ul>
+			<li>
+				<a href="#Wednesday" class="fade icon"><img src="themes/agile2010/img/shed_on.png" alt="Shedule"/></a>
+			</li>
+			<li>
+				<a href="#about" class="fade icon"><img src="themes/agile2010/img/about_off.png" alt="More Info"/></a>
+			</li>
+			<li>
+				<a href="#twitter" class="fade  icon"><img src="themes/agile2010/img/buzz_off.png" alt="Twitter Feed"/></a>
+			</li>
+			<li>
+				<a href="#floorplan" class="fade icon"><img src="themes/agile2010/img/rooms_off.png" alt="Rooms"/></a>
+			</li>
+			<li>
+				<a href="#map" class="fade icon"><img src="themes/agile2010/img/where_off.png" alt="Getting There"/></a>
+			</li>
+		</ul>
+	</nav>
 
 
-
-    
 </div>
 
 </body>
