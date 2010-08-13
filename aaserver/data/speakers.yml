@@ -230,4 +230,30 @@ james-brett
         
 nick-strybosch
     name: Nick Strybosch
-    title: Product and Techo
+    title: Product and Technology Manager, Aconex
+    description: |
+        <p>Nick Strybosch works for Aconex, who provide a SAAS-based construction project collaboration platform. He hopped on the Agile bandwagon in 2006, after quitting a business analyst role at a bank because he was sure they were doing requirements wrong, without knowing what right was. Right, as it turned out, has something to do with index cards and sharpies. He's been scribbling ever since, joining Aconex on day one of their transition to scrum in late 2008, and is currently part of a team building the first product outside of the core platform.</p>
+        
+mahesh-baxi
+    name: Mahesh Baxi
+    title: Managing Director, ThoughtWorks India
+    description: |
+        <p>Mahesh Baxi joined ThoughtWorks in July 2008 as Head of Delivery, and later became Chief Operating Officer where he was responsible for the day-to-day operations of business. As the Managing Director of ThoughtWorks India, Mahesh Baxi is responsible for the company's India operations, business strategy, software delivery excellence, customer relationships, and balancing sustainable growth & employee needs.</p>
+        <p>Before joining ThoughtWorks, Mahesh had been in the software industry for over 15 years, of which he spent 12 yearsin in the Bay Area, USA. He has worked for various software product development companies including Apttus, Vendavo, Nextance and Challenger Systems, where he led the professional services group as Director of Professional Services, and CRM & B2B practices as Engagement Manager. Mahesh holds a Computer Engineering degree from Gujarat University. Mahesh is a member of the Technology Advisory Board for PSVillage, and a contributing editor of the book 'Tips from the Trenches'.</p>
+
+chris-murphy
+    name: Chris Murphy
+    title: Managing Director, ThoughtWorks Australia
+    description: |
+        <p>Chris Murphy is Managing Director of ThoughtWorks Australia. Chris has over 15 years experience in the ICT industry, in a diverse range of technical and business roles including as a computer science instructor, software developer, technology & intellectual property lawyer, and in senior commercial and leadership positions within the information technology industry.</p>
+        <p>Following his initial Agile “Eureka moment” on his first day at ThoughtWorks six years ago (which simultaneously filled him with hope - and invalidated his entire frame of reference and career achievements to that point), Chris has worked extensively with ThoughtWorks consultants, clients and the Agile community to break-down traditional legal, commercial and governance models and reinvent them appropriate to more business focussed Agile approaches.</p>
+        <p>Chris holds Bachelor degrees in Science and Law from the University of Melbourne, Master degrees in Information Technology and Law (Intellectual Property) from Monash University, and is qualified as a solicitor in Australia, England and Wales.</p>
+
+andy-marks
+    name: Andy Marks
+    title: Consultant, ThoughtWorks
+    description: |
+        <p>Since 2002, Andy Marks has worked at ThoughtWorks in a variety of roles and within a variety of different organisational cultures. Andy has helped introduce Agile into organisations both large and small and spent considerable time working within established Agile environments of various levels of maturity. Andy brings a passion for high quality software development to his work, accompanied by a strong mentoring background.</p>
+        
+
+    
