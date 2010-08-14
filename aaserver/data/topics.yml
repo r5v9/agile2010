@@ -302,7 +302,7 @@ running-company-agile:
 
 dev-ops:
     date: Thu 3:00PM
-    title: DevOps and Agile Release Management: Rapid, Reliable Software Releases Through Automation and Collaboration
+    title: 'DevOps and Agile Release Management: Rapid, Reliable Software Releases Through Automation and Collaboration'
     speakers: jez-humble
     description: |
         <p>Many organisations struggle with getting valuable, working software released to users frequently and reliably. Often, software is found to be unfit for purpose or simply undeployable late in the delivery process. Jez discusses how automation of the build, deploy, test and release process, automated infrastructure and database management, and better collaboration between developers, testers, and operations enables rapid, reliable software releases.</p> 
