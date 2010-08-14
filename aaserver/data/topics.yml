@@ -10,7 +10,7 @@ breakfast:
 beyond-scope-schedule-cost:
     date: Wed 09:00AM
     title: > 
-        Beyond Scope, Schedule, and Cost: Rethinking Agile performance measures
+        Beyond Scope, Schedule, and Cost: Rethinking Agile Performance Measures
     speakers: jim-highsmith
     description: |
         <p>A March 2009 Business Week article proclaims, "There is no more Normal." In the throws of such pervasive change the traditional emphasis on "following the plan with minimal changes," needs to be supplanted by an agile stress on "adapting successfully to inevitable changes." Furthermore, if agility is about delivering customer value by being flexible, then how can adherence to a traditional scope, schedule, and cost plan be the best way to measure performance? It can't. We need to move beyond the classic Iron Triangle measures to an Agile Triangle that focuses on Value, Quality, and Constraints.</p>
@@ -25,72 +25,73 @@ essence-agile:
 
 dogs-tricks:
     date: Wed 11:30AM
-    title: Old tricks for new dogs and new tricks for old dogs
+    title: Old Tricks for New Dogs and New Tricks for Old Dogs
     speakers: shane-hastie
     description: |
-        <p>Agile Organisation, Process and Practice brolly Context is everything - there is no 'one-size-fits-all' approach to project delivery. The Agile umbrella encompasses a wide range of techniques and approaches. This talk briefly examines a variety of the techniques and identifies the "project ecosystem" elements that will enable them to be effective, where they work best, where they are to be avoided and practical advice on how to get the maximum benefit from each of the practices.</p>
+        <p>Context is everything - there is no 'one-size-fits-all' approach to project delivery. The Agile umbrella encompasses a wide range of techniques and approaches. This talk briefly examines a variety of the techniques and identifies the "project ecosystem" elements that will enable them to be effective, where they work best, where they are to be avoided and practical advice on how to get the maximum benefit from each of the practices.</p>
         <p>Shane presents a framework for selecting from a variety of techniques to identify the combination that will work most effectively in a specific project environment. This talk doesn't attempt to teach the techniques; rather Shane provides some concrete advice for selecting from techniques such as: brainstorming, mind maps, DeBono's thinking hats, vision box, structured interviews, questionnaires, scriptwriting, snowcards, use cases, user stories, process models, decision tables, data models, planning poker, behaviour driven development, low-fi prototypes, and CRC cards.</p>
         
 
 agile-agile:
     date: Wed 11:30AM
     title: >
-        Agile Agile: Using Agile techniques to adopt Agile
+        Agile Agile: Using Agile Techniques to Adopt Agile
     speakers: ben-hogan
     description: |
-        <p>Agile Organisation, Process and Practice brolly If you are currently introducing Agile into an organisation or thinking of doing so then this talk is for you. In this talk, Ben Hogan looks at the idea of using an Agile approach to introducing Agile into an organisation in a congruent and incremental way and with the benefits of using an Agile method: early delivery of business value, the flexibility to adapt to organisational constraints. Drawing on Ben's eight years of Agile experience and a number of recent publications this talk gives attendees a practical approach to introducing Agile into their organisation. Ben will answer questions such as: "Where do I start?" and "How do I introduce Agile into a large traditional organisation?" The talk includes an introduction to the most important organisational change models and provides attendees a number of recommendations and tips on what to avoid in their Agile journey.</p>
+        <p>If you are currently introducing Agile into an organisation or thinking of doing so then this talk is for you. In this talk, Ben Hogan looks at the idea of using an Agile approach to introducing Agile into an organisation in a congruent and incremental way and with the benefits of using an Agile method: early delivery of business value, the flexibility to adapt to organisational constraints. Drawing on Ben's eight years of Agile experience and a number of recent publications this talk gives attendees a practical approach to introducing Agile into their organisation. Ben will answer questions such as: "Where do I start?" and "How do I introduce Agile into a large traditional organisation?" The talk includes an introduction to the most important organisational change models and provides attendees a number of recommendations and tips on what to avoid in their Agile journey.</p>
 
 
 culture-stupid:
     date: Wed 12:15PM
-    title: It's the culture, stupid! - Agile as an organisational paradigm
+    title: It's the Culture, Stupid! - Agile as an Organisational Paradigm
     speakers: rob-thomsett
     description: |
-        <p>Culture, Leadership, People brolly Too many organisations and some Agilists see Agile as a "quick fix". In searching for a "silver bullet" as Fred Brooks stated so many years ago, the disruptive nature of Agile to an organisation's processes, management models and culture is too often ignored until too late.</p>
+        <p>Too many organisations and some Agilists see Agile as a "quick fix". In searching for a "silver bullet" as Fred Brooks stated so many years ago, the disruptive nature of Agile to an organisation's processes, management models and culture is too often ignored until too late.</p>
         <p>Agile is not a new method for project development, it is a total re-definition of how an organisation delivers change. In this session, Rob will present a systemic view of Agile and how two leading organisations have used Agile sponsorship, Agile project management, and Agile development as a critical part of building a new organisational paradigm.</p>
 
 jemena-case-study:
     date: Wed 12:15PM
-    title: Case study - energy utility, Jemena
+    title: Case Study - Energy Utility, Jemena
     speakers: paula-ngov
     description: |
-        <p>Business Value brolly This case study examines the positive impact of introducing Agile development processes in an environment that is made up of regulatory requirements, extension of legacy systems, tight and non-negotiable deadlines, old technology, multiple vendors, traditional methodologies, and integration with external and market systems.</p>
+        <p>This case study examines the positive impact of introducing Agile development processes in an environment that is made up of regulatory requirements, extension of legacy systems, tight and non-negotiable deadlines, old technology, multiple vendors, traditional methodologies, and integration with external and market systems.</p>
         <p>This presentation outlines the way in which DIUS computing and Energy Utility - Jemena, have overcome many of the issues confronting large complex projects, by applying agile techniques such as behaviour and test driven development (BDD and TDD).</p>
 
 maturity-assessment:
     date: Wed 12:15PM
-    title: You can take your Agile Maturity Assessment and...
+    title: You Can Take Your Agile Maturity Assessment and...
     speakers: jason-yip, marina-chiovetti
     description: |
-        <p>Agile Organisation, Process and Practice brolly It's a common and understandable request to want to know how "Agile" you are but there is a great risk of being distracted by process compliance rather than staying focused on improvement and delivering business value. Agile Maturity Assessments typically take a few people's opinions of where the team is at, then dictates how to change - but that rarely 'sticks.' The problem still exists that we need to know how well we are doing and what to do next, and teams will buy in and drive this change if they assess the situation themselves. This presentation will discuss how to do this in a way that stays focused on our goals and not on our Agile score.</p>
+        <p>It's a common and understandable request to want to know how "Agile" you are but there is a great risk of being distracted by process compliance rather than staying focused on improvement and delivering business value. Agile Maturity Assessments typically take a few people's opinions of where the team is at, then dictates how to change - but that rarely 'sticks.' The problem still exists that we need to know how well we are doing and what to do next, and teams will buy in and drive this change if they assess the situation themselves. This presentation will discuss how to do this in a way that stays focused on our goals and not on our Agile score.</p>
 
 aconex-case-study:
     date: Wed 02:00PM
-    title: Case study - Aconex
+    title: Case Study - Aconex
     speakers: leigh-jasper
     description: |
-        <p>Business Value brolly By 2008, Aconex had established itself as one of Australia's largest and fastest growing SaaS companies, yet it needed to evolve to remain successful in its over sixty overseas markets. Despite facing unprecedented global economic uncertainty, Aconex made the decision to transition to Agile. CEO Leigh Jasper will present on how Agile aligned with the company's core values, how it helped them navigate the global financial crisis and has now positioned Aconex well for future growth.</p>
+        <p>By 2008, Aconex had established itself as one of Australia's largest and fastest growing SaaS companies, yet it needed to evolve to remain successful in its over sixty overseas markets. Despite facing unprecedented global economic uncertainty, Aconex made the decision to transition to Agile. CEO Leigh Jasper will present on how Agile aligned with the company's core values, how it helped them navigate the global financial crisis and has now positioned Aconex well for future growth.</p>
 
 flavours-panel:
     date: Wed 02:00PM
     title: Flavours of Agile panel
     speakers: bruce-taylor, steve-lawrence, james-brett, john-sullivan
-    description:
+    description: |
+        <p>This panel session will provide attendees with an understanding of the different flavours of Agile. Agile is an umbrella terms for several software development methodologies which share the spirit of the Agile Manifesto while differing in how they are implemented. Panelists will outline the various approaches to Agile, how they differ and how they overlap. Understand terms such as - Scrum, Lean and Kanban, Feature Driven Development, Extreme Programming.</p>
 
 continuous-deployment:
     date: Wed 02:00PM
-    title: Working with Continuous Deployment to reduce cycle time
+    title: Working with Continuous Deployment to Reduce Cycle Time
     speakers: kane-mar
     description: |
-        <p>Innovation and Emerging Ideas brolly Continuous Deployment (CD) is becoming fashionable, driven primarily by both the Agile and Lean communities to deliver online services more rapidly. But what is CD? How can CD be used to get feedback on our services? And, what are the business advantages of adopting CD?</p>
-        <p>In this presentation, Jason would like to introduce the concept of CD, discuss real world instances of CD in use, and why for a certain niche of product the use of CD represents a compelling business advantage.</p>
+        <p>Continuous Deployment (CD) is becoming fashionable, driven primarily by both the Agile and Lean communities to deliver online services more rapidly. But what is CD? How can CD be used to get feedback on our services? And, what are the business advantages of adopting CD?</p>
+        <p>In this presentation, Kane would like to introduce the concept of CD, discuss real world instances of CD in use, and why for a certain niche of product the use of CD represents a compelling business advantage.</p>
 
 agile-governance:
     date: Wed 02:45PM
     title: Agile Governance - the key to doing more with less
     speakers: philip-abernathy
     description: |
-        <p>Culture, Leadership, People brolly BFC! Better Faster Cheaper! Pick any three! This talk will address how organisations can leverage Lean and Agile principle and techniques to govern the funnel of work in an efficient and effective manner thus getting more bang for buck. Phil Abernathy will draw on case studies and experience to show how Agile governance is key to the successful implementation of Agile within an organisation and how it can deliver business value faster and more cost effectively. It will also address the steps needed to make the transformation and its impact on the way of working.</p>
+        <p>BFC! Better Faster Cheaper! Pick any three! This talk will address how organisations can leverage Lean and Agile principle and techniques to govern the funnel of work in an efficient and effective manner thus getting more bang for buck. Phil Abernathy will draw on case studies and experience to show how Agile governance is key to the successful implementation of Agile within an organisation and how it can deliver business value faster and more cost effectively. It will also address the steps needed to make the transformation and its impact on the way of working.</p>
 
 lightning-talks-wed:
     date: Wed 02:45PM
@@ -102,11 +103,10 @@ lightning-talks-wed:
 
 agile-adoption:
     date: Wed 02:45PM
-    title: >
-        Agile Adoption: Real world lessons on getting Agile established in the enterprise
+    title: Agile Adoption: Real world lessons on getting Agile established in the enterprise
     speakers: richard-henning
     description: |
-        <p>Business Value brolly Allianz began to adopt elements of Agile delivery practices a few years ago, and learnt some unique lessons that led to two full blown Agile pilot projects to be established in 2009. The aim was to assess Agile and promote the practice as an acceptable alternate form of software delivery where appropriate. Also embodied in the aim was the establishment of agreed SDLC deliverables and activities to ensure relevant governance and reduce confusion. Consideration was also given to the key behaviours required in the team and how to build broader corporate adoption.</p>
+        <p>Allianz began to adopt elements of Agile delivery practices a few years ago, and learnt some unique lessons that led to two full blown Agile pilot projects to be established in 2009. The aim was to assess Agile and promote the practice as an acceptable alternate form of software delivery where appropriate. Also embodied in the aim was the establishment of agreed SDLC deliverables and activities to ensure relevant governance and reduce confusion. Consideration was also given to the key behaviours required in the team and how to build broader corporate adoption.</p>
         <p>This talk will provide insight into Enterprise Agile Adoption from an experience view, sharing how Agile was adopted at Allianz Australia Insurance. We will discuss lessons learnt and tips on how to overcome inertia, what would be done differently with hindsight and how you can go about getting Agile accepted as a way of meeting ever expanding expectations.</p>
 
 agile-games:
@@ -115,11 +115,12 @@ agile-games:
     speakers: philip-abernathy, kane-mar
     description:
 
-procurement-panel:
+engaging-for-agile:
     date: Wed 04:00PM
-    title: Procurement panel
-    speakers:
-    description:
+    title: Engaging for Agile Panel
+    speakers: todd-porter, ian-crawford, nigel-dalton, chris-murphy
+    description: |
+        <p>Adopting Agile means engaging with a number of organisational stakeholders in an entirely new way. Our experienced panelists will discuss how Agile changes the way organisations approach, including procurement, contracts and budgeting by discussing the options, how cultural issues play out and how corporations can minimise their risk.</p>
 
 a-team:
     date: Wed 04:00PM
@@ -127,7 +128,7 @@ a-team:
         Building an A-Team: I love it when a team comes together
     speakers: craig-smith
     description: |
-        <p>Culture, Leadership, People brolly High performing teams are something that all organisations aspire to, but how exactly do you turn a team from good to great? There is much discussion in the community about management versus leadership, working in a factory versus embracing a tribe and how to motivate a new generation of employees. In this presentation we will look at these topics and determine what makes a high performing team, how Agile techniques can help, what tools and techniques you can use to create this environment and how you can measure performance.</p>
+        <p>High performing teams are something that all organisations aspire to, but how exactly do you turn a team from good to great? There is much discussion in the community about management versus leadership, working in a factory versus embracing a tribe and how to motivate a new generation of employees. In this presentation we will look at these topics and determine what makes a high performing team, how Agile techniques can help, what tools and techniques you can use to create this environment and how you can measure performance.</p>
 
 government-case-studies:
     date: Wed 04:45PM
