@@ -257,7 +257,7 @@ ConferenceDOMBuilder.prototype.buildSessionSpeakerList = function(session) {
 
 ConferenceDOMBuilder.prototype.buildSessionDOM = function(sessionID, session) {
     var sessionDiv = $('<div id="' + sessionID + '" class="uses_local_data content"></div>');
-    sessionDiv.append($('<div class="toolbar"><h1>' + session.date + '</h1></div>'));
+    sessionDiv.append($('<div class="toolbar"><a href="#" class="back">Back</a><h1>' + session.date + '</h1></div>'));
     var contentDiv = $('<div class="scroll"></div>');
     sessionDiv.append(contentDiv);
 	contentDiv.append($('<div class="description"><span class="session-header">' + session.title + '</span><span style=""><span class="toggle go-skip" style="display: inline-block;"><input type="checkbox" topic="' + sessionID + '" class="attend-slider"/></span></span></div>'));
