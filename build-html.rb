@@ -25,6 +25,9 @@ class Main
             puts "topic #{id} points to speaker #{speaker_id} which is not in speakers.yml"
             valid = false
           end
+          raise "Speaker #{speaker_id} does not have a description" unless speakers[speaker_id]['description']
+          raise "Speaker #{speaker_id} does not have a title" unless speakers[speaker_id]['title']
+          raise "Speaker #{speaker_id} does not have a name" unless speakers[speaker_id]['name']
         end
       end
     end
