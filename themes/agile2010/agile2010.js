@@ -3,11 +3,11 @@ function isInMySessions(id) {
 }
 
 function addToMySessions(id) {
-    localStorage.setItem(id, true);
+  setTimeout(localStorage.setItem(id, true), 10);
 }
 
 function removeFromMySessions(id) {
-    localStorage.removeItem(id);
+  setTimeout(localStorage.removeItem(id), 10);
 }
 
 function differentialTime(date) {
@@ -50,7 +50,7 @@ function differentialTime(date) {
 }
 
 function changeIcons(){
-	$(".icon-img").each(function(index, s) {
+	$("#tabbar img.icon-img").each(function(index, s) {
 		var src = $(this).attr('src');
 		$(this).attr('src', src.replace('on', 'off'));
 	});
@@ -79,7 +79,7 @@ function rebuildTweets(json) {
 //do to the fact that not all components are loaded before firing $.ready
 $(window).load(function() {
     $(document.body).trigger('orientationchange');
-    $('.current').trigger('pageAnimationStart');
+    $('#Wednesday.current').trigger('pageAnimationStart');
 });
 
 function buildDateStringForSession(session) {
@@ -132,7 +132,7 @@ function cleanSpeakerID(speakerID) {
 }
 
 function registerJQTHandlers() {
-    $('.toggle.yes-no input, .toggle.go-skip input').swipe(function() {
+    $('#Wednesday span.toggle.go-skip input, #Thursday span.toggle.go-skip input').tap(function() {
         id = $(this).attr('topic');
         if (this.checked) {
             addToMySessions(id);
@@ -141,7 +141,7 @@ function registerJQTHandlers() {
         }
     });
 
-    $('.uses_local_data').bind('pageAnimationStart', function() {
+    $('#Wednesday, #Thursday').bind('pageAnimationStart', function() {
         $(this).find("input.attend-slider").each(function() {
             slider = $(this);
             id = slider.attr('topic');
@@ -266,7 +266,7 @@ ConferenceDOMBuilder.prototype.buildSessionDOM = function(sessionID, session) {
     sessionDiv.append($('<div class="toolbar"><a href="#" class="back">Back</a><h1>' + session.date + '</h1></div>'));
     var contentDiv = $('<div class="scroll"></div>');
     sessionDiv.append(contentDiv);
-	contentDiv.append($('<div class="description"><span class="session-header">' + session.title + '</span><span style=""><span class="toggle go-skip" style="display: inline-block;"><input type="checkbox" topic="' + sessionID + '" class="attend-slider"/></span></span></div>'));
+	contentDiv.append($('<div class="description"><span class="session-header">' + session.title + '</span><span style=""><span class="toggle go-skip" style="display: inline-block;"><input type="checkbox" topic="' + sessionID + '" class="attend-slider touch"/></span></span></div>'));
 	contentDiv.append($('div class="topic">' + session.topic + '</div>'));
     contentDiv.append(this.buildSessionSpeakerList(session));
     contentDiv.append($('<div class="description">' + session.description + '</div>'));
@@ -281,7 +281,7 @@ ConferenceDOMBuilder.prototype.updateSessionsDOM = function() {
 };
 
 ConferenceDOMBuilder.prototype.updateDayMenu = function(day, dayDiv) {
-    var dayList = $('.segmented', dayDiv);
+    var dayList = $('ul.segmented', dayDiv);
     dayList.empty();
     var numberOfDays = this.conference.days.length;
     for (var dayIndex = 0; dayIndex < numberOfDays; ++dayIndex) {
@@ -315,7 +315,7 @@ ConferenceDOMBuilder.prototype.updateTopicList = function(day, dayDiv) {
 			+'</div>'
 			+'<div class="speaker-go">'
 				+'<span class="speaker-title3">' + this.conference.getPrettySpeakersList(speakers) + '</span>'
-				+'<span class="toggle go-skip"><input type="checkbox" topic="' + session.id + '" class="attend-slider"/></span>'
+				+'<span class="toggle go-skip"><input type="checkbox" topic="' + session.id + '" class="attend-slider touch"/></span>'
 			+'</div>'
 			+'</li>'));
     }
