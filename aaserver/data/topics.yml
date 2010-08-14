@@ -88,14 +88,14 @@ continuous-deployment:
 
 agile-governance:
     date: Wed 02:45PM
-    title: Agile Governance - the key to doing more with less
+    title: Agile Governance - The Key to Doing More with Less
     speakers: philip-abernathy
     description: |
         <p>BFC! Better Faster Cheaper! Pick any three! This talk will address how organisations can leverage Lean and Agile principle and techniques to govern the funnel of work in an efficient and effective manner thus getting more bang for buck. Phil Abernathy will draw on case studies and experience to show how Agile governance is key to the successful implementation of Agile within an organisation and how it can deliver business value faster and more cost effectively. It will also address the steps needed to make the transformation and its impact on the way of working.</p>
 
 lightning-talks-wed:
     date: Wed 02:45PM
-    title: Lightning talks
+    title: Lightning Talks
     speakers:
     description: |
         <p>Lightning Talks are concise, informal mini-presentations that generate ideas and conversation points for the audience.</p>
@@ -103,7 +103,7 @@ lightning-talks-wed:
 
 agile-adoption:
     date: Wed 02:45PM
-    title: Agile Adoption: Real world lessons on getting Agile established in the enterprise
+    title: Agile Adoption: Real World Lessons on Getting Agile Established in the Enterprise
     speakers: richard-henning
     description: |
         <p>Allianz began to adopt elements of Agile delivery practices a few years ago, and learnt some unique lessons that led to two full blown Agile pilot projects to be established in 2009. The aim was to assess Agile and promote the practice as an acceptable alternate form of software delivery where appropriate. Also embodied in the aim was the establishment of agreed SDLC deliverables and activities to ensure relevant governance and reduce confusion. Consideration was also given to the key behaviours required in the team and how to build broader corporate adoption.</p>
@@ -111,7 +111,7 @@ agile-adoption:
 
 agile-games:
     date: Wed 04:00PM
-    title: Agile games
+    title: Agile Games
     speakers: philip-abernathy, kane-mar
     description:
 
@@ -125,17 +125,17 @@ engaging-for-agile:
 a-team:
     date: Wed 04:00PM
     title: >
-        Building an A-Team: I love it when a team comes together
+        Building an A-Team: I Love it When a Team Comes Together
     speakers: craig-smith
     description: |
         <p>High performing teams are something that all organisations aspire to, but how exactly do you turn a team from good to great? There is much discussion in the community about management versus leadership, working in a factory versus embracing a tribe and how to motivate a new generation of employees. In this presentation we will look at these topics and determine what makes a high performing team, how Agile techniques can help, what tools and techniques you can use to create this environment and how you can measure performance.</p>
 
 government-case-studies:
     date: Wed 04:45PM
-    title: Government case studies
+    title: Government Case Studies
     speakers: ian-crawford, todd-porter
     description: |
-        <p>Business Value brolly The story of information management at NOPSA begins in the distant past, at a time when the most advanced form of information is a spreadsheet, and most business activities are completely dependent on the movement of pieces of paper. The inhabitants of this primeval world resolve to create an application that assists their core business processes, reduces their compliance burden and prevents data rot.</p>
+        <p>The story of information management at NOPSA begins in the distant past, at a time when the most advanced form of information is a spreadsheet, and most business activities are completely dependent on the movement of pieces of paper. The inhabitants of this primeval world resolve to create an application that assists their core business processes, reduces their compliance burden and prevents data rot.</p>
         <p>Unfortunately, the project faces some challenges.</p>
         <li>The defining legislation is being added to and amended at unpredictable intervals - by three or four governments.</li>
         <li>Some of the business processes have never been agreed on.</li>
@@ -168,26 +168,26 @@ open-house:
 
 delivering-business-value:
     date: Thu 09:00AM
-    title: Delivering business value with Agile
+    title: Delivering Business Value with Agile
     speakers: jeff-smith
     description: |
         <p>Suncorp's business and technology teams have a strong track record of deploying solutions for competitive advantage and being able to drive business value faster with a strong return on investment. Key to this approach is their commitment to collaborate on projects using the Agile values, principles and practices to optimise the broader team performance and meet business needs. Jeff Smith, Group Executive, Suncorp Business Services, sees the Agile development methodology as not just about making good technology but as an approach that can be applied by any successful business.</p>
 
 legacy-gold:
     date: Thu 10:30AM
-    title: Legacy Gold - Using Lean and Agile to extract maximum value from your legacy and enterprise application portfolio
+    title: Legacy Gold - Using Lean and Agile to Extract Maximum Value from your Legacy and Enterprise Application Portfolio
     speakers: dave-thomas
     description: |
-        <p>Agile Organisation, Process and Practice brolly Successful businesses have large application and product legacies which require care and feeding over their useful lifetime. In major product companies significant revenue comes from customers of existing legacy products and their support revenues. Hence it isn't surprising that 70-85% of the software development budget is allocated to the operation and enhancement Legacy Code. For many companies their most successful product/application has become their worst enemy. Painfully we have learned that languages, tools, methods and practices we have often been unable to replace or even substantially reduce the entropy of our legacy code. Indeed it is generally accepted today that a major rewrite of any large legacy application has way too much risk and way too little business value to be given serious consideration. We have no choice but to live with and improve our Legacy!</p>
+        <p>Successful businesses have large application and product legacies which require care and feeding over their useful lifetime. In major product companies significant revenue comes from customers of existing legacy products and their support revenues. Hence it isn't surprising that 70-85% of the software development budget is allocated to the operation and enhancement Legacy Code. For many companies their most successful product/application has become their worst enemy. Painfully we have learned that languages, tools, methods and practices we have often been unable to replace or even substantially reduce the entropy of our legacy code. Indeed it is generally accepted today that a major rewrite of any large legacy application has way too much risk and way too little business value to be given serious consideration. We have no choice but to live with and improve our Legacy!</p>
         <p>Unfortunately major Legacy Systems is an area where most in Agile community fear to tread. This is due in part to their lack of experience in these environments. It is also due to their expectations for tool chains and deployment models which are matched to the Agile expectations of incremental OO development and associated tool chains.</p>
         <p>In this talk we discuss how Lean thinking and Agile have been applied to real legacy systems spanning mainframe, military, embedded and multi-vendor integration of legacy and EAP applications. We illustrate by example how organisations can benefit by using Lean and Agile to reduce the entropy (improve Agility) of their legacy systems and hence maximize the value they can get from them. We discuss appropriate investments in training, tooling and practices for different legacy environments.</p>
 
 about-trust:
     date: Thu 10:30AM
-    title: It's about trust…
+    title: It's About Trust…
     speakers: josh-melville
     description: |
-        <p>Culture, Leadership, People brolly Agile requires a fundamental change in how we manage projects and lead people. How we motivate and provide structure for project teams requires equal emphasis with what we are delivering.</p>
+        <p>Agile requires a fundamental change in how we manage projects and lead people. How we motivate and provide structure for project teams requires equal emphasis with what we are delivering.</p>
         <p>Accordingly, our view of project managers is changing. In contrast to more traditional approaches, Agile promotes project management into the realms of business management as a truly valued capability in its own right. Underscoring this increased profile is a need to quickly establish credibility and trust - in that context, an Agile approach is particularly effective.</p>
         <p>I will be elaborating on the changing role of project managers within organisations and the application of Agile practices with business teams. Specifically, the new skills required by project managers to become more effective facilitators of change and delivery along with some of the challenges of adopting Agile with business teams.</p>
 
@@ -196,14 +196,14 @@ emergent-design:
     title: Implementing Emergent Design
     speakers: neal-ford
     description: |
-        <p>Innovation and Emerging Ideas brolly This session describes the current thinking about emergent design, discovering design in code. The hazard of Big Design Up Front in software is that you don't yet know what you don't know, and design decisions made too early are just speculations without facts. Emergent design techniques allow you to wait until the last responsible moment to make design decisions. This talk covers three areas: emergent design enablers, battling things that make emergent design hard, finding idiomatic patterns, and how to leverage the patterns you find. It includes both proactive (test-driven development) and reactive (refactoring, metrics, visualisations, tests) approaches to discovering design, and discusses the use of custom attributes, DSLs, and other techniques for utilising them. The goal of this talk is to provide nomenclature, strategies, and techniques for allowing design to emerge from projects as they proceed, keeping you code in sync with the problem domain. This talk shows lots of examples of how to make this concept work in your environment.</p>
+        <p>This session describes the current thinking about emergent design, discovering design in code. The hazard of Big Design Up Front in software is that you don't yet know what you don't know, and design decisions made too early are just speculations without facts. Emergent design techniques allow you to wait until the last responsible moment to make design decisions. This talk covers three areas: emergent design enablers, battling things that make emergent design hard, finding idiomatic patterns, and how to leverage the patterns you find. It includes both proactive (test-driven development) and reactive (refactoring, metrics, visualisations, tests) approaches to discovering design, and discusses the use of custom attributes, DSLs, and other techniques for utilising them. The goal of this talk is to provide nomenclature, strategies, and techniques for allowing design to emerge from projects as they proceed, keeping you code in sync with the problem domain. This talk shows lots of examples of how to make this concept work in your environment.</p>
 
 introspection-leadership:
     date: Thu 11:15AM
-    title: Introspection and leadership
+    title: Introspection and Leadership
     speakers: martin-kearns
     description: |
-        <p>Culture, Leadership, People brolly Who has ever thought about why Agile is such a simple concept that is so difficult to implement? Fact is, it is not simple at all - the problem of creating innovative solutions through the collective effort of a group of individuals is extremely difficult and one that needs significant effort. But the harder question is the one to ask that guy looking at you in the mirror. The hardest and most difficult problem we have is to introspect and understand what I must do. My presentation will consider: what is leadership for an Agile project and how/what are the tools we need to ask ourselves regularly. Introspection is the best tool I have learnt as a coach and my goal is to encourage you to the same.</p>
+        <p>Who has ever thought about why Agile is such a simple concept that is so difficult to implement? Fact is, it is not simple at all - the problem of creating innovative solutions through the collective effort of a group of individuals is extremely difficult and one that needs significant effort. But the harder question is the one to ask that guy looking at you in the mirror. The hardest and most difficult problem we have is to introspect and understand what I must do. My presentation will consider: what is leadership for an Agile project and how/what are the tools we need to ask ourselves regularly. Introspection is the best tool I have learnt as a coach and my goal is to encourage you to the same.</p>
 
 mars-venus:
     date: Thu 11:15AM
