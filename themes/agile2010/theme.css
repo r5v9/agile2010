@@ -42,15 +42,17 @@ div#jqt .toolbar > h1 {
 }
 
 .attending {
- 
     font-size: 10pt;
 	vertical-align: -5px;
-	
-
 }
 
 .speaker {
     font-size: 12pt;
+}
+
+.speaker-names{
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .speaker-title {
