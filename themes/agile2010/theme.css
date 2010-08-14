@@ -18,20 +18,11 @@ div#jqt .toolbar > h1 {
     white-space: normal;
 }
 
-#about-agile
-{
-	position: absolute;
-	top: 46px;
-}
-
-
 #about-agile-links a {
    color: #C00;
    font-size:14px;
    text-decoration: none;
 }
-
-
 
 #twitter-feed
 {
@@ -240,9 +231,7 @@ a:hover {
 a:active {
     color: black;
 }
-#tabbar {
-    bottom: 19px;
-}
+
 #tabbar a.button.icon {
     position: relative;
     /*float: right;*/

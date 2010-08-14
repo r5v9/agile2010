@@ -1,6 +1,7 @@
 breakfast:
     date: Wed 07:00AM
     title: Executive Breakfast with Jim Highsmith
+    
     speakers: jim-highsmith
     description: |
         <p><a href="https://www.slatteryit.com.au/RegoPages/Agile2010Breakfast.aspx" target="_blank">Register for this session</a></p>
@@ -30,13 +31,6 @@ dogs-tricks:
         <p>Agile Organisation, Process and Practice brolly Context is everything - there is no 'one-size-fits-all' approach to project delivery. The Agile umbrella encompasses a wide range of techniques and approaches. This talk briefly examines a variety of the techniques and identifies the "project ecosystem" elements that will enable them to be effective, where they work best, where they are to be avoided and practical advice on how to get the maximum benefit from each of the practices.</p>
         <p>Shane presents a framework for selecting from a variety of techniques to identify the combination that will work most effectively in a specific project environment. This talk doesn't attempt to teach the techniques; rather Shane provides some concrete advice for selecting from techniques such as: brainstorming, mind maps, DeBono's thinking hats, vision box, structured interviews, questionnaires, scriptwriting, snowcards, use cases, user stories, process models, decision tables, data models, planning poker, behaviour driven development, low-fi prototypes, and CRC cards.</p>
         
-technology-transformation:
-    date: Wed 11:30AM
-    title: Delivering technology transformation in parallel with a transition to Agile
-    speakers: daniel-oertli
-    description: |
-        <p>Culture, Leadership, People brolly If you need to push through a substantial technology transformation - and are wondering whether a simultaneous transition to Agile will help or hinder your organisation to digest a major technology change - then this talk is for you.</p>
-        <p>In this talk, Daniel Oertli reflects on the experience of rebuilding a major website - realestate.com.au - in under a year on a new platform, running on new infrastructure, delivered with newly-introduced Agile practices. Daniel will answer questions such as: "How do you quickly raise a team's overall tempo?" and "How can a change to Agile reduce change?". The talk includes recommendations for making 'all-in' people, process and technology transformations 'stick' and deliver, and a candid view of the pitfalls and learnings during REA's journey.</p>
 
 agile-agile:
     date: Wed 11:30AM
@@ -80,7 +74,7 @@ aconex-case-study:
 flavours-panel:
     date: Wed 02:00PM
     title: Flavours of Agile panel
-    speakers:
+    speakers: bruce-taylor, steve-lawrence, james-brett, john-sullivan
     description:
 
 continuous-deployment:
@@ -151,13 +145,25 @@ government-case-studies:
         <p>This is the story of how we delivered less software, but more business value than we expected. It is also a story of how management skepticism evolved into commitment, and how our inspectors' anxiety gave way to ownership.</p>
         <p>There is a brief discussion of what worked well, particularly those characteristics of NOPSA that were useful to the process (yes, they can exist in a government agency !).</p>
         <p>This session finishes with a summary of the factors that have made Agile 'the way we do things' at NOPSA.</p>
-
+        
+engaging-the-business
+    date: Wed 04:45PM
+    title: Engaging the Business on an Agile Project
+    speakers: jay-jenkins
+    description: |
+        <p>In early 2010, ANZ Bank engaged Renewtek to build a reusable process automation solution. The solution was developed using Renewtek’s Agile-BPM and Agile development practices with teams in Melbourne and Vietnam. Since this is a reusable asset across multiple business units, Renewtek had to engage a broad range of stakeholders to prioritise functions and create a foundation for further enhancement.</p> 
+        <p>The solution itself is unique in that it takes a business value and Agile approach to deliver small working solutions on an incremental and regular basis. The business was engaged throughout the development process and empowered to make decisions to ensure the high level of business value is delivered within the project budget. Toolsets for rapid process composition and management were vital to the success of this approach.</p> 
+        <p>This solution has won a 2010 AIIA iAward Commendation in the Financial Industry Applications and has been entered as a finalist in the National iAwards.</p> 
+    
 open-house:
     date: Wed 05:30PM
     title: Open House - ThoughtWorks Offices
     speakers:
     description: |
-        <p>Following on from the success of the last Open House last year, we will be opening the doors of our Melbourne office which will be filled with food, drinks and Agile enthusiasts. Join us after Agile10 on Wednesday evening at 6.00pm. Register at the ThoughtWorks booth.</p>
+        <p>Following on from the success of the ThoughtWorks Open House last year, we will be opening the doors of our Melbourne office which will be filled with food, drinks and Agile enthusiasts. Join us after Agile10 on Wednesday evening at 6.00pm. 
+        <p>ThoughtWorks Melbourne Office is located at 303 Collins Street, Melbourne</p>
+        <p>Register at the ThoughtWorks booth.</p>
+        
 
 delivering-business-value:
     date: Thu 09:00AM
@@ -201,7 +207,7 @@ introspection-leadership:
 mars-venus:
     date: Thu 11:15AM
     title: Developers are from Mars, Product Owners are from Venus
-    speakers: adam-boas
+    speakers: adam-boas, nick-strybosch
     description: |
         <p>Culture, Leadership, People brolly When a business adopts Agile it must quickly learn to get the most from its development teams. High performing teams are highly aligned, aligned from the business right the way through to developers and testers. Achieving such an alignment needs understanding, a clear plan, and skilful execution. Product owners and developers think differently, are motivated by different goals and can often talk at cross-purposes. Each side has its own success and failure stereotypes. Often these are from polar opposites and can have immense difficulty communicating effectively with each other.</p>
         <p>Resolving this dichotomy requires teams to speak the same language and to speak it fluently. That language is expressed in User Stories. They must:</p>
@@ -260,7 +266,7 @@ trials-tribulations:
 distributed-panel:
     date: Thu 01:45PM
     title: Distributed Agile Panel
-    speakers:
+    speakers: mahesh-baxi, dave-thomas, nigel-dalton, philip-abernathy
     description:
 
 achieving-quality:
@@ -289,9 +295,9 @@ running-company-agile:
 
 technical-debt:
     date: Thu 03:45PM
-    title: Technical Debt panel
-    speakers:
-    description:
+    title: Paying Down Technical Debt Panel
+    speakers: adam-boas, martin-kearns, craig-smith, andy-marks, marina-chiovetti
+    description: <p>No matter how hard we try, accumulating some technical debt is inevitable. Yet its nebulous nature often makes it difficult for anyone apart from the development team to appreciate and communicate. Our panel of experts will provide you with a sound understanding of technical debt, its causes and the ramifications. Panelists will give some practical ways of paying down technical debt while still delivering business value.</p>
 
 against-odds:
     date: Thu 03:45PM

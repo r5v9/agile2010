@@ -206,3 +206,54 @@ jason-yip:
     title: Principal Consultant, ThoughtWorks
     description: |
         <p>Jason Yip has been involved with Agile since 1999. He is a committer on CruiseControl, the earliest continuous integration server, and is one of the organisers of SyXPAC (Sydney XP and Agile Club). Jason is a prolific blogger and tweeter on Agile and Lean software development. Jason is employed by ThoughtWorks as a Principal Consultant.</p>
+
+jay-jenkins:
+    name: Jay Jenkins
+    title: Principal Consultant, Renewtek
+    description: |
+        <p>Jay Jenkins (James Jenkins) is the Business Process Management (BPM) Practice Lead and a Principal Consultant for Renewtek. Jay has over 13 years of BPM and workflow experience using various technologies. He currently oversees various BPM projects and is an advisor to financial and government agencies for implementation of BPM systems for both tactical and transformational programs of work.</p>
+        <p>Jay attended the University of Missouri in the Computer Engineering program and immediately joined a software company specialising in terminal emulation. Jay then joined a FileNet partner in New York that specialised in data capture and workflow. This began his focus on business process and efficiency. His clients included Amalgamated Insurance, Federal Express, Gallup, US Census Bureau, Revenue Canada, Massachusetts Department of Revenue and VSI Holdings.</p>
+        <p>Jay joined the consulting arm of KPMG in New York City which spun off to become BearingPoint. As a consultant and manager for BearingPoint for seven years, Jay worked as one of the BPM leads working across both integration services and data and knowledge management areas. BearingPoint transferred Jay to BearingPoint Australia to help grow the Australian Content Management and BPM capability. Jay's clients included Commonwealth Bank Australia, IAG, Australia Post, Westpac, Telstra Corporation Ltd, New York City Department of Finance, New York City School Construction Authority, Commonwealth of Pennsylvania, Florida Department of Education and Arizona Department of Revenue.</p>
+        <p>Jay Jenkins is a recognised expert and thought leader in BPM. Current clients include international and Australian tier one banks, health insurers and government agencies.</p>
+
+bruce-taylor:
+    name: Bruce Taylor
+    title: Engineering Manager, Aconex
+    description: |
+        <p>Bruce is working at Aconex in Melbourne as one of the Engineering Managers. This role is essentially the typical Scrum master/Agile coach role with some responsibility for recruitment and performance management of some members of the team. Prior to working at Aconex, Bruce was an Agile BA then PM/Scrum Master at Lonely Planet for around 4 ½ years. Bruce was part of the original in house team that introduced Agile to the organisation and assisted in the transition from one Agile team to multiple work units, from IT right through to the Legal department.</p>
+
+james-brett
+    name: James Brett
+    title: Scrum and Agile Coach, ThoughtWorks
+    description: |
+        <p>James Brett is a Certified Scrum Coach and Agile Coach with over 15 years experience in software development and has worked with a number of Australian and European blue chip companies such as Suncorp, Conchango, Volkswagen, Boots, Play.com and various leading financial organisations. James coaches Agile teams and businesses to create exceptional products that are of high quality and cost effective. Leadership, self-organisation and continuous improvement are his passions as he helps organisations to develop the practices and culture required to succeed with Agile development.</p>
+        
+nick-strybosch
+    name: Nick Strybosch
+    title: Product and Technology Manager, Aconex
+    description: |
+        <p>Nick Strybosch works for Aconex, who provide a SAAS-based construction project collaboration platform. He hopped on the Agile bandwagon in 2006, after quitting a business analyst role at a bank because he was sure they were doing requirements wrong, without knowing what right was. Right, as it turned out, has something to do with index cards and sharpies. He's been scribbling ever since, joining Aconex on day one of their transition to scrum in late 2008, and is currently part of a team building the first product outside of the core platform.</p>
+        
+mahesh-baxi
+    name: Mahesh Baxi
+    title: Managing Director, ThoughtWorks India
+    description: |
+        <p>Mahesh Baxi joined ThoughtWorks in July 2008 as Head of Delivery, and later became Chief Operating Officer where he was responsible for the day-to-day operations of business. As the Managing Director of ThoughtWorks India, Mahesh Baxi is responsible for the company's India operations, business strategy, software delivery excellence, customer relationships, and balancing sustainable growth & employee needs.</p>
+        <p>Before joining ThoughtWorks, Mahesh had been in the software industry for over 15 years, of which he spent 12 yearsin in the Bay Area, USA. He has worked for various software product development companies including Apttus, Vendavo, Nextance and Challenger Systems, where he led the professional services group as Director of Professional Services, and CRM & B2B practices as Engagement Manager. Mahesh holds a Computer Engineering degree from Gujarat University. Mahesh is a member of the Technology Advisory Board for PSVillage, and a contributing editor of the book 'Tips from the Trenches'.</p>
+
+chris-murphy
+    name: Chris Murphy
+    title: Managing Director, ThoughtWorks Australia
+    description: |
+        <p>Chris Murphy is Managing Director of ThoughtWorks Australia. Chris has over 15 years experience in the ICT industry, in a diverse range of technical and business roles including as a computer science instructor, software developer, technology & intellectual property lawyer, and in senior commercial and leadership positions within the information technology industry.</p>
+        <p>Following his initial Agile “Eureka moment” on his first day at ThoughtWorks six years ago (which simultaneously filled him with hope - and invalidated his entire frame of reference and career achievements to that point), Chris has worked extensively with ThoughtWorks consultants, clients and the Agile community to break-down traditional legal, commercial and governance models and reinvent them appropriate to more business focussed Agile approaches.</p>
+        <p>Chris holds Bachelor degrees in Science and Law from the University of Melbourne, Master degrees in Information Technology and Law (Intellectual Property) from Monash University, and is qualified as a solicitor in Australia, England and Wales.</p>
+
+andy-marks
+    name: Andy Marks
+    title: Consultant, ThoughtWorks
+    description: |
+        <p>Since 2002, Andy Marks has worked at ThoughtWorks in a variety of roles and within a variety of different organisational cultures. Andy has helped introduce Agile into organisations both large and small and spent considerable time working within established Agile environments of various levels of maturity. Andy brings a passion for high quality software development to his work, accompanied by a strong mentoring background.</p>
+        
+
+    
