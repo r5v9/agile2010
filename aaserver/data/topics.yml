@@ -102,7 +102,7 @@ lightning-talks-wed:
 
 agile-adoption:
     date: Wed 02:45PM
-    title: Agile Adoption: Real World Lessons on Getting Agile Established in the Enterprise
+    title: 'Agile Adoption: Real World Lessons on Getting Agile Established in the Enterprise'
     speakers: richard-henning
     description: |
         <p>Allianz began to adopt elements of Agile delivery practices a few years ago, and learnt some unique lessons that led to two full blown Agile pilot projects to be established in 2009. The aim was to assess Agile and promote the practice as an acceptable alternate form of software delivery where appropriate. Also embodied in the aim was the establishment of agreed SDLC deliverables and activities to ensure relevant governance and reduce confusion. Consideration was also given to the key behaviours required in the team and how to build broader corporate adoption.</p>
@@ -146,7 +146,7 @@ government-case-studies:
         <p>There is a brief discussion of what worked well, particularly those characteristics of NOPSA that were useful to the process (yes, they can exist in a government agency !).</p>
         <p>This session finishes with a summary of the factors that have made Agile 'the way we do things' at NOPSA.</p>
         
-engaging-the-business
+engaging-the-business:
     date: Wed 04:45PM
     title: Engaging the Business on an Agile Project
     speakers: jay-jenkins
@@ -302,7 +302,7 @@ running-company-agile:
 
 dev-ops:
     date: Thu 3:00PM
-    title: DevOps and Agile Release Management: Rapid, Reliable Software Releases Through Automation and Collaboration
+    title: 'DevOps and Agile Release Management: Rapid, Reliable Software Releases Through Automation and Collaboration'
     speakers: jez-humble
     description: |
         <p>Many organisations struggle with getting valuable, working software released to users frequently and reliably. Often, software is found to be unfit for purpose or simply undeployable late in the delivery process. Jez discusses how automation of the build, deploy, test and release process, automated infrastructure and database management, and better collaboration between developers, testers, and operations enables rapid, reliable software releases.</p> 
