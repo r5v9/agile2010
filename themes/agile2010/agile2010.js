@@ -49,6 +49,15 @@ function differentialTime(date) {
     return s;
 }
 
+function changeIcons(){
+	$(".icon-img").each(function(index, s) {
+		var src = $(this).attr('src');
+		$(this).attr('src', src.replace('on', 'off'))
+	});
+	
+	event.target.src = event.target.src.replace('off', 'on');
+}
+
 function requestTweetsJson() {
     $('#twitter-feed').html('<div style="text-align:center;"><img src="themes/jqt/img/loading.gif" align="center" width="31" height="31" style="margin-top:50px"></div>');
     $.getScript("http://search.twitter.com/search.json?q=agileaus&callback=rebuildTweets");
