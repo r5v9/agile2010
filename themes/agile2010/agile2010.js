@@ -179,10 +179,10 @@ function AgileConference() {
 AgileConference.prototype.loadSpeakerInfo = function() {
     var conference = this;
     
-    $.getJSON('http://samagile2010.appspot.com/speakersTimestamp?callback=?',
+    $.getJSON('http://agileaustralia2010.appspot.com/speakersTimestamp?callback=?',
         function(speakersTimestamp) {
             if (localStorage.getItem('speakersTimestamp') !== speakersTimestamp['timestamp']) {
-                $.getJSON('http://samagile2010.appspot.com/speakers?callback=?',
+                $.getJSON('http://agileaustralia2010.appspot.com/speakers?callback=?',
                     function(speakersData) {
                         localStorage.setItem("speakers", $.toJSON(speakersData));
                         localStorage.setItem('speakersTimestamp', speakersTimestamp['timestamp']);
@@ -198,10 +198,10 @@ AgileConference.prototype.loadSpeakerInfo = function() {
 AgileConference.prototype.loadSessionInfo = function() {
     var conference = this;
 
-    $.getJSON('http://samagile2010.appspot.com/topicsTimestamp?callback=?',
+    $.getJSON('http://agileaustralia2010.appspot.com/topicsTimestamp?callback=?',
         function(sessionsTimestamp) {
             if (localStorage.getItem('sessionsTimestamp') !== sessionsTimestamp['timestamp']) {
-                $.getJSON('http://samagile2010.appspot.com/topics?callback=?',
+                $.getJSON('http://agileaustralia2010.appspot.com/topics?callback=?',
                     function(sessionsData) {
                         localStorage.setItem("sessions", $.toJSON(sessionsData));
                         localStorage.setItem('sessionsTimestamp', sessionsTimestamp['timestamp']);
