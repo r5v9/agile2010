@@ -114,7 +114,6 @@
 					<a href="http://www.thoughtworks.com/experience-design" target="_blank">Experience Design</a> |
 					<a href="http://www.thoughtworks.com/testing" target="_blank">Testing</a>
 					<br/>
-					<br/>
 					<a href="http://www.thoughtworks.com/careers" target="_blank">Interested in becoming a ThoughtWorker?</a>
 				</div>
 
@@ -175,8 +174,20 @@
 					Enter Crown opposite King's way foot bridge. Walk straight ahead (past vodafone) into the casino.
 					Take the escalator up to the next level, cross the walkway and at the end (to your right) is the
 					conference hall.
+
 				<br/>
+
+
 			</div>
+
+			<!--
+				<div id="map-container" class="notransform">
+					<div id="map_text">Click on a marker for the description</div>
+					<div id="map-overflow" style="overflow: hidden; padding: 0; border: 0;" class="notransform">
+						<div id="map_canvas" style="margin-left: -20px; margin-top: -20px;" class="notransform"></div>
+					</div>
+				</div>
+			-->
 		</div>
 	</div>
 
@@ -206,28 +217,25 @@
 			-->
 		</div>
 	</div>
-    
     <nav id="tabbar">
             <ul>
                 <li>
                     <a href="#Wednesday" class="fade icon"><img class="icon-img" src="themes/agile2010/img/shed_on.png" alt="Shedule" onClick='changeIcons(); return false;'/></a>
                 </li>
                 <li>
-                    <a href="#about" class="fade icon"><img class="icon-img" src="themes/agile2010/img/about_off.png" alt="More Info" alt="Shedule" onClick='changeIcons(); return false;'/></a>
+                    <a href="#about" class="fade icon"><img class="icon-img" src="themes/agile2010/img/about_off.png" alt="More Info" onClick='changeIcons(); return false;'/></a>
                 </li>
                 <li>
-                    <a href="#twitter" class="fade  icon"><img class="icon-img" src="themes/agile2010/img/buzz_off.png" alt="Twitter Feed" alt="Shedule" onClick='changeIcons(); return false;'/></a>
+                    <a href="#twitter" class="fade  icon"><img class="icon-img" src="themes/agile2010/img/buzz_off.png" alt="Twitter Feed" onClick='changeIcons(); return false;'/></a>
                 </li>
                 <li>
-                    <a href="#floorplan" class="fade icon"><img class="icon-img" src="themes/agile2010/img/rooms_off.png" alt="Rooms" alt="Shedule" onClick='changeIcons(); return false;'/></a>
+                    <a href="#floorplan" class="fade icon"><img class="icon-img" src="themes/agile2010/img/rooms_off.png" alt="Rooms" onClick='changeIcons(); return false;'/></a>
                 </li>
                 <li>
-                    <a href="#map" class="fade icon"><img class="icon-img" src="themes/agile2010/img/where_off.png" alt="Getting There" alt="Shedule" onClick='changeIcons(); return false;'/></a>
+                    <a href="#map" class="fade icon"><img class="icon-img" src="themes/agile2010/img/where_off.png" alt="Getting There" onClick='changeIcons(); return false;'/></a>
                 </li>
             </ul>
         </nav> 
-
-
 
 </div>
 

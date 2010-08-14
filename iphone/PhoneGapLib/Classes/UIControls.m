@@ -65,13 +65,12 @@
     tabBar.hidden = NO;
 
      CGRect webViewBounds = originalWebViewBounds = webView.bounds;
-	 CGRect offsetRect = [ [UIApplication sharedApplication] statusBarFrame];
 	
      CGRect tabBarBounds;
      if (atBottom) {
          tabBarBounds = CGRectMake(
              webViewBounds.origin.x,
-             webViewBounds.origin.y + webViewBounds.size.height - height - offsetRect.size.height,
+             webViewBounds.origin.y + webViewBounds.size.height - height,
              webViewBounds.size.width,
              height
          );
@@ -79,7 +78,7 @@
             webViewBounds.origin.x,
             webViewBounds.origin.y,
             webViewBounds.size.width,
-            webViewBounds.size.height - height - offsetRect.size.height
+            webViewBounds.size.height - height
          );
      } else {
          tabBarBounds = CGRectMake(
