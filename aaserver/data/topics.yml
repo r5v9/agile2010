@@ -210,7 +210,7 @@ mars-venus:
     title: Developers are from Mars, Product Owners are from Venus
     speakers: adam-boas, nick-strybosch
     description: |
-        <p>Culture, Leadership, People brolly When a business adopts Agile it must quickly learn to get the most from its development teams. High performing teams are highly aligned, aligned from the business right the way through to developers and testers. Achieving such an alignment needs understanding, a clear plan, and skilful execution. Product owners and developers think differently, are motivated by different goals and can often talk at cross-purposes. Each side has its own success and failure stereotypes. Often these are from polar opposites and can have immense difficulty communicating effectively with each other.</p>
+        <p>When a business adopts Agile it must quickly learn to get the most from its development teams. High performing teams are highly aligned, aligned from the business right the way through to developers and testers. Achieving such an alignment needs understanding, a clear plan, and skilful execution. Product owners and developers think differently, are motivated by different goals and can often talk at cross-purposes. Each side has its own success and failure stereotypes. Often these are from polar opposites and can have immense difficulty communicating effectively with each other.</p>
         <p>Resolving this dichotomy requires teams to speak the same language and to speak it fluently. That language is expressed in User Stories. They must:</p>
         <ul>
             <li>Articulate the business need in a language everyone appreciates</li>
@@ -222,24 +222,24 @@ mars-venus:
 truly-agile:
     date: Thu 11:15AM
     title: >
-        Truly Agile : Building Agile software using Agile techniques
+        Truly Agile : Building Agile Software Using Agile Techniques
     speakers: jean-christophe-huet
     description: |
-        <p>Business Value brolly GreenHopper, an Agile planning tool from Atlassian, began as a one-man show three years ago. GreenHopper is now a team of five with customers spread across the globe and over 10,000 licenses sold. GreenHopper customers have enjoyed more than 30 releases in less than three years, making this a product which truly reflects the needs of our users.</p>
+        <p>GreenHopper, an Agile planning tool from Atlassian, began as a one-man show three years ago. GreenHopper is now a team of five with customers spread across the globe and over 10,000 licenses sold. GreenHopper customers have enjoyed more than 30 releases in less than three years, making this a product which truly reflects the needs of our users.</p>
         <p>I will share my 10 priceless tips for building a successful product - and team - using Agile techniques. You will hear first-hand the challenges and lessons learned over the past three years, my experiences with listening and responding to the changing needs of customers and our continued focus on delivering quality, fast.</p>
 
 agile-lawyers:
     date: Thu 01:00PM
-    title: Agile Lawyers? The transition from Agile IT to a radically Agile organisation at Lonely Planet
+    title: Agile Lawyers? The transition from Agile IT to a Radically Agile Organisation at Lonely Planet
     speakers: nigel-dalton
     description: |
-        <p>Innovation and Emerging Ideas brolly Many Australian organisations are being driven to find a better way to deliver projects at the pace that competition demands in 2010. Lonely Planet started on that journey in their IT group in late 2007, and three years later the petrie dish that was the initial Agile implementation has overflowed with interesting organisms. Agile principles are now evident in teams as variable as legal, HR, guidebook publishing, product development, and IT operations.</p>
+        <p>Many Australian organisations are being driven to find a better way to deliver projects at the pace that competition demands in 2010. Lonely Planet started on that journey in their IT group in late 2007, and three years later the petrie dish that was the initial Agile implementation has overflowed with interesting organisms. Agile principles are now evident in teams as variable as legal, HR, guidebook publishing, product development, and IT operations.</p>
         <p>A field trip to Lonely Planet starts to answer the question "what happens when a whole company starts adopting Agile methods?" Since not everyone can come to Footscray however, in this presentation you will see which Agile principles work for each team, how groups work together, whether 'competitive Agile' can work, and the flywheel effect on the productivity of core IT teams from widespread understanding of Agile principles - now that their colleagues across the business use card walls, talk about stories and conduct daily stand-ups.</p>
         <p>You will also hear how key steps in the broader adoption of Agile, how the insistence of uniformity of Agile process can be a killer of innovation, and how Agile underpinned the delivery of a new iPad digital product from the day Apple called to say "we've announced the iPad, we've emailed your SDK - we expect a product in iTunes when we hit the market in a month".</p>
 
 lightning-talks-thursday:
     date: Thu 01:00PM
-    title: Lightning talks
+    title: Lightning Talks
     speakers:
     description: |
         <p>Lightning Talks are concise, informal mini-presentations that generate ideas and conversation points for the audience.</p>
@@ -247,10 +247,10 @@ lightning-talks-thursday:
 
 red:
     date: Thu 01:00PM
-    title: Dr W. Edwards Deming's famous Red Bead Experiment
+    title: Dr W. Edwards Deming's Famous Red Bead Experiment
     speakers: david-joyce
     description: |
-        <p>Culture, Leadership, People brolly Come along and participate in Dr W. Edwards Deming's famous Red Bead Experiment. This classic learning tool helps illustrate the impact that a system, and traditional management approaches, can have on individuals who work within an organisation.</p>
+        <p>Come along and participate in Dr W. Edwards Deming's famous Red Bead Experiment. This classic learning tool helps illustrate the impact that a system, and traditional management approaches, can have on individuals who work within an organisation.</p>
         <p>The experiment introduces many of Deming's ideas about management, including his 14 Points for Management. It also introduces the Statistical Process Control Chart.</p>
         <p>Originally used by Dr Deming as part of his four-day seminar, the experiment represents a corporation formed of "willing workers", quality control personnel, a data recorder, a Project Manager and a Product Owner, each of which is staffed by volunteers from the audience.</p>
         <p>The corporation's aim is to produce white beads. The production of beads is controlled by an approved procedure to ensure the removal of defective red beads.</p>
@@ -259,24 +259,31 @@ red:
 
 trials-tribulations:
     date: Thu 01:45PM
-    title: Trials and tribulations of ensuring enterprise architecture with Agile delivery
+    title: Trials and Tribulations of Ensuring Enterprise Architecture with Agile Delivery
     speakers: john-sullivan
-    description: |
-        <p>Agile Organisation, Process and Practice brolly</p>
+    description: 
 
 distributed-panel:
     date: Thu 01:45PM
-    title: Distributed Agile Panel
+    title: Transcending Culture, Timezones and Countries
     speakers: mahesh-baxi, dave-thomas, nigel-dalton, philip-abernathy
-    description:
+    description: |
+        <p>How do you overcome the challenges of implementing Agile in a distributed environment? Panellists will call on their own experiences of being involved in distributed agile projects, the added complexities of communicating across distributed teams, how to tackle customer collaboration, trust and technical issues and most importantly, the ingredients to making it work!</p>
 
 achieving-quality:
     date: Thu 01:45PM
-    title: Achieving quality
+    title: Building Quality into the Lifecycle - All the Way Through
     speakers: sharon-robson
     description: |
-        <p>Agile Organisation, Process and Practice brolly</p>
-
+        <p> Sharon Robson discusses how to integrate testing into an Agile project to enhance the final quality of the product, right from the start. This is done initially by high level examination of test objectives by both the business and the technical team members so that all agree and understand the key quality criteria for the product. The Agile approach is then overlaid to show how the integration of "traditional" testing methods, levels and techniques are appropriate and applicable to build quality of the product into the entire life cycle. The focus on regression testing, risk analysis and automation is considered in conjunction with the need for appropriate UAT at both the delivery team level and the business acceptance level. The common pitfalls and hurdles to look out for when implementing in an Agile testing strategy are also outlined, as well as how to deal with them.</p> 
+        <p>Attend to discover:</p>
+        <ul>
+        <li>How to ensure quality in an Agile development environment</li>
+        <li>What traditional testing can be done in an Agile development world</li>
+        <li>How to build effective and efficient testing into an Agile development effort</li>
+        <li>When to apply the various test techniques and levels in an Agile team</li>
+        <li>What can the tester contribute to the Agile team.</li>
+        </ul>
 open-space:
     date: Thu 03:00PM
     title: Open Space
@@ -289,10 +296,18 @@ open-space:
 
 running-company-agile:
     date: Thu 03:00PM
-    title: Running a company Agile
+    title: Running a Company Agile
     speakers: tim-hunt-smith
     description: |
-        <p>Business Value brolly The retail energy industry in Australia is one of the most competitive in the world and characterised by complex systems and processes which constrain speed to market. Tim Hunt-Smith shares his experience of transforming an energy retail company into a nimble and effective competitor by implementing lean/agile techniques as a management system for the company</p>
+        <p>The retail energy industry in Australia is one of the most competitive in the world and characterised by complex systems and processes which constrain speed to market. Tim Hunt-Smith shares his experience of transforming an energy retail company into a nimble and effective competitor by implementing lean/agile techniques as a management system for the company</p>
+
+dev-ops:
+    date: Thu 3:00PM
+    title: DevOps and Agile Release Management: Rapid, Reliable Software Releases Through Automation and Collaboration
+    speakers: jez-humble
+    description: |
+        <p>Many organisations struggle with getting valuable, working software released to users frequently and reliably. Often, software is found to be unfit for purpose or simply undeployable late in the delivery process. Jez discusses how automation of the build, deploy, test and release process, automated infrastructure and database management, and better collaboration between developers, testers, and operations enables rapid, reliable software releases.</p> 
+        <p>Jez will discuss the nascent DevOps movement, and present the deployment pipeline - a pattern for modeling your organisation's value stream, getting fast feedback on the production readiness of your software, and enabling incremental automation of the delivery process.</p>
 
 technical-debt:
     date: Thu 03:45PM
@@ -302,8 +317,8 @@ technical-debt:
 
 against-odds:
     date: Thu 03:45PM
-    title: Delivery against the odds - How Agile practices can save your project
+    title: Delivery Ggainst the Odds - How Agile Practices Can Save Your Project
     speakers: holger-kaufmann
     description: |
-        <p>Business Value brolly A case study on a large, highly time-critical development project for an iron ore industry client, the talk will describe how Agile practices can be used to achieve delivery against the odds. Topics will include effective on-boarding, no-waste production, and optimal utilisation of time and people.</p>
+        <p>A case study on a large, highly time-critical development project for an iron ore industry client, the talk will describe how Agile practices can be used to achieve delivery against the odds. Topics will include effective on-boarding, no-waste production, and optimal utilisation of time and people.</p>
         <p>Team organisation, iteration planning, monitoring and reporting for a large team (>15) will be presented and the effectiveness of different Agile tools and practices in the context of a large (>$40 M) integration project with a predictive PM methodology will be discussed.</p>
