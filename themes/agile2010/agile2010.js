@@ -1,13 +1,13 @@
 function isInMySessions(id) {
-    return localStorage.getItem(id) !== null;
+  return localStorage.getItem(id) !== null;
 }
 
 function addToMySessions(id) {
-  setTimeout(localStorage.setItem(id, true), 10);
+  localStorage.setItem(id, true);
 }
 
 function removeFromMySessions(id) {
-  setTimeout(localStorage.removeItem(id), 10);
+  localStorage.removeItem(id);
 }
 
 function differentialTime(date) {
@@ -131,34 +131,10 @@ function cleanSpeakerID(speakerID) {
     return speakerID.replace(" ","").replace("%20","");
 }
 
-function registerJQTHandlers() {
-    $('#Wednesday span.toggle.go-skip input, #Thursday span.toggle.go-skip input').tap(function() {
-        id = $(this).attr('topic');
-        if (this.checked) {
-            addToMySessions(id);
-        } else {
-            removeFromMySessions(id);
-        }
-    });
-
-    $('#Wednesday, #Thursday').bind('pageAnimationStart', function() {
-        $(this).find("input.attend-slider").each(function() {
-            slider = $(this);
-            id = slider.attr('topic');
-            slider.attr('checked', isInMySessions(id));
-        });
-    });
-
-    $('#twitter').bind('pageAnimationStart', function() {
-        requestTweetsJson();
-    });
-}
-
 function buildSessionDom(conference) {
     var domBuilder = new ConferenceDOMBuilder(conference);
     domBuilder.updateSessionsDOM();
     domBuilder.updateIndexPageDOM();
-    registerJQTHandlers();
 }
 
 function buildSpeakerDom(conference) {
@@ -233,8 +209,10 @@ function ConferenceDOMBuilder(conference) {
 
 ConferenceDOMBuilder.prototype.buildSpeakerDOM = function(speakerID, speaker) {
     var speakerDiv = $('<div id="' + speakerID + '" class="content"></div>');
-    speakerDiv.append($('<div class="toolbar"><h1>' + speaker.name + '</h1><a class="button back" href="#">Back</a></div>'));
-    speakerDiv.append($('<div class="speaker-info description scroll"><img src="themes/agile2010/img/speakers/' + speakerID + '.gif" width="80" height="120" class="speaker-photo"/><div class="speaker-title2">' + speaker.title + '</div>' + speaker.description + '</div>'));
+    speakerDiv.append($('<div class="toolbar"><a href="#" class="back">Back</a><h1>' + speaker.name + '</h1></div>'));
+    var contentDiv = $('<div class="scroll"></div>')
+    speakerDiv.append(contentDiv);
+    contentDiv.append($('<div class="speaker-info description scroll"><img src="themes/agile2010/img/speakers/' + speakerID + '.gif" width="80" height="120" class="speaker-photo"/><div class="speaker-title2">' + speaker.title + '</div>' + speaker.description + '</div>'));
     return speakerDiv;
 };
 
@@ -242,8 +220,7 @@ ConferenceDOMBuilder.prototype.updateSpeakersDOM = function() {
     for (speakerID in this.conference.conferenceSpeakers) {
         var cleanID = cleanSpeakerID(speakerID);
         $("#"+cleanID).remove();
-        this.buildSpeakerDOM(cleanID,
-            this.conference.conferenceSpeakers[cleanID]).insertBefore("#Wednesday");
+        this.buildSpeakerDOM(cleanID, this.conference.conferenceSpeakers[cleanID]).insertBefore("#Wednesday");
     }
 };
 
@@ -266,8 +243,8 @@ ConferenceDOMBuilder.prototype.buildSessionDOM = function(sessionID, session) {
     sessionDiv.append($('<div class="toolbar"><a href="#" class="back">Back</a><h1>' + session.date + '</h1></div>'));
     var contentDiv = $('<div class="scroll"></div>');
     sessionDiv.append(contentDiv);
-	contentDiv.append($('<div class="description"><span class="session-header">' + session.title + '</span><span style=""><span class="toggle go-skip" style="display: inline-block;"><input type="checkbox" topic="' + sessionID + '" class="attend-slider touch"/></span></span></div>'));
-	contentDiv.append($('div class="topic">' + session.topic + '</div>'));
+	  contentDiv.append($('<div class="description"><span class="session-header">' + session.title + '</span><span style=""><span class="toggle go-skip" style="display: inline-block;"><input type="checkbox" topic="' + sessionID + '" class="attend-slider touch"/></span></span></div>'));
+	  contentDiv.append($('div class="topic">' + session.topic + '</div>'));
     contentDiv.append(this.buildSessionSpeakerList(session));
     contentDiv.append($('<div class="description">' + session.description + '</div>'));
     return sessionDiv;
@@ -336,11 +313,46 @@ ConferenceDOMBuilder.prototype.updateIndexPageDOM = function() {
     }
 };
 
+function registerJQTouchLiveEvents() {
+  // Live events will be added to elements that match the selector
+  // when those elements are added to the DOM. Because of that,
+  // this method only needs to be run once for the document.
+  // Running it more than once results in the handlers being called
+  // multiple times.
+    $('span.go-skip input').tap(function(e) {
+        var id = $(this).attr('topic');
+        var transitioningTo = !this.checked;
+        if (transitioningTo) {
+            addToMySessions(id);
+        } else {
+            removeFromMySessions(id);
+        }
+    });
+
+    $('div.uses_local_data').live('pageAnimationStart', function(e,info) {
+      if (!info || info.direction === "in") {
+        $(this).find("input.attend-slider").each(function() {
+            var slider = $(this);
+            var id = slider.attr('topic');
+            slider.attr('checked', isInMySessions(id));
+        });
+      }
+    });
+
+    $('#twitter').bind('pageAnimationStart', function() {
+        requestTweetsJson();
+    });
+    
+    $('#tabbar a').tap(function() {
+      changeIcons();
+    });
+}
+
 $(document).ready(function() {
     var conference = new AgileConference();
     buildSpeakerDom(conference);
     buildSessionDom(conference);
-    registerJQTHandlers();
+    registerJQTouchLiveEvents();
     
     conference.loadSpeakerInfo();
     conference.loadSessionInfo();
