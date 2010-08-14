@@ -35,7 +35,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 301BF52D109A57CC0062928A /* PhoneGapLib.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* PhoneGapLib */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = PhoneGapLib;
 		};
 		0391CB8B1215011B00BEA45F /* PBXContainerItemProxy */ = {
@@ -352,7 +352,7 @@
 				);
 				PREBINDING = NO;
 				SDKROOT = iphoneos4.0;
-				USER_HEADER_SEARCH_PATHS = "$(PHONEGAPLIB)/Classes";
+				USER_HEADER_SEARCH_PATHS = ../PhoneGapLib/Classes;
 			};
 			name = Debug;
 		};
