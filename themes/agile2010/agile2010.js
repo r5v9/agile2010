@@ -220,7 +220,11 @@ AgileConference.prototype.getPrettySpeakersList = function(speakerIDs) {
     }
     var _this = this;
     return $.map(speakerIDs, function(id, i) {
-        return _this.conferenceSpeakers[cleanSpeakerID(id)].name;
+        var speaker = _this.conferenceSpeakers[cleanSpeakerID(id)];
+        if (!speaker) {
+            speaker = { name: "N/A", description: "N/A", title: "N/A" };
+        }
+        return speaker.name;
     }).join(' and ');
 }
 
@@ -250,6 +254,9 @@ ConferenceDOMBuilder.prototype.buildSessionSpeakerList = function(session) {
     for (var i = 0; i < speakers.length; ++i) {
         var speakerID = cleanSpeakerID(speakers[i]);
         var speaker = this.conference.conferenceSpeakers[speakerID];
+        if (!speaker) {
+            speaker = { name: "N/A", description: "N/A", title: "N/A" };
+        }
         speakerList.append('<li class="arrow speaker-names"><a href="#' + speakerID + '" class="slide">' + speaker.name + '<div class="speaker-title">' + speaker.title + '</div></li>');
     }
     return speakerList;
