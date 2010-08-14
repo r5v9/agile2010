@@ -4,12 +4,17 @@ require 'yaml'
 require 'erb'
 require 'time'
 require 'fileutils'
+require 'rubygems'
+require 'json'
 
 class Main
 
   def check_speakers
-    topics = YAML::load(File.open('topics.yml'))
-    speakers = YAML::load(File.open('speakers.yml'))
+    puts "Loading topics"
+    topics = YAML::load(File.open('aaserver/data/topics.yml'))
+
+    puts "Loading speakers"
+    speakers = YAML::load(File.open('aaserver/data/speakers.yml'))
     valid = true
     topics.each_key do |id|
       topic_speakers = topics[id]['speakers']
@@ -23,6 +28,22 @@ class Main
         end
       end
     end
+    
+    now = DateTime.now
+    
+    data = <<-DATA
+    var defaultSpeakerData = { 
+      'timestamp': '#{now}',
+      'data': #{speakers.to_json}
+    }
+    var defaultSessionData = {
+      'timestamp': '#{now}',
+      'data': #{topics.to_json}
+    }
+    DATA
+    
+    File.open("themes/agile2010/defaultData.js", "w") { |f| f.puts data }
+    
     return valid
   end
 

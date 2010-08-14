@@ -222,26 +222,26 @@ bruce-taylor:
     description: |
         <p>Bruce is working at Aconex in Melbourne as one of the Engineering Managers. This role is essentially the typical Scrum master/Agile coach role with some responsibility for recruitment and performance management of some members of the team. Prior to working at Aconex, Bruce was an Agile BA then PM/Scrum Master at Lonely Planet for around 4 ½ years. Bruce was part of the original in house team that introduced Agile to the organisation and assisted in the transition from one Agile team to multiple work units, from IT right through to the Legal department.</p>
 
-james-brett
+james-brett:
     name: James Brett
     title: Scrum and Agile Coach, ThoughtWorks
     description: |
         <p>James Brett is a Certified Scrum Coach and Agile Coach with over 15 years experience in software development and has worked with a number of Australian and European blue chip companies such as Suncorp, Conchango, Volkswagen, Boots, Play.com and various leading financial organisations. James coaches Agile teams and businesses to create exceptional products that are of high quality and cost effective. Leadership, self-organisation and continuous improvement are his passions as he helps organisations to develop the practices and culture required to succeed with Agile development.</p>
         
-nick-strybosch
+nick-strybosch:
     name: Nick Strybosch
     title: Product and Technology Manager, Aconex
     description: |
         <p>Nick Strybosch works for Aconex, who provide a SAAS-based construction project collaboration platform. He hopped on the Agile bandwagon in 2006, after quitting a business analyst role at a bank because he was sure they were doing requirements wrong, without knowing what right was. Right, as it turned out, has something to do with index cards and sharpies. He's been scribbling ever since, joining Aconex on day one of their transition to scrum in late 2008, and is currently part of a team building the first product outside of the core platform.</p>
         
-mahesh-baxi
+mahesh-baxi:
     name: Mahesh Baxi
     title: Managing Director, ThoughtWorks India
     description: |
         <p>Mahesh Baxi joined ThoughtWorks in July 2008 as Head of Delivery, and later became Chief Operating Officer where he was responsible for the day-to-day operations of business. As the Managing Director of ThoughtWorks India, Mahesh Baxi is responsible for the company's India operations, business strategy, software delivery excellence, customer relationships, and balancing sustainable growth & employee needs.</p>
         <p>Before joining ThoughtWorks, Mahesh had been in the software industry for over 15 years, of which he spent 12 yearsin in the Bay Area, USA. He has worked for various software product development companies including Apttus, Vendavo, Nextance and Challenger Systems, where he led the professional services group as Director of Professional Services, and CRM & B2B practices as Engagement Manager. Mahesh holds a Computer Engineering degree from Gujarat University. Mahesh is a member of the Technology Advisory Board for PSVillage, and a contributing editor of the book 'Tips from the Trenches'.</p>
 
-chris-murphy
+chris-murphy:
     name: Chris Murphy
     title: Managing Director, ThoughtWorks Australia
     description: |
@@ -249,7 +249,7 @@ chris-murphy
         <p>Following his initial Agile “Eureka moment” on his first day at ThoughtWorks six years ago (which simultaneously filled him with hope - and invalidated his entire frame of reference and career achievements to that point), Chris has worked extensively with ThoughtWorks consultants, clients and the Agile community to break-down traditional legal, commercial and governance models and reinvent them appropriate to more business focussed Agile approaches.</p>
         <p>Chris holds Bachelor degrees in Science and Law from the University of Melbourne, Master degrees in Information Technology and Law (Intellectual Property) from Monash University, and is qualified as a solicitor in Australia, England and Wales.</p>
 
-andy-marks
+andy-marks:
     name: Andy Marks
     title: Consultant, ThoughtWorks
     description: |
