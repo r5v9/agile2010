@@ -304,10 +304,14 @@ ConferenceDOMBuilder.prototype.updateTopicList = function(day, dayDiv) {
         }
         var speakers = (session.speakers === null ? [] : session.speakers.split(','));
         topicList.append($('<li>'
-			+'<div class="arrow"><a href="#' + session.id + '" class="topic-link slide">' + session.title + '</a></div>'
-			+'<span class="speaker-title3">' + this.conference.getPrettySpeakersList(speakers) + '</span>'
-			+'<span class="toggle go-skip"><input type="checkbox" topic="' 
-			+ session.id + '" class="attend-slider"/></span></li>'));
+			+'<div class="arrow">'
+				+'<a href="#' + session.id + '" class="topic-link slide">' + session.title + '</a>'
+			+'</div>'
+			+'<div class="speaker-go">'
+				+'<span class="speaker-title3">' + this.conference.getPrettySpeakersList(speakers) + '</span>'
+				+'<span class="toggle go-skip"><input type="checkbox" topic="' + session.id + '" class="attend-slider"/></span>'
+			+'</div>'
+			+'</li>'));
     }
 };
 
