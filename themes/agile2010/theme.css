@@ -34,11 +34,6 @@ div#jqt .toolbar > h1 {
 	background-color: #FFF;
 }
 
-#map-container
-{
-	background-color: #FFF;
-}
-
 .topic {
     padding: 10px;
     padding-bottom: 0;
@@ -169,33 +164,6 @@ div#jqt .toolbar > h1 {
     width: 50px;
     height: 50px;
     margin-right: 10px;
-}
-
-#map_text {
-    position: absolute;
-    z-index: 1000;
-    top: 45px;
-    background-color: rgb(0, 0, 0);
-    opacity: .75;
-    width: 100%;
-    padding: 8px 8px 8px 8px;
-    margin: 0;
-    border: 0;
-    color: white;
-    font-size: smaller;
-}
-
-#map_canvas {
-    width: 100%;
-    height: 250px;
-}
-
-body.profile #map_canvas {
-    min-height: 250px;
-}
-
-body.landscape #map_canvas {
-    min-height: 250px;
 }
 
 .mapcontrol {
