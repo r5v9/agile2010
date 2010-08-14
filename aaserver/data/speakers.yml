@@ -154,13 +154,6 @@ paula-ngov:
         <p>Paula Ngov has a diverse background in the technical and business space of the IT industry which has led her to become a modern-day, multi-skilled Senior Business Analyst. She has strong skills in stakeholder management and the facilitation and gathering of business requirements and processes.</p>
         <p>Paula is passionate about continuous learning, quality and the more collaborative approach that Agile provides. As a certified SCRUM Master Paula plays a key role in implementing Agile practices on client sites. Paula also heads up a competency within DiUS helping to mentor, foster and grow the analysis capability in line with these Agile practices.</p>
 
-daniel-oertli:
-    name: Daniel Oertli
-    title: Chief Information Officer, REA Group
-    description: |
-        <p>Daniel Oertli joined REA Group (parent of realestate.com.au) as CIO in 2009 with a mission to reinvigorate innovation and tempo at REA's leading online realestate brands in Australia, Asia and Europe.</p>
-        <p>Prior to REA Group, Daniel's experience includes executive leadership positions in finance and travel - most recently Head of IT Asia Pacific for CMC Markets, and Head of IT &amp; Operations for Carlson Wagonlit Asia Pacific.</p>
-
 todd-porter:
     name: Todd Porter
     title: Manager, Online Service Integration, Smart Service Queensland
@@ -255,5 +248,10 @@ andy-marks:
     description: |
         <p>Since 2002, Andy Marks has worked at ThoughtWorks in a variety of roles and within a variety of different organisational cultures. Andy has helped introduce Agile into organisations both large and small and spent considerable time working within established Agile environments of various levels of maturity. Andy brings a passion for high quality software development to his work, accompanied by a strong mentoring background.</p>
         
-
+jez-humble
+    name: Jez Humble
+    title: Principal Consultant, ThoughtWorks
+    description: |
+        <p>Jez Humble is a Principal Consultant with ThoughtWorks. He got into IT in 2000, just in time for the dot-com bust. Since then he has worked as a developer, system administrator, trainer, consultant, manager, and speaker. He has worked with a variety of platforms and technologies, consulting for non-profits, telecoms, financial services, and online retail companies. He is the author of Continuous Delivery, published in Martin Fowler's Signature Series (Addison Wesley, 2010).</p>
+        <p>Since 2004 he has worked for ThoughtWorks and ThoughtWorks Studios in Beijing, Bangalore, London, and San Francisco. His focus is on helping organisations deliver valuable, high-quality software frequently and reliably through implementing effective engineering practices in the field of Agile delivery. He holds a BA in Physics and Philosophy from Oxford University and an MMus in Ethnomusicology from the School of Oriental and African Studies, University of London.</p>
     
