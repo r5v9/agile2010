@@ -1,7 +1,6 @@
 breakfast:
     date: Wed 07:00AM
     title: Executive Breakfast with Jim Highsmith
-    
     speakers: jim-highsmith
     description: |
         <p><a href="https://www.slatteryit.com.au/RegoPages/Agile2010Breakfast.aspx" target="_blank">Register for this session</a></p>
@@ -16,12 +15,12 @@ beyond-scope-schedule-cost:
         <p>A March 2009 Business Week article proclaims, "There is no more Normal." In the throws of such pervasive change the traditional emphasis on "following the plan with minimal changes," needs to be supplanted by an agile stress on "adapting successfully to inevitable changes." Furthermore, if agility is about delivering customer value by being flexible, then how can adherence to a traditional scope, schedule, and cost plan be the best way to measure performance? It can't. We need to move beyond the classic Iron Triangle measures to an Agile Triangle that focuses on Value, Quality, and Constraints.</p>
         <p>Agile teams are asked to be agile, flexible, and adaptive, but then are told to conform to planned scope, schedule, and cost goals. They are asked to adapt, but inside a very small box. If we are to scale agility to large projects and bring agile values to organizations, then we must change performance measures. To mirror the Agile Manifesto, it's not that scope, schedule, and cost are unimportant, but that value and quality are more important. This keynote explores the necessity for and the rationale behind moving to this new set of agile performance measures.</p>
 
-essence-agile:
-    date: Wed 10:00AM
-    title: The Essence of Agile Software Development
-    speakers: martin-fowler
+delivering-business-value:
+    date: Thu 10:00AM
+    title: Delivering Business Value with Agile
+    speakers: jeff-smith
     description: |
-        <p>Almost ten years ago I had the good fortune to be at a workshop that led to the coining of the term "Agile" and the writing of the "Manifesto for Agile Software Development". Since then I've watched as ThoughtWorks, my employer, has embraced software agility and applied it on projects all over the world. During these years the concept of Agile has become more and more mainstream, but as with any radical idea, popularity tends to introduce diffusion. So I find it's important to revisit the core essence of these ideas, so they don't get lost in the noise of widespread adoption.</p>
+        <p>Suncorp's business and technology teams have a strong track record of deploying solutions for competitive advantage and being able to drive business value faster with a strong return on investment. Key to this approach is their commitment to collaborate on projects using the Agile values, principles and practices to optimise the broader team performance and meet business needs. Jeff Smith, Group Executive, Suncorp Business Services, sees the Agile development methodology as not just about making good technology but as an approach that can be applied by any successful business.</p>
 
 dogs-tricks:
     date: Wed 11:30AM
@@ -166,12 +165,12 @@ open-house:
         <p>Register at the ThoughtWorks booth.</p>
         
 
-delivering-business-value:
+essence-agile:
     date: Thu 09:00AM
-    title: Delivering Business Value with Agile
-    speakers: jeff-smith
+    title: The Essence of Agile Software Development
+    speakers: martin-fowler
     description: |
-        <p>Suncorp's business and technology teams have a strong track record of deploying solutions for competitive advantage and being able to drive business value faster with a strong return on investment. Key to this approach is their commitment to collaborate on projects using the Agile values, principles and practices to optimise the broader team performance and meet business needs. Jeff Smith, Group Executive, Suncorp Business Services, sees the Agile development methodology as not just about making good technology but as an approach that can be applied by any successful business.</p>
+                <p>Almost ten years ago I had the good fortune to be at a workshop that led to the coining of the term "Agile" and the writing of the "Manifesto for Agile Software Development". Since then I've watched as ThoughtWorks, my employer, has embraced software agility and applied it on projects all over the world. During these years the concept of Agile has become more and more mainstream, but as with any radical idea, popularity tends to introduce diffusion. So I find it's important to revisit the core essence of these ideas, so they don't get lost in the noise of widespread adoption.</p>
 
 legacy-gold:
     date: Thu 10:30AM
