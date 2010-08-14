@@ -132,8 +132,7 @@ function cleanSpeakerID(speakerID) {
 }
 
 function registerJQTHandlers() {
-    // add/remove topic into/from local storage once slider changes and rebuild my sessions list
-    $('.toggle.yes-no input, .toggle.go-skip input').click(function() {
+    $('.toggle.yes-no input, .toggle.go-skip input').swipe(function() {
         id = $(this).attr('topic');
         if (this.checked) {
             addToMySessions(id);
