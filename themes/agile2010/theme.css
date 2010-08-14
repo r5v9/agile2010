@@ -123,6 +123,10 @@ div#jqt .toolbar > h1 {
     margin-bottom: 5px;
 }
 
+.speaker-go {
+	padding-top: 5px;
+}
+
 .attend-button {
     margin-left: 10px;
     margin-right: 10px;
@@ -406,6 +410,13 @@ div#jqt.landscape .toolbar > h1 {
 	-webkit-border-radius: 8px;
 }
 
+#jqt div.arrow {
+	background-image: url(img/chevron.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+	padding-right: 30px;
+}
+
 #jqt ul li.arrow a {
 	padding: 12px 22px 12px 10px;
 }
@@ -423,7 +434,7 @@ div#jqt.landscape .toolbar > h1 {
     /*white-space: nowrap;*/
     /*overflow: hidden;*/
     display: block;
-    padding: 10px 10px 16px 10px;
+    padding: 10px 10px 10px 10px;
     margin: -10px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 
