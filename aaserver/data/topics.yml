@@ -1,7 +1,6 @@
 breakfast:
     date: Wed 07:00AM
     title: Executive Breakfast with Jim Highsmith
-    
     speakers: jim-highsmith
     description: |
         <p><a href="https://www.slatteryit.com.au/RegoPages/Agile2010Breakfast.aspx" target="_blank">Register for this session</a></p>
@@ -10,22 +9,22 @@ breakfast:
 beyond-scope-schedule-cost:
     date: Wed 09:00AM
     title: > 
-        Beyond Scope, Schedule, and Cost: Rethinking Agile Performance Measures
+        CCH - Beyond Scope, Schedule, and Cost: Rethinking Agile Performance Measures
     speakers: jim-highsmith
     description: |
         <p>A March 2009 Business Week article proclaims, "There is no more Normal." In the throws of such pervasive change the traditional emphasis on "following the plan with minimal changes," needs to be supplanted by an agile stress on "adapting successfully to inevitable changes." Furthermore, if agility is about delivering customer value by being flexible, then how can adherence to a traditional scope, schedule, and cost plan be the best way to measure performance? It can't. We need to move beyond the classic Iron Triangle measures to an Agile Triangle that focuses on Value, Quality, and Constraints.</p>
         <p>Agile teams are asked to be agile, flexible, and adaptive, but then are told to conform to planned scope, schedule, and cost goals. They are asked to adapt, but inside a very small box. If we are to scale agility to large projects and bring agile values to organizations, then we must change performance measures. To mirror the Agile Manifesto, it's not that scope, schedule, and cost are unimportant, but that value and quality are more important. This keynote explores the necessity for and the rationale behind moving to this new set of agile performance measures.</p>
 
-essence-agile:
+delivering-business-value:
     date: Wed 10:00AM
-    title: The Essence of Agile Software Development
-    speakers: martin-fowler
+    title: CCH - Delivering Business Value with Agile
+    speakers: jeff-smith
     description: |
-        <p>Almost ten years ago I had the good fortune to be at a workshop that led to the coining of the term "Agile" and the writing of the "Manifesto for Agile Software Development". Since then I've watched as ThoughtWorks, my employer, has embraced software agility and applied it on projects all over the world. During these years the concept of Agile has become more and more mainstream, but as with any radical idea, popularity tends to introduce diffusion. So I find it's important to revisit the core essence of these ideas, so they don't get lost in the noise of widespread adoption.</p>
+        <p>Suncorp's business and technology teams have a strong track record of deploying solutions for competitive advantage and being able to drive business value faster with a strong return on investment. Key to this approach is their commitment to collaborate on projects using the Agile values, principles and practices to optimise the broader team performance and meet business needs. Jeff Smith, Group Executive, Suncorp Business Services, sees the Agile development methodology as not just about making good technology but as an approach that can be applied by any successful business.</p>
 
 dogs-tricks:
     date: Wed 11:30AM
-    title: Old Tricks for New Dogs and New Tricks for Old Dogs
+    title: CCH1 - Old Tricks for New Dogs and New Tricks for Old Dogs
     speakers: shane-hastie
     description: |
         <p>Context is everything - there is no 'one-size-fits-all' approach to project delivery. The Agile umbrella encompasses a wide range of techniques and approaches. This talk briefly examines a variety of the techniques and identifies the "project ecosystem" elements that will enable them to be effective, where they work best, where they are to be avoided and practical advice on how to get the maximum benefit from each of the practices.</p>
@@ -103,7 +102,7 @@ lightning-talks-wed:
 
 agile-adoption:
     date: Wed 02:45PM
-    title: Agile Adoption: Real World Lessons on Getting Agile Established in the Enterprise
+    title: 'Agile Adoption: Real World Lessons on Getting Agile Established in the Enterprise'
     speakers: richard-henning
     description: |
         <p>Allianz began to adopt elements of Agile delivery practices a few years ago, and learnt some unique lessons that led to two full blown Agile pilot projects to be established in 2009. The aim was to assess Agile and promote the practice as an acceptable alternate form of software delivery where appropriate. Also embodied in the aim was the establishment of agreed SDLC deliverables and activities to ensure relevant governance and reduce confusion. Consideration was also given to the key behaviours required in the team and how to build broader corporate adoption.</p>
@@ -147,7 +146,7 @@ government-case-studies:
         <p>There is a brief discussion of what worked well, particularly those characteristics of NOPSA that were useful to the process (yes, they can exist in a government agency !).</p>
         <p>This session finishes with a summary of the factors that have made Agile 'the way we do things' at NOPSA.</p>
         
-engaging-the-business
+engaging-the-business:
     date: Wed 04:45PM
     title: Engaging the Business on an Agile Project
     speakers: jay-jenkins
@@ -166,12 +165,12 @@ open-house:
         <p>Register at the ThoughtWorks booth.</p>
         
 
-delivering-business-value:
+essence-agile:
     date: Thu 09:00AM
-    title: Delivering Business Value with Agile
-    speakers: jeff-smith
+    title: The Essence of Agile Software Development
+    speakers: martin-fowler
     description: |
-        <p>Suncorp's business and technology teams have a strong track record of deploying solutions for competitive advantage and being able to drive business value faster with a strong return on investment. Key to this approach is their commitment to collaborate on projects using the Agile values, principles and practices to optimise the broader team performance and meet business needs. Jeff Smith, Group Executive, Suncorp Business Services, sees the Agile development methodology as not just about making good technology but as an approach that can be applied by any successful business.</p>
+                <p>Almost ten years ago I had the good fortune to be at a workshop that led to the coining of the term "Agile" and the writing of the "Manifesto for Agile Software Development". Since then I've watched as ThoughtWorks, my employer, has embraced software agility and applied it on projects all over the world. During these years the concept of Agile has become more and more mainstream, but as with any radical idea, popularity tends to introduce diffusion. So I find it's important to revisit the core essence of these ideas, so they don't get lost in the noise of widespread adoption.</p>
 
 legacy-gold:
     date: Thu 10:30AM
@@ -303,7 +302,7 @@ running-company-agile:
 
 dev-ops:
     date: Thu 3:00PM
-    title: DevOps and Agile Release Management: Rapid, Reliable Software Releases Through Automation and Collaboration
+    title: 'DevOps and Agile Release Management: Rapid, Reliable Software Releases Through Automation and Collaboration'
     speakers: jez-humble
     description: |
         <p>Many organisations struggle with getting valuable, working software released to users frequently and reliably. Often, software is found to be unfit for purpose or simply undeployable late in the delivery process. Jez discusses how automation of the build, deploy, test and release process, automated infrastructure and database management, and better collaboration between developers, testers, and operations enables rapid, reliable software releases.</p> 

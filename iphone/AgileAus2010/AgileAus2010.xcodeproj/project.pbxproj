@@ -352,7 +352,7 @@
 				);
 				PREBINDING = NO;
 				SDKROOT = iphoneos4.0;
-				USER_HEADER_SEARCH_PATHS = ../PhoneGapLib/Classes;
+				USER_HEADER_SEARCH_PATHS = ../phonegaplib/Classes;
 			};
 			name = Debug;
 		};
@@ -371,7 +371,7 @@
 				);
 				PREBINDING = NO;
 				SDKROOT = iphoneos4.0;
-				USER_HEADER_SEARCH_PATHS = "$(PHONEGAPLIB)/Classes";
+				USER_HEADER_SEARCH_PATHS = ../phonegaplib/Classes;
 			};
 			name = Release;
 		};
