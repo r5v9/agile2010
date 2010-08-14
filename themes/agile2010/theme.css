@@ -3,21 +3,10 @@
 }
 
 div#jqt #about {
-    padding: 100px 10px 40px;
     text-shadow: rgba(255, 255, 255, 0.3) 0px -1px 0;
     font-size: 13px;
     text-align: center;
-    background: #161618;
-}
-
-div#jqt #about p {
-    margin-bottom: 8px;
-}
-
-div#jqt #about a {
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
+	background-color: #FFF;
 }
 
 div#jqt .toolbar > h1 {
@@ -29,11 +18,35 @@ div#jqt .toolbar > h1 {
     white-space: normal;
 }
 
+#about-agile-links a {
+   color: #C00;
+   font-size:14px;
+   text-decoration: none;
+}
+
+#twitter-feed
+{
+	margin-top: 10px;
+}
+
+#floorplan-container
+{
+	background-color: #FFF;
+}
+
 .topic {
     padding: 10px;
     padding-bottom: 0;
     font-size: 14pt;
     font-weight: bold;
+}
+
+.attending {
+ 
+    font-size: 10pt;
+	vertical-align: -5px;
+	
+
 }
 
 .speaker {
@@ -42,7 +55,7 @@ div#jqt .toolbar > h1 {
 
 .speaker-title {
     font-style: italic;
-    font-weight: none;
+    font-weight: normal;
     font-size: 10pt;
     color: gray;
     margin-top: 3px;
@@ -51,7 +64,7 @@ div#jqt .toolbar > h1 {
 
 .speaker-title2 {
     font-style: italic;
-    font-weight: none;
+    font-weight: normal;
     font-size: 12pt;
     color: gray;
     margin-top: 3px;
@@ -67,19 +80,37 @@ div#jqt .toolbar > h1 {
     white-space: normal;
 }
 
+.session-header {
+	font-size: 16px; 
+	font-weight:bold; 
+	width: 60%; 
+	display: inline-block;"
+}
+
 .description {
-    border-top: 1px solid gray;
+    
     margin: 10px;
-    padding: 5px;
-    padding-top: 10px;
+    padding: 10px;
+	background-color:#E0E0E0;
+	border-style:solid;
+	border-width:1px;
+	border-color:#999;
+	font-size:20px;
+	margin:12px;
+	-webkit-border-radius: 8px;
+	
 }
 
 .description p {
     margin-bottom: 7px;
+	color:#000;
+	font-size:16px;
 }
 
 .speaker-info {
     padding: 15px;
+	color:#000;
+	font-size:16px;
 }
 
 .speaker-info p {
@@ -113,13 +144,13 @@ div#jqt .toolbar > h1 {
 
 .tweet {
     font-size: 11pt;
-    color: white;
+    color: #000;
 }
 
 .tweet-user {
     margin-top: 5pt;
     font-size: 10pt;
-    color: lightgray;
+    color: gray;
 }
 
 .tweet-date {
@@ -133,33 +164,6 @@ div#jqt .toolbar > h1 {
     width: 50px;
     height: 50px;
     margin-right: 10px;
-}
-
-#map_text {
-    position: absolute;
-    z-index: 1000;
-    top: 45px;
-    background-color: rgb(0, 0, 0);
-    opacity: .75;
-    width: 100%;
-    padding: 8px 8px 8px 8px;
-    margin: 0;
-    border: 0;
-    color: white;
-    font-size: smaller;
-}
-
-#map_canvas {
-    width: 100%;
-    height: 250px;
-}
-
-body.profile #map_canvas {
-    min-height: 250px;
-}
-
-body.landscape #map_canvas {
-    min-height: 250px;
 }
 
 .mapcontrol {
@@ -181,51 +185,65 @@ a {
 }
 
 a:link {
-    color: white;
+    color: black;
 }
 
 a:visited {
-    color: white;
+    color: black;
 }
 
 a:hover {
-    color: white;
+    color: black;
 }
 
 a:active {
-    color: white;
+    color: black;
 }
 
-#jqt .toolbar a.button.icon {
+#tabbar a.button.icon {
     position: relative;
-    float: right;
-    margin-left:4px;
-    width:28px;
-    font-size:8px;
-    text-align:center;
-    padding: 0 0;
+    /*float: right;*/
+    height:auto;
+    top:0;
+    -webkit-border-image: none;
+    line-height: 0;
+    padding: 0;
+}
+
+#tabbar .logo {
+    /*background-image: url(img/footer_logo.png);*/
+    /*float:left;*/
+    /*overflow: hidden;*/
+    line-height: 0;
+}
+#tabbar ul li a {
+    margin: 0 !important;
+}
+#tabbar ul li a img {
+    margin-top: -30px;
 }
 
 /* @start "copy of jqt/themes.css" */
 body {
     background: #FFF;
-    color: #ddd;
+    color: #000;
 }
-div#jqt > * {
-    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#5e5e65)); */
-}
+
 #jqt h1, #jqt h2 {
     font: bold 18px "Helvetica Neue", Helvetica;
     text-shadow: rgba(255,255,255,.2) 0 1px 1px;
     color: #000;
-    margin: 10px 20px 5px;
+    margin: 0px;
 }
 /* @group Toolbar */
 #jqt .toolbar {
 	-webkit-box-sizing: border-box;
-	height: 42px;
+	height: 46px;
 	position: relative;
-	background-image: url(img/header_bg.png);
+	background-image: url(img/nav_bg.png);
+}
+#jqt .toolbar.bottom {
+	background-image: url(img/nav_bg.png);
 }
 #jqt .black-translucent .toolbar {
 	margin-top: 20px;
@@ -241,11 +259,10 @@ div#jqt .toolbar > h1 {
     font-size: 20px;
     width: 150px;
     font-weight: bold;
-    text-shadow: rgba(0,0,0,1) 0 -1px 1px;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    color: #fff;
+    color: #CCC;
 }
 div#jqt.landscape .toolbar > h1 {
     margin-left: -125px;
@@ -273,8 +290,20 @@ div#jqt.landscape .toolbar > h1 {
     background: none;
     -webkit-border-image: url(img/button.png) 0 5 0 5;
 }
+
+.refresh a {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    padding: 0 3px;
+
+   
+
+}
+
+
+
 #jqt .button.active, #jqt .cancel.active, #jqt .add.active, #jqt .back.active {
-    /* -webkit-border-image: url(img/button_clicked.png) 0 5 0 5; */
     color: #aaa;
 }
 #jqt .blueButton {
@@ -291,7 +320,7 @@ div#jqt.landscape .toolbar > h1 {
 }
 #jqt .back.active {
     -webkit-border-image: url(img/back_button_clicked.png) 0 8 0 14;
-    color: #aaa;
+    color: #fff;
 }
 #jqt .leftButton, #jqt .cancel {
     left: 6px;
@@ -337,7 +366,6 @@ div#jqt.landscape .toolbar > h1 {
     color: #FFFFFF;
 }
 
-
 /* @end */
 /* @group Lists */
 #jqt h1 + ul, #jqt h2 + ul, #jqt h3 + ul, #jqt h4 + ul, #jqt h5 + ul, #jqt h6 + ul {
@@ -363,16 +391,19 @@ div#jqt.landscape .toolbar > h1 {
     -webkit-border-bottom-right-radius: 8px;
 }
 #jqt ul li {
-    /*color: #666;*/
     list-style-type: none;
     padding: 10px 10px 10px 10px;
-    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));*/
     overflow: hidden;
 }
 #jqt ul li.arrow {
-    /background-image: url(img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
+    background-image: url(img/chevron.png);
     background-position: right center;
     background-repeat: no-repeat;
+	background-color:#E0E0E0;
+	border-style:solid;
+	border-width:1px;
+	font-size:20px;
+	-webkit-border-radius: 8px;
 }
 
 #jqt ul li.arrow a {
@@ -389,16 +420,15 @@ div#jqt.landscape .toolbar > h1 {
     color: #000;
     text-decoration: none;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
     display: block;
-    padding: 12px 10px 12px 10px;
+    padding: 10px 10px 16px 10px;
     margin: -10px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    /*text-shadow: rgba(0,0,0,.2) 0 1px 1px;*/
+
 }
 #jqt ul li a.active, #jqt ul li a.button {
-    background-color: #53b401;
     color: #fff;
 }
 #jqt ul li a.active.loading {
@@ -446,8 +476,8 @@ div#jqt.landscape .toolbar > h1 {
     color: #000;
     font: 14px "Helvetica Neue", Helvetica;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
     display: block;
     margin: 0;
     padding: 0;
@@ -456,8 +486,8 @@ div#jqt.landscape .toolbar > h1 {
     color: #666;
     font: 13px "Helvetica Neue", Helvetica;
     margin: 0;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    /*text-overflow: ellipsis;*/
+    /*white-space: nowrap;*/
     overflow: hidden;
     display: block;
     padding: 0;
@@ -484,7 +514,7 @@ div#jqt.landscape .toolbar > h1 {
 #jqt ul li textarea,
 #jqt ul li select {
     color: #777;
-   /background: transparent url('data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
+    background: transparent url('data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
     border: 0;
     font: normal 17px "Helvetica Neue", Helvetica;
     padding: 0;
@@ -524,8 +554,8 @@ div#jqt.landscape .toolbar > h1 {
     font: 17px "Helvetica Neue", Helvetica;
     text-align: right;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
     display: block;
     width: 23%;
     float: right;
@@ -632,10 +662,10 @@ div#jqt.landscape .toolbar > h1 {
     border-width: 1px 0;
     margin: 0;
     padding: 0;
+	background-color:white;
 }
 #jqt ul.edgetoedge li {
     background-color:#E0E0E0;
-	/*border-color:#4A4B4D #4A4B4D #000000;*/
 	border-style:solid;
 	border-width:1px;
 	font-size:20px;
@@ -644,7 +674,6 @@ div#jqt.landscape .toolbar > h1 {
 
 }
 #jqt ul.edgetoedge li.sep {
-    /* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,.5))); */
     border: 0px;
     color: #CC0000;
     font-size: 12px;
@@ -755,9 +784,6 @@ div#jqt.landscape .toolbar > h1 {
     background-image: url(img/chevron.png);
     background-position: right center;
     background-repeat: no-repeat;
-   background-image: url(img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1)));
-    background-repeat: no-repeat;
-    background-position: right center;
 }
 #jqt ul.metal li.arrow a small {
     padding-right: 15px;

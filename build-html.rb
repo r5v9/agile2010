@@ -4,33 +4,17 @@ require 'yaml'
 require 'erb'
 require 'time'
 require 'fileutils'
+require 'rubygems'
+require 'json'
 
 class Main
 
-  def build_html
-    topics = YAML::load(File.open('topics.yml'))
-    speakers = YAML::load(File.open('speakers.yml'))
-    topic_keys = { 'Wed' => topic_keys_sorted(topics, 'Wed'), 'Thu' => topic_keys_sorted(topics, 'Thu') }
+  def check_speakers
+    puts "Loading topics"
+    topics = YAML::load(File.open('aaserver/data/topics.yml'))
 
-		if !check_speakers(topics, speakers)
-		  return
-		end
-  
-    b = binding
-    template = ERB.new(File.read('index.erb'))
-
-    index_file = File.new('index.html', 'w')
-    index_file.puts template.result(b)
-    index_file.close
-  end
-  
-  def topic_keys_sorted(topics, day)
-    return topics.select { |k,v| v['date'].match(/#{day}/) } \
-	        .sort { |a,b| Time.parse(a[1]['date'])<=>Time.parse(b[1]['date']) } \
-	        .map { |a| a[0] }
-  end
-  
-  def check_speakers(topics, speakers)
+    puts "Loading speakers"
+    speakers = YAML::load(File.open('aaserver/data/speakers.yml'))
     valid = true
     topics.each_key do |id|
       topic_speakers = topics[id]['speakers']
@@ -44,18 +28,41 @@ class Main
         end
       end
     end
+    
+    now = DateTime.now
+    
+    data = <<-DATA
+    var defaultSpeakerData = { 
+      'timestamp': '#{now}',
+      'data': #{speakers.to_json}
+    }
+    var defaultSessionData = {
+      'timestamp': '#{now}',
+      'data': #{topics.to_json}
+    }
+    DATA
+    
+    File.open("themes/agile2010/defaultData.js", "w") { |f| f.puts data }
+    
     return valid
   end
 
   def build_iphone_app
-    FileUtils.cp_r(%w(index.html jqtouch/ themes/), 'phonegap-iphone/www')
+    iphone_app_project_dir = 'iphone/AgileAus2010'
+    FileUtils.remove_dir(iphone_app_project_dir + '/www', force = true)
+    FileUtils.makedirs(iphone_app_project_dir + '/www/themes')
+    FileUtils.cp_r(%w(index.html jqtouch/), iphone_app_project_dir + '/www')
+    FileUtils.cp_r(%w(themes/agile2010), iphone_app_project_dir + '/www/themes')
+    FileUtils.cp('themes/agile2010/icon.png', iphone_app_project_dir + '/icon.png')
+    FileUtils.cp('themes/agile2010/startup.png', iphone_app_project_dir + '/Default.png')
+    #TODO: invoke the xcode build script for 'release'
   end
 
 end
 
 if __FILE__ == $0
   main = Main.new
-  main.build_html
+  main.check_speakers
   main.build_iphone_app
 end
 
