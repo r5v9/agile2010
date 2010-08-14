@@ -52,10 +52,11 @@ function differentialTime(date) {
 function changeIcons(){
 	$(".icon-img").each(function(index, s) {
 		var src = $(this).attr('src');
-		$(this).attr('src', src.replace('on', 'off'))
+		$(this).attr('src', src.replace('on', 'off'));
 	});
 	
-	event.target.src = event.target.src.replace('off', 'on');
+	var src = $(event.target).attr('src');  
+	$(event.target).attr('src', src.replace('off', 'on'));
 }
 
 function requestTweetsJson() {
