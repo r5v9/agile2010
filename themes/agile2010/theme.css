@@ -406,6 +406,13 @@ div#jqt.landscape .toolbar > h1 {
 	-webkit-border-radius: 8px;
 }
 
+#jqt div.arrow {
+	background-image: url(img/chevron.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+	padding-right: 30px;
+}
+
 #jqt ul li.arrow a {
 	padding: 12px 22px 12px 10px;
 }
