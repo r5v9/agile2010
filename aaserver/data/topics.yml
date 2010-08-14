@@ -9,7 +9,7 @@ breakfast:
 beyond-scope-schedule-cost:
     date: Wed 09:00AM
     title: > 
-        Beyond Scope, Schedule, and Cost: Rethinking Agile Performance Measures
+        CCH - Beyond Scope, Schedule, and Cost: Rethinking Agile Performance Measures
     speakers: jim-highsmith
     description: |
         <p>A March 2009 Business Week article proclaims, "There is no more Normal." In the throws of such pervasive change the traditional emphasis on "following the plan with minimal changes," needs to be supplanted by an agile stress on "adapting successfully to inevitable changes." Furthermore, if agility is about delivering customer value by being flexible, then how can adherence to a traditional scope, schedule, and cost plan be the best way to measure performance? It can't. We need to move beyond the classic Iron Triangle measures to an Agile Triangle that focuses on Value, Quality, and Constraints.</p>
@@ -17,14 +17,14 @@ beyond-scope-schedule-cost:
 
 delivering-business-value:
     date: Wed 10:00AM
-    title: Delivering Business Value with Agile
+    title: CCH - Delivering Business Value with Agile
     speakers: jeff-smith
     description: |
         <p>Suncorp's business and technology teams have a strong track record of deploying solutions for competitive advantage and being able to drive business value faster with a strong return on investment. Key to this approach is their commitment to collaborate on projects using the Agile values, principles and practices to optimise the broader team performance and meet business needs. Jeff Smith, Group Executive, Suncorp Business Services, sees the Agile development methodology as not just about making good technology but as an approach that can be applied by any successful business.</p>
 
 dogs-tricks:
     date: Wed 11:30AM
-    title: Old Tricks for New Dogs and New Tricks for Old Dogs
+    title: CCH1 - Old Tricks for New Dogs and New Tricks for Old Dogs
     speakers: shane-hastie
     description: |
         <p>Context is everything - there is no 'one-size-fits-all' approach to project delivery. The Agile umbrella encompasses a wide range of techniques and approaches. This talk briefly examines a variety of the techniques and identifies the "project ecosystem" elements that will enable them to be effective, where they work best, where they are to be avoided and practical advice on how to get the maximum benefit from each of the practices.</p>
