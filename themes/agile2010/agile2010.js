@@ -151,43 +151,64 @@ function AgileConference() {
     this.conferenceSessions = $.parseJSON(localStorage.getItem('sessions'));
 }
 
-AgileConference.prototype.loadSpeakerInfo = function() {
-    var conference = this;
+AgileConference.prototype.updateFromWeb = function() {
+  var conference = this;
+  
+  var needSessions = false;
+  var sessionsTimestamp = localStorage.getItem('sessionsTimestamp');
+  var sessions = null;
+  
+  var needSpeakers = false;
+  var speakersTimestamp = localStorage.getItem('speakersTimestamp');
+  var speakers = null;
+  
+  var sessionsTimestampCallback = function(result) {
+    if (localStorage.getItem('sessionsTimestamp') !== result['timestamp']) {
+      needSessions = true;
+      sessionsTimestamp = result['timestamp'];
+      $.getJSON('http://agileaustralia2010.appspot.com/topics?callback=?', sessionsLoadCallback);
+    }
+  };
+  var sessionsLoadCallback = function(sessionsData) {
+      sessions = sessionsData;
+      promptUserToRefreshData();
+  };
+  var speakersTimestampCallback = function(result) {
+    if (localStorage.getItem('speakersTimestamp') !== result['timestamp']) {
+      needSpeakers = true;
+      speakersTimestamp = result['timestamp'];
+      $.getJSON('http://agileaustralia2010.appspot.com/speakers?callback=?', speakersLoadCallback);
+    }
+  };
+  var speakersLoadCallback = function(speakersData) {
+      speakers = speakersData;
+      promptUserToRefreshData();
+  };
+  var promptUserToRefreshData = function() {
+    var sessionsComplete = (needSessions && sessions !== null) || !needSessions;
+    var speakersComplete = (needSpeakers && speakers !== null) || !needSpeakers;
     
-    $.getJSON('http://agileaustralia2010.appspot.com/speakersTimestamp?callback=?',
-        function(speakersTimestamp) {
-            if (localStorage.getItem('speakersTimestamp') !== speakersTimestamp['timestamp']) {
-                $.getJSON('http://agileaustralia2010.appspot.com/speakers?callback=?',
-                    function(speakersData) {
-                        localStorage.setItem("speakers", $.toJSON(speakersData));
-                        localStorage.setItem('speakersTimestamp', speakersTimestamp['timestamp']);
-                        conference.conferenceSpeakers = speakersData;
-                        buildSpeakerDom(conference);
-                    }
-                );
-            }
-        }
-    );       
-};
-
-AgileConference.prototype.loadSessionInfo = function() {
-    var conference = this;
-
-    $.getJSON('http://agileaustralia2010.appspot.com/topicsTimestamp?callback=?',
-        function(sessionsTimestamp) {
-            if (localStorage.getItem('sessionsTimestamp') !== sessionsTimestamp['timestamp']) {
-                $.getJSON('http://agileaustralia2010.appspot.com/topics?callback=?',
-                    function(sessionsData) {
-                        localStorage.setItem("sessions", $.toJSON(sessionsData));
-                        localStorage.setItem('sessionsTimestamp', sessionsTimestamp['timestamp']);
-                        conference.conferenceSessions = sessionsData;
-                        buildSessionDom(conference);
-                    }
-                );
-            }
-        }
-    );
-};
+    if (sessionsComplete && speakersComplete) {
+      if (sessions !== null) {
+        localStorage.setItem("sessions", $.toJSON(sessions));
+        localStorage.setItem('sessionsTimestamp', sessionsTimestamp);        
+      }
+      if (speakers !== null) {
+        localStorage.setItem("speakers", $.toJSON(speakers));
+        localStorage.setItem('speakersTimestamp', speakersTimestamp);        
+      }      
+      alert("something");
+      var refreshNow = confirm("Updated schedule downloaded. Apply now?");
+      if (refreshNow === true) {
+        location.reload(true);
+      }
+    }
+  };
+  
+  
+  $.getJSON('http://agileaustralia2010.appspot.com/speakersTimestamp?callback=?', speakersTimestampCallback);
+  $.getJSON('http://agileaustralia2010.appspot.com/topicsTimestamp?callback=?', sessionsTimestampCallback);  
+}
 
 AgileConference.prototype.getPrettySpeakersList = function(speakerIDs) {
     if (speakerIDs.length === 0) {
@@ -353,7 +374,6 @@ $(document).ready(function() {
     buildSpeakerDom(conference);
     buildSessionDom(conference);
     registerJQTouchLiveEvents();
-    
-    conference.loadSpeakerInfo();
-    conference.loadSessionInfo();
+
+    conference.updateFromWeb();
 });
