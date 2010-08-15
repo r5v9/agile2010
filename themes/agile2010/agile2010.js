@@ -196,12 +196,16 @@ AgileConference.prototype.updateFromWeb = function() {
       if (speakers !== null) {
         localStorage.setItem("speakers", $.toJSON(speakers));
         localStorage.setItem('speakersTimestamp', speakersTimestamp);        
-      }      
-      alert("something");
-      var refreshNow = confirm("Updated schedule downloaded. Apply now?");
-      if (refreshNow === true) {
-        location.reload(true);
       }
+      var alertDelegate = navigator.notification.confirm(
+              "Updated schedule downloaded. Apply now?",
+              "Schedule Update",
+              "Yes,No");
+      alertDelegate.onAlertDismissed = function(index, label) {
+          if ('Yes' == label) {
+            location.reload(true);
+          }
+      };
     }
   };
   
