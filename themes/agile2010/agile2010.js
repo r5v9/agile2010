@@ -212,7 +212,7 @@ ConferenceDOMBuilder.prototype.buildSpeakerDOM = function(speakerID, speaker) {
     speakerDiv.append($('<div class="toolbar"><a href="#" class="back">Back</a><h1>' + speaker.name + '</h1></div>'));
     var contentDiv = $('<div class="scroll"></div>')
     speakerDiv.append(contentDiv);
-    contentDiv.append($('<div class="speaker-info description scroll"><img src="themes/agile2010/img/speakers/' + speakerID + '.gif" width="80" height="120" class="speaker-photo"/><div class="speaker-title2">' + speaker.title + '</div>' + speaker.description + '</div>'));
+    contentDiv.append($('<div class="speaker-info description"><img src="themes/agile2010/img/speakers/' + speakerID + '.gif" width="80" height="120" class="speaker-photo"/><div class="speaker-title2">' + speaker.title + '</div>' + speaker.description + '</div>'));
     return speakerDiv;
 };
 
