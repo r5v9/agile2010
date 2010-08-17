@@ -133,13 +133,13 @@ function cleanSpeakerID(speakerID) {
 
 function buildSessionDom(conference) {
     var domBuilder = new ConferenceDOMBuilder(conference);
-//    domBuilder.updateSessionsDOM();
+    domBuilder.updateSessionsDOM();
     domBuilder.updateIndexPageDOM();
 }
 
 function buildSpeakerDom(conference) {
     var domBuilder = new ConferenceDOMBuilder(conference);
-//    domBuilder.updateSpeakersDOM();
+    domBuilder.updateSpeakersDOM();
 }
 
 function AgileConference() {
@@ -313,8 +313,7 @@ ConferenceDOMBuilder.prototype.updateTopicList = function(day, dayDiv) {
         var speakers = (session.speakers === null ? [] : session.speakers.split(','));
         topicList.append($('<li>'
 			+'<div class="arrow">'
-				+'<a href="#sessionDetail" onclick="updateSessionDetail(\'' + session.id 
-				  +'\')" class="topic-link slide">' + session.title + '</a>'
+				+'<a href="#' + session.id + '" class="topic-link slide">' + session.title + '</a>'
 			+'</div>'
 			+'<div class="speaker-go">'
 				+'<span class="speaker-title3">' + this.conference.getPrettySpeakersList(speakers) + '</span>'
@@ -339,18 +338,6 @@ ConferenceDOMBuilder.prototype.updateIndexPageDOM = function() {
     }
 };
 
-function updateSessionDetail(sessionId) {
-  var session = conference.conferenceSessions[sessionId];
-  var sessionDetail = $('#sessionDetail');
-  sessionDetail.find('#sessionDetailDate').html(session.date);
-  sessionDetail.find('#sessionDetailTitle').html(session.title);
-  var domBuilder = new ConferenceDOMBuilder(conference);
-  sessionDetail.find('#sessionDetailSpeakerList').html(domBuilder.buildSessionSpeakerList(session));
-  sessionDetail.find('#sessionDetailDescription').html(session.description);
-    
-  return true;
-};
-
 function registerJQTouchLiveEvents() {
   // Live events will be added to elements that match the selector
   // when those elements are added to the DOM. Because of that,
@@ -367,7 +354,7 @@ function registerJQTouchLiveEvents() {
         }
     });
 
-    $('div.uses_local_data').live('pageAnimationStart', function(e,info,t,u,v,w,x,y,z) {
+    $('div.uses_local_data').live('pageAnimationStart', function(e,info) {
       if (!info || info.direction === "in") {
         $(this).find("input.attend-slider").each(function() {
             var slider = $(this);
@@ -386,10 +373,8 @@ function registerJQTouchLiveEvents() {
     });
 }
 
-var conference;
-
 $(document).ready(function() {
-    conference = new AgileConference();
+    var conference = new AgileConference();
     buildSpeakerDom(conference);
     buildSessionDom(conference);
     registerJQTouchLiveEvents();
