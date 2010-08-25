@@ -379,5 +379,5 @@ $(document).ready(function() {
     buildSessionDom(conference);
     registerJQTouchLiveEvents();
 
-    conference.updateFromWeb();
+    /* conference.updateFromWeb(); */
 });
