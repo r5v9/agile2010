@@ -147,71 +147,8 @@ function AgileConference() {
         {'full': "Wednesday", 'shortName': "Wed", 'cssClass': "current"},
         {'full': "Thursday", 'shortName': "Thu"}
     ];
-    this.conferenceSpeakers = $.parseJSON(localStorage.getItem('speakers'));
-    this.conferenceSessions = $.parseJSON(localStorage.getItem('sessions'));
-}
-
-AgileConference.prototype.updateFromWeb = function() {
-  var conference = this;
-  
-  var needSessions = false;
-  var sessionsTimestamp = localStorage.getItem('sessionsTimestamp');
-  var sessions = null;
-  
-  var needSpeakers = false;
-  var speakersTimestamp = localStorage.getItem('speakersTimestamp');
-  var speakers = null;
-  
-  var sessionsTimestampCallback = function(result) {
-    if (localStorage.getItem('sessionsTimestamp') !== result['timestamp']) {
-      needSessions = true;
-      sessionsTimestamp = result['timestamp'];
-      $.getJSON('http://agileaustralia2010.appspot.com/topics?callback=?', sessionsLoadCallback);
-    }
-  };
-  var sessionsLoadCallback = function(sessionsData) {
-      sessions = sessionsData;
-      promptUserToRefreshData();
-  };
-  var speakersTimestampCallback = function(result) {
-    if (localStorage.getItem('speakersTimestamp') !== result['timestamp']) {
-      needSpeakers = true;
-      speakersTimestamp = result['timestamp'];
-      $.getJSON('http://agileaustralia2010.appspot.com/speakers?callback=?', speakersLoadCallback);
-    }
-  };
-  var speakersLoadCallback = function(speakersData) {
-      speakers = speakersData;
-      promptUserToRefreshData();
-  };
-  var promptUserToRefreshData = function() {
-    var sessionsComplete = (needSessions && sessions !== null) || !needSessions;
-    var speakersComplete = (needSpeakers && speakers !== null) || !needSpeakers;
-    
-    if (sessionsComplete && speakersComplete) {
-      if (sessions !== null) {
-        localStorage.setItem("sessions", $.toJSON(sessions));
-        localStorage.setItem('sessionsTimestamp', sessionsTimestamp);        
-      }
-      if (speakers !== null) {
-        localStorage.setItem("speakers", $.toJSON(speakers));
-        localStorage.setItem('speakersTimestamp', speakersTimestamp);        
-      }
-      var alertDelegate = navigator.notification.confirm(
-              "Updated schedule downloaded. Apply now?",
-              "Schedule Update",
-              "Yes,No");
-      alertDelegate.onAlertDismissed = function(index, label) {
-          if ('Yes' == label) {
-            location.reload(true);
-          }
-      };
-    }
-  };
-  
-  
-  $.getJSON('http://agileaustralia2010.appspot.com/speakersTimestamp?callback=?', speakersTimestampCallback);
-  $.getJSON('http://agileaustralia2010.appspot.com/topicsTimestamp?callback=?', sessionsTimestampCallback);  
+    this.conferenceSpeakers = defaultSpeakerData.data;
+    this.conferenceSessions = defaultSessionData.data;
 }
 
 AgileConference.prototype.getPrettySpeakersList = function(speakerIDs) {
@@ -378,6 +315,4 @@ $(document).ready(function() {
     buildSpeakerDom(conference);
     buildSessionDom(conference);
     registerJQTouchLiveEvents();
-
-    /* conference.updateFromWeb(); */
 });

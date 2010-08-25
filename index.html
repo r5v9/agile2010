@@ -37,13 +37,6 @@
 				'themes/agile2010/floorplan.jpg'
 			]
 		});
-
-		if (!(localStorage.getItem('speakers') && localStorage.getItem('sessions'))) {
-			localStorage.setItem('sessions', $.toJSON(defaultSessionData.data));
-			localStorage.setItem('sessionsTimestamp', defaultSessionData.timestamp);
-			localStorage.setItem('speakers', $.toJSON(defaultSpeakerData.data));
-			localStorage.setItem('speakersTimestamp', defaultSpeakerData.timestamp);
-		}
 	</script>
 </head>
 
