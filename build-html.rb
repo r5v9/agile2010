@@ -11,10 +11,10 @@ class Main
 
   def check_speakers
     puts "Loading topics"
-    topics = YAML::load(File.open('aaserver/data/topics.yml'))
+    topics = YAML::load(File.open('data/topics.yml'))
 
     puts "Loading speakers"
-    speakers = YAML::load(File.open('aaserver/data/speakers.yml'))
+    speakers = YAML::load(File.open('data/speakers.yml'))
     valid = true
     topics.each_key do |id|
       topic_speakers = topics[id]['speakers']
