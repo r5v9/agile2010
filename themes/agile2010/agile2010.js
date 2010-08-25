@@ -310,9 +310,19 @@ function registerJQTouchLiveEvents() {
     });
 }
 
+function registerCacheUpdateEvents() {
+    cache = window.applicationCache;
+    cache.addEventListener('updateready', function() {
+        cache.swapCache();
+    }, false);
+
+    setInterval(function() { cache.update(); }, 30 * 1000);
+}
+
 $(document).ready(function() {
     var conference = new AgileConference();
     buildSpeakerDom(conference);
     buildSessionDom(conference);
     registerJQTouchLiveEvents();
+    registerCacheUpdateEvents();
 });
